@@ -42,11 +42,15 @@ for (const sheetName in sheetsJson) {
                 await wfmhomepage.OpenTimeCardPage();
             });
 
-            await test.step('Search for the Employee in Time Card Page', async () => {
+            //await test.step('Search for the Employee in Time Card Page', async () => {
                 await wfmtimecardpage.SearchEMP_Timecard(EmpName || `Employee ${index + 1}`);
+                //step to be added to select the payrange 01-10-2024 05-10-2024
+
+                //work on this
+                await  wfmtimecardpage.setCurrentPayPeriod(data.StartDate,data.EndDate);
                 const result = await wfmtimecardpage.ValidateTotal(data.Paycode, data.Total);
                 writeResultsToExcel(excelFilePath, sheetName, index, "", result);
-            });
+           // });
         });
     });
 }
