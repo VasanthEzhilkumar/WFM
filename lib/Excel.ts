@@ -87,49 +87,84 @@ export function getEmployeeNumbers(): string[] {
 //     }
 //   };
   
-export const writeResultsToExcel = async (filePath: string, sheetName: string, rowIndex: number, empNum: string, status: string) => {
-  const workbook = new ExcelJS.Workbook();
-  await workbook.xlsx.readFile(filePath);
-  const worksheet = workbook.getWorksheet(sheetName);
+// export const writeResultsToExcel = async (filePath: string, sheetName: string, rowIndex: number, empNum: string, status: string) => {
+//   const workbook = new ExcelJS.Workbook();
+//   await workbook.xlsx.readFile(filePath);
+//   const worksheet = workbook.getWorksheet(sheetName);
 
-  let statusCol = -1;
+//   let statusCol = -1;
 
-  // Determine which column to search based on empNum
-  const targetColumn = empNum === 'EmpResult' ? 'EmpTestResult' : 'TestResult';
+//   // Determine which column to search based on empNum
+//   const targetColumn = empNum === 'EmpResult' ? 'EmpTestResult' : 'TestResult';
 
-  // Find the column index for the target column
-  const headerRow = worksheet.getRow(1);
-  headerRow.eachCell((cell, colNumber) => {
-      if (cell.value === targetColumn) {
-          statusCol = colNumber;
-      }
-  });
+//   // Find the column index for the target column
+//   const headerRow = worksheet.getRow(1);
+//   headerRow.eachCell((cell, colNumber) => {
+//       if (cell.value === targetColumn) {
+//           statusCol = colNumber;
+//       }
+//   });
 
-  if (statusCol !== -1) {
-      const row = worksheet.getRow(rowIndex + 2); // Adjust for 1-based index and header row
-      const statusCell = row.getCell(statusCol);
+//   if (statusCol !== -1) {
+//       const row = worksheet.getRow(rowIndex + 2); // Adjust for 1-based index and header row
+//       const statusCell = row.getCell(statusCol);
     
-      // Set the status in the correct column
-      statusCell.value = status;
+//       // Set the status in the correct column
+//       statusCell.value = status;
 
-      // Apply color formatting based on the status
-    //   if (status === 'Failed') {
-    //       statusCell.fill = {
-    //           type: 'pattern',
-    //           pattern: 'solid',
-    //           fgColor: { argb: 'FFFF0000' } // Red color
-    //       };
-    //   } else if (status === 'Passed') {
-    //       statusCell.fill = {
-    //           type: 'pattern',
-    //           pattern: 'solid',
-    //           fgColor: { argb: 'FF00FF00' } // Green color
-    //       };
-    //   }
+//       // Apply color formatting based on the status
+//     //   if (status === 'Failed') {
+//     //       statusCell.fill = {
+//     //           type: 'pattern',
+//     //           pattern: 'solid',
+//     //           fgColor: { argb: 'FFFF0000' } // Red color
+//     //       };
+//     //   } else if (status === 'Passed') {
+//     //       statusCell.fill = {
+//     //           type: 'pattern',
+//     //           pattern: 'solid',
+//     //           fgColor: { argb: 'FF00FF00' } // Green color
+//     //       };
+//     //   }
 
-      row.commit();
-      await workbook.xlsx.writeFile(filePath);
-  } else {
-      console.error(`${targetColumn} column not found`);
-  }
+//       row.commit();
+//       await workbook.xlsx.writeFile(filePath);
+//   } else {
+//       console.error(`${targetColumn} column not found`);
+//   }
+// };
+export const writeResultsToExcel = async (filePath: string, sheetName: string, rowIndex: number, empNum: string, status: string) => {
+    const workbook = new ExcelJS.Workbook();
+    await workbook.xlsx.readFile(filePath);
+    const worksheet = workbook.getWorksheet(sheetName);
+
+    let statusCol = -1;
+    const targetColumn = empNum === 'EmpResult' ? 'EmpTestResult' : 'TestResult';
+
+    // Find the column index
+    const headerRow = worksheet.getRow(1);
+    headerRow.eachCell((cell, colNumber) => {
+        if (cell.value === targetColumn) {
+            statusCol = colNumber;
+        }
+    });
+
+    if (statusCol === -1) {
+        console.error(`Column ${targetColumn} not found`);
+        return;
+    }
+
+    const row = worksheet.getRow(rowIndex + 2);
+    const statusCell = row.getCell(statusCol);
+
+    if (statusCell) {
+        console.log(`Writing status "${status}" to row ${rowIndex + 2}, column ${statusCol}`);
+        statusCell.value = status;
+        row.commit();
+        await workbook.xlsx.writeFile(filePath);
+        console.log(`Successfully wrote status for row ${rowIndex + 2}`);
+    } else {
+        console.error(`Failed to find cell at row ${rowIndex + 2}, column ${statusCol}`);
+    }
 };
+
