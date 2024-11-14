@@ -11,11 +11,6 @@ export class WFMTimecardPage {
     readonly EMP_NAME: Locator;
     readonly TIMECARD_SAVE: Locator;
     readonly TIMECARD_TOTAL: Locator
-    readonly CurrentPayPeriod : Locator;
-    readonly SelectRange:Locator;
-    readonly Apply:Locator;
-    // readonly StartDate:Locator;
-    // readonly EndDate:Locator;
     ariaLabel: string;
 
 
@@ -32,11 +27,6 @@ export class WFMTimecardPage {
         this.EMP_NAME = page.locator('[personnumber="80010054"]');
         this.TIMECARD_SAVE = page.getByTitle('Save').locator('div').nth(1);
         this.TIMECARD_TOTAL = page.getByRole('tab', { name: 'Totals' });
-        this.CurrentPayPeriod=page.getByTitle('Select Timeframe');
-        this.SelectRange=page.getByRole('button', { name: 'Select Range' });
-        this.Apply=page.getByRole('button', { name: 'Apply' });
-        // this.StartDate=page.locator("//input[@id='startDateTimeInput']");
-        // this.EndDate=page.locator("//input[@id='endDateTimeInput']");
     }
 
     async SearchEMP_Timecard(EmpName: string): Promise<void> {
@@ -45,20 +35,6 @@ export class WFMTimecardPage {
         await this.EMP_SEARCHBAR.fill(EmpName);
         await this.EMP_LIST.click();
 
-    }
-    async setCurrentPayPeriod(StartDate: string , EndDate:string) {
-        await this.page.waitForTimeout(500);
-        await this.CurrentPayPeriod.click();
-        await this.page.waitForTimeout(500);
-        await this.SelectRange.click();
-        await this.page.waitForTimeout(2000);
-        await this.page.locator("//input[@id='startDateTimeInput']").type(StartDate);
-        await this.page.waitForTimeout(2000);
-        await this.page.locator("//input[@id='endDateTimeInput']").type(EndDate);
-        await this.page.waitForTimeout(2000);
-        await this.Apply.click();
-        await this.page.waitForTimeout(500);
-        
     }
     // async punchTime(index: number, inpunch: string, outpunch: string, addTime?: boolean): Promise<void> {
     //     // Format the index for locators based on the value of index

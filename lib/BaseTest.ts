@@ -7,6 +7,7 @@ import { WFMSchedulePlannerPage } from '@pages/WFMScheduleplannerPage';
 import { WFMTimecardPage } from '@pages/WFMTimecardPage';
 import { WFMNotificationPage } from '@pages/WFMNotificationPage';
 import { WFMIntegrationPage } from '@pages/WFMIntegrationPage';
+import { CurrentPayPeriodPage } from 'pageFactory/commonPages/CurrentPayPeriodPage';
 
 
 
@@ -19,6 +20,7 @@ const test = baseTest.extend<{
     wfmtimecardpage: WFMTimecardPage;
     wfmnotificationpage: WFMNotificationPage;
     wfmintegrationpage: WFMIntegrationPage;
+    currentPayPeriodPage: CurrentPayPeriodPage;
    
 }>({
     webActions: async ({ page, context }, use) => {
@@ -42,6 +44,11 @@ const test = baseTest.extend<{
     wfmintegrationpage: async({page,context}, use) =>{
         await use(new WFMIntegrationPage(page,context));
     },
+    currentPayPeriodPage: async({page,context}, use) =>{
+        await use(new CurrentPayPeriodPage(page,context));
+    },
+
+
 
 })
 
