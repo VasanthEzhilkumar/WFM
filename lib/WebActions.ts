@@ -69,22 +69,24 @@ export class WebActions {
         const maxPages = pdf.numPages;
         const pageTextPromises = [];
         for (let pageNo = 1; pageNo <= maxPages; pageNo += 1) {
-          pageTextPromises.push(this.getPdfPageText(pdf, pageNo));
+            pageTextPromises.push(this.getPdfPageText(pdf, pageNo));
         }
         const pageTexts = await Promise.all(pageTextPromises);
         return pageTexts.join(' ');
-      }
+    }
 
-      async getEmployeeName(empNumber: string): Promise<string | null> {
+    async getEmployeeName(empNumber: string): Promise<string | null> {
         const EMP_NAME = this.page.locator(`[personnumber="${empNumber}"]`);
         const ariaLabel = await EMP_NAME.getAttribute('aria-label');
-        
+
         if (!ariaLabel) {
             console.error(`No element found with personnumber: ${empNumber}`);
             return null;
         }
-    
+
         return ariaLabel.toString();
-      }
+    }
+
+
 
 }

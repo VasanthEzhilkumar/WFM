@@ -7,6 +7,7 @@ import { WFMSchedulePlannerPage } from '@pages/WFMScheduleplannerPage';
 import { WFMTimecardPage } from '@pages/WFMTimecardPage';
 import { WFMNotificationPage } from '@pages/WFMNotificationPage';
 import { WFMIntegrationPage } from '@pages/WFMIntegrationPage';
+import { WFMReportLibraryPage } from '@pages/WFMReportLibraryPage';
 
 
 
@@ -19,6 +20,7 @@ const test = baseTest.extend<{
     wfmtimecardpage: WFMTimecardPage;
     wfmnotificationpage: WFMNotificationPage;
     wfmintegrationpage: WFMIntegrationPage;
+    wfmreportpage: WFMReportLibraryPage;
    
 }>({
     webActions: async ({ page, context }, use) => {
@@ -41,6 +43,9 @@ const test = baseTest.extend<{
     },
     wfmintegrationpage: async({page,context}, use) =>{
         await use(new WFMIntegrationPage(page,context));
+    },
+    wfmreportpage: async({page,context}, use) =>{
+        await use(new WFMReportLibraryPage(page,context));
     },
 
 })

@@ -19,3 +19,10 @@ export function getExcelFilePath(fileName: string): string {
     const directory = path.resolve(__dirname,'../Data');
     return path.resolve(directory, fileName);
 }
+
+export function readExcel(filePath: string):any[] {
+    const workbook = XLSX.readFile(filePath);
+    const sheetName = workbook.SheetNames[0];
+    const sheet = workbook.Sheets[sheetName];
+    return XLSX.utils.sheet_to_json(sheet);
+}

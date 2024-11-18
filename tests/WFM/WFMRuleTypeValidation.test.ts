@@ -1,9 +1,10 @@
 import test from '@lib/BaseTest';
 import { getEmployeeNumbers, writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
+import { WFMSchedulePlannerPage } from '@pages/WFMScheduleplannerPage';
 import * as path from 'path';
 
-const excelFileName = 'RuleTypeValidation_Amy2.xlsx';
+const excelFileName = 'RuleTypeValidationSmokeTest.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 
@@ -36,6 +37,7 @@ for (const sheetName in sheetsJson) {
             });
 
             await test.step(`Search for the Employee Rule Violation: ${data.EmpNum}`, async () => {
+                await wfmscheduleplannerpage.setCurrentPayPeriod(data.FromDate, data.ToDate)
                 const empName = await wfmscheduleplannerpage.clickonRuleViolationTab(data.EmpNum);
                 const ruleViolations = await wfmscheduleplannerpage.SearchEmpRuleViolation(empName.toString(), data.ExpectedDescription, data.Date);
 

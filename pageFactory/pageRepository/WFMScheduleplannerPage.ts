@@ -19,6 +19,9 @@ export class WFMSchedulePlannerPage {
     readonly EMP_Select: Locator;
     readonly EMP_Selected: Locator;
     employeeNumbers: string[];
+    readonly CurrentPayPeriod : Locator;
+    readonly SelectRange:Locator;
+    readonly Apply:Locator;
 
 
     constructor(page: Page, context: BrowserContext) {
@@ -29,6 +32,9 @@ export class WFMSchedulePlannerPage {
         this.EMP_RELOAD = page.getByRole('button', { name: ' Reload' });
         this.EMP_Select = page.getByRole('button', { name: 'Select people' });
         this.EMP_Selected = page.getByRole('menu', { name: 'Select people' }).locator('label');
+        this.CurrentPayPeriod=page.getByTitle('Select Timeframe');
+        this.SelectRange=page.getByRole('button', { name: 'Select Range' });
+        this.Apply=page.getByRole('button', { name: 'Apply', exact: true })
 
     }
 
@@ -60,6 +66,21 @@ export class WFMSchedulePlannerPage {
         }
 
         return ariaLabel;
+    }
+
+    async setCurrentPayPeriod(StartDate: any , EndDate:any) {
+        await this.page.waitForTimeout(500);
+        await this.CurrentPayPeriod.click();
+        await this.page.waitForTimeout(500);
+        await this.SelectRange.click();
+        await this.page.waitForTimeout(2000);
+        await this.page.locator("//input[@id='startDateTimeInput']").type(StartDate.toString());
+        await this.page.waitForTimeout(2000);
+        await this.page.locator("//input[@id='endDateTimeInput']").type(EndDate.toString());
+        await this.page.waitForTimeout(2000);
+        await this.Apply.click();
+        await this.page.waitForTimeout(500);
+
     }
 
     async getEmployeeName(empNumber: string): Promise<string | null> {
