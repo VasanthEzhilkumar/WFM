@@ -171,46 +171,69 @@ export const writeResultsToExcel = async (filePath: string, sheetName: string, r
 
 
 // Generic Function to write values to Excel
-export const writeResultToExcel = async (filePath: string, sheetName: string, rowIndex: any, columnValue: string, columnName: string) => {
-    const workbook = new ExcelJS.Workbook();
-    // Read the Excel file
-    await workbook.xlsx.readFile(filePath);
-    const worksheet = workbook.getWorksheet(sheetName);
-    // Find the column indices for Position
-    const headerRow = worksheet.getRow(1);
-    let positionIdCol = -1;
+export const writeResultToExcel = async (filePath: string, sheetName: string, rowIndex: number, columnValue: string, columnName: string) => {
+    try {
 
-    headerRow.eachCell((cell, colNumber) => {
-        if (cell.value === columnName) {
-            positionIdCol = colNumber;
+        // Read the Excel file
+        let workbook = XLSX.readFile(filePath);
+
+        // Ensure the sheet exists
+        let worksheet = workbook.Sheets[sheetName];
+
+        // Convert the sheet to JSON (array of rows) where each row is an array of cell values
+        const rows = XLSX.utils.sheet_to_json(worksheet, { header: 1, defval: '' });
+        // Debug: Log the rows to inspect the structure
+        console.log('Rows:', rows);
+
+        // Get the header row (first row) from the sheet
+        const headerRow: any = rows[0];
+        // Find the column index by comparing each header cell
+        let columnIndex = headerRow.findIndex((cell: any) => cell === columnName);
+        if (columnIndex !== -1) {
+            columnIndex = columnIndex;
         }
-    });
 
-    if (positionIdCol !== -1) {
-        const row = worksheet.getRow(rowIndex+2);
-        // Adjust for 1-based index and header row
 
-        const empIdCell = row.getCell(positionIdCol);
 
-        empIdCell.value = columnValue;
-        if (columnValue.includes('Passed')) {
-            // Apply green fill to the cell if the test passed
-            empIdCell.fill = {
-                type: 'pattern',
-                pattern: 'solid',
-                fgColor: { argb: 'FF00FF01' } // Green color
-            };
+        // Adjust for 1-based index and header row (use rowIndex to access data row)
+        const row: any = rows[rowIndex]; // rowIndex is 0-based, so add 1 to access the correct row
+        if (row) {
+            // Update the cell value in the correct column
+            row[columnIndex] = columnValue;
+
+            // Debug: Log the updated row
+            console.log('Updated Row:', row);
+
+            // if (columnValue.includes('Passed')) {
+            //     // Apply green fill to the cell if the test passed
+            //     row[columnIndex].fill = {
+            //         type: 'pattern',
+            //         pattern: 'solid',
+            //         fgColor: { argb: 'FF00FF01' } // Green color
+            //     };
+            // } else {
+            //     // Apply red fill to the cell if the test failed
+            //     row[columnIndex].fill = {
+            //         type: 'pattern',
+            //         pattern: 'solid',
+            //         fgColor: { argb: 'FFFF0000' } // Red color
+            //     };
+            // }
+
+            // Convert rows back to sheet format
+            const updatedSheet = XLSX.utils.aoa_to_sheet(rows as any);
+
+            // Replace the old sheet with the updated sheet
+            workbook.Sheets[sheetName] = updatedSheet;
+
+            // Write the workbook back to the file
+            XLSX.writeFile(workbook, filePath);
+
+            console.log('File has been updated successfully.');
         } else {
-            // Apply red fill to the cell if the test failed
-            empIdCell.fill = {
-                type: 'pattern',
-                pattern: 'solid',
-                fgColor: { argb: 'FFFF0000' } // Red color
-            };
+            console.error(`Row at index ${rowIndex} not found`);
         }
-        row.commit();
-        await workbook.xlsx.writeFile(filePath);
-    } else {
+    } catch (error) {
         console.error(columnName + ' column not found');
     }
 };
@@ -236,7 +259,7 @@ export const getRowNumberByCellValue = async (filePath: string, sheetName: strin
     console.log('Rows:', rows);
 
     // Loop through the rows to find the target value
-    for (let i = 0; i < rows.length; i++) {
+    for (let i: number = 0; i < rows.length; i++) {
         const row: any = rows[i];
 
         // Clean up any leading/trailing whitespace from each cell (important for matching values)

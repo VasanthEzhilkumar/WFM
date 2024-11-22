@@ -205,8 +205,10 @@ export class WFMTimecardPage {
         const selectListViewForPucnhInOut = this.page.locator("//div[@class='tk-calendar-box']//div[contains(text(),'" + weekday + "')]/following-sibling::div[contains(text(),'" + dateDigit + "')]");
         //--------------------------------------------------------------------------------------------------------
         try {
-            //
-            if (punchIn !== null || punchOut !== null || punchIn2 !== null || punchOut2 !== null) {
+            const punchValues = [punchIn, punchOut, punchIn2, punchOut2];
+            const isAnyDefined = punchValues.some(value => value !== null && value !== undefined && value !== '');
+            await this.page.waitForTimeout(500);
+            if (isAnyDefined) {
                 await this.page.waitForTimeout(1000);
                 if (await btnLoadMore.count() > 0 && await btnLoadMore.count()) {
                     await this.page.waitForTimeout(500);

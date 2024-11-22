@@ -63,10 +63,9 @@ for (const empId in groupedData) {
 
             // Handle punch-in/punch-out actions for each day
             const result = await wfmtimecardpage.pucnInPunchOutByDate(data.Date, data.PunchIn, data.PunchOut, data.PunchIn2, data.PunchOut2);
-            const rowNumber = getRowNumberByCellValue(excelFilePath, sheetName, data.EmpNum, data.Date);
-            // // const result = "Failed";
-            writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
-            //rowNumber = rowNumber + 1;
+            const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, data.EmpNum, data.Date);
+            //  const result = "Failed";
+            await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
         }
         // });
 
