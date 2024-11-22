@@ -13,12 +13,12 @@ const config: PlaywrightTestConfig = {
   globalSetup: `./global-setup`,
 
   //sets timeout for each test case
-  //timeout: 60000,
+  timeout: 900000,
 
   //number of retries if test case fails
   retries: 0,
   workers: 4,
-  fullyParallel : true,
+  fullyParallel : false,
 
   //Reporters
   reporter: [[`./CustomReporterConfig.ts`], [`allure-playwright`], [`html`, { outputFolder: 'html-report', open: 'never' }]],
@@ -43,7 +43,7 @@ const config: PlaywrightTestConfig = {
         
 
         //Browser height and width
-        //viewport: { width: 1800, height: 970 },
+        viewport: { width: 1280, height: 595 },
         ignoreHTTPSErrors: true,
 
         //Enable File Downloads in Chrome

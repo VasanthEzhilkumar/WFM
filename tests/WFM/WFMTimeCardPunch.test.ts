@@ -1,8 +1,7 @@
 
 import test from '@lib/BaseTest';
-import { writeResultsToExcel } from '@lib/Excel';
+import { getRowNumberByCellValue, writeResultToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
-import path from 'path';
 
 // Define the relative directory path to your Excel file
 const excelFileName = 'TimecardPunch_Amy2.xlsx';
@@ -28,7 +27,7 @@ const groupedData = sheetsJson[sheetName].reduce((acc, row) => {
     acc[row.EmpNum].push(row);
     return acc;
 }, {});
-
+//let rowNumber = 0;
 // Iterate over each grouped dataset and run the test
 for (const empId in groupedData) {
     const dataSet = groupedData[empId];
@@ -57,19 +56,22 @@ for (const empId in groupedData) {
             await wfmhomepage.OpenTimeCardPage();
         });
 
-        await test.step('Search for the Employee in Time Card Page', async () => {
-            await wfmtimecardpage.SearchEMP_Timecard(EmpName);
+        // await test.step('Search for the Employee in Time Card Page', async () => {
+        await wfmtimecardpage.SearchEMP_Timecard(EmpName);
 
-            for (const data of dataSet) {
-                // Handle punch-in/punch-out actions for each day
-               const  result = await wfmtimecardpage.punchInOutMultipleDays(data.Date, data.PunchIn, data.PunchOut, data.PunchIn2, data.PunchOut2);
-             
-            }
-        });
+        for (const data of dataSet) {
 
-        await test.step('Save the timesheet and validate if there are no errors ', async() => {
-            
-            await wfmtimecardpage.saveTimesheet();
+            // Handle punch-in/punch-out actions for each day
+            const result = await wfmtimecardpage.pucnInPunchOutByDate(data.Date, data.PunchIn, data.PunchOut, data.PunchIn2, data.PunchOut2);
+            const rowNumber = getRowNumberByCellValue(excelFilePath, sheetName, data.EmpNum, data.Date);
+            // // const result = "Failed";
+            writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
+            //rowNumber = rowNumber + 1;
+        }
+        // });
+
+        await test.step('Save the timesheet and validate if there are no errors ', async () => {
+            //await wfmtimecardpage.saveTimesheet();
         })
     });
 }

@@ -4976,3 +4976,1148 @@
 {"level":"info","message":"Executing Step : Open Maintenance Menu page"}
 {"level":"info","message":"Executing Step : Run the integration"}
 {"level":"info","message":"Executing Step : Check Integration status  "}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Run the integration"}
+{"level":"info","message":"Executing Step : Check Integration status  "}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Run the integration"}
+{"level":"info","message":"Executing Step : Check Integration status  "}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Run the integration"}
+{"level":"info","message":"Executing Step : Check Integration status  "}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Run the integration"}
+{"level":"info","message":"Executing Step : Check Integration status  "}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Run the integration"}
+{"level":"info","message":"Executing Step : Check Integration status  "}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Run the integration"}
+{"level":"info","message":"Executing Step : Check Integration status  "}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Executing Step : Validate the row count of CSV and Excel input file"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Paycode"}
+{"level":"info","message":"Executing Step : Validate the inputs in the file "}
+{"level":"info","message":"Executing Step : Validate the row count of CSV and Excel input file"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Run the integration"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : timedOut"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10648977 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10648977"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10648977 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10648977"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : failed"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"error","message":"Error: Invalid Address: G[object Promise]2\n\n\u001b[31mFailed worker ran 1 test:\u001b[39m\n[Chrome] › tests\\WFM\\WFMTimeCardPunch.test.ts:36:9 › @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : failed"}
+{"level":"error","message":"Error: Invalid Address: G[object Promise]2\n\n\u001b[31mFailed worker ran 1 test:\u001b[39m\n[Chrome] › tests\\WFM\\WFMTimeCardPunch.test.ts:36:9 › @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : failed"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : failed"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"error","message":"Error: Invalid Address: G[object Promise]1\n\n\u001b[31mFailed worker ran 1 test:\u001b[39m\n[Chrome] › tests\\WFM\\WFMTimeCardPunch.test.ts:36:9 › @WFM Time card punch for 10649012"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : timedOut"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : timedOut"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
