@@ -253,8 +253,9 @@ export class WFMTimecardPage {
                     }
                     if ((punchIn !== '' && punchIn !== undefined && punchIn !== null) || (punchOut !== '' && punchOut !== undefined && punchOut !== null) && (punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
                         if (punchIn2 !== '' && punchIn2 !== null) {
-                            await this.page.waitForTimeout(2000);
+                            await this.page.waitForTimeout(1500);
                             await btnAddPunch.click();
+                            await this.page.waitForTimeout(500);
                             resultMsgError = await this.editPunchFillandApply(punchIn2, "In Punch");
                             if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
                                 new throws(error);
@@ -275,8 +276,9 @@ export class WFMTimecardPage {
                             }
 
                         } else if ((punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
-                            await this.page.waitForTimeout(2000);
+                            await this.page.waitForTimeout(1500);
                             await btnAddPunch.click();
+                            await this.page.waitForTimeout(500);
                             resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
                             if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
                                 new throws(error);
@@ -291,8 +293,9 @@ export class WFMTimecardPage {
                         }
                     } else if ((punchIn !== '' && punchIn !== undefined && punchIn !== null) || (punchOut !== '' && punchOut !== undefined && punchOut !== null) && (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
                         if (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null) {
-                            await this.page.waitForTimeout(2000);
+                            await this.page.waitForTimeout(1500);
                             await btnAddPunch.click();
+                            await this.page.waitForTimeout(500);
                             resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
                             if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
                                 new throws(error);
