@@ -62,7 +62,7 @@ for (const empId in groupedData) {
         for (const data of dataSet) {
 
             // Handle punch-in/punch-out actions for each day
-            const result = await wfmtimecardpage.pucnInPunchOutByDate(data.Date, data.PunchIn, data.PunchOut, data.PunchIn2, data.PunchOut2);
+            const result = await wfmtimecardpage.pucnInPunchOutByDate(data.Date, String(data.PunchIn), String(data.PunchOut), String(data.PunchIn2), String(data.PunchOut2));
             const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, data.EmpNum, data.Date);
             //  const result = "Failed";
             await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');

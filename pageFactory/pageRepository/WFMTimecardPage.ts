@@ -1,4 +1,7 @@
 import { BrowserContext, Locator, Page } from '@playwright/test';
+import { throws } from 'assert';
+import { error } from 'console';
+import { UnexpectedResponseException } from 'pdfjs-dist-es5';
 import { formatDiagnosticsWithColorAndContext } from 'typescript';
 
 export class WFMTimecardPage {
@@ -152,30 +155,24 @@ export class WFMTimecardPage {
         await this.page.waitForTimeout(1000);
         await this.page.locator('//div[@data-component="timeComponent"]//input[@id="punch-effective-time_inptext"]').fill(inputString);
         await this.page.waitForTimeout(1000);
-        await this.page.locator('//button[@type="button" and @aria-labelledby="punch-editor-override-label"]').click();
+        await this.page.keyboard.press('Tab');
+        await this.page.locator('//button[@type="button" and @aria-labelledby="punch-editor-override-label"]').click({ 'force': true });
         await this.page.locator("//a/span[text() ='" + selectPunch + "']").scrollIntoViewIfNeeded();
         await this.page.locator("//a/span[text() ='" + selectPunch + "']").click();
         await this.page.getByRole('button', { name: 'Apply' }).click({ 'force': true });
         await this.page.waitForTimeout(1000);
-        const alertMsg = await this.page.locator('//div[@class="msg-wrapper alert alert-error"]');
+        const alertMsg = await this.page.locator('//div[@class="msg-wrapper alert alert-error"or @class="inline-error"]');
         await this.page.waitForTimeout(1000);
         if (await alertMsg.isVisible()) {
             const alertPopupMsg = await alertMsg.allInnerTexts();
             console.log(alertPopupMsg);
             await this.page.waitForTimeout(1000);
             await this.page.locator('//div[@class="text-right"]//button[text()="Cancel" and @id="punch_cancel" ]').click();
-            return 'Failed';
-        } else {
-            return "Passed";
+            if (alertPopupMsg !== null) {
+                return "" + alertPopupMsg;
+            }
         }
     }
-
-    async isVisiableWebLocator(locator: Locator) {
-        return locator.isVisible();
-    }
-
-
-
 
     async pucnInPunchOutByDate(date: string, punchIn: string, punchOut: string, punchIn2: string, punchOut2: string): Promise<string> {
 
@@ -200,11 +197,13 @@ export class WFMTimecardPage {
         const weekday = dateArray[0].trim();
         let month = dateArray[1].split("/")[0].trim();
         let dateDigit = dateArray[1].split("/")[1].trim();
-        let resultMsg = "";
+        let resultMsgError = "";
+        let errorMsgafterSave = "";
         //----------------------------------------------------------------------------------------------------
         const selectListViewForPucnhInOut = this.page.locator("//div[@class='tk-calendar-box']//div[contains(text(),'" + weekday + "')]/following-sibling::div[contains(text(),'" + dateDigit + "')]");
         //--------------------------------------------------------------------------------------------------------
         try {
+
             const punchValues = [punchIn, punchOut, punchIn2, punchOut2];
             const isAnyDefined = punchValues.some(value => value !== null && value !== undefined && value !== '');
             await this.page.waitForTimeout(500);
@@ -252,7 +251,10 @@ export class WFMTimecardPage {
                         if (punchIn2 !== '' && punchIn2 !== null) {
                             await this.page.waitForTimeout(2000);
                             await btnAddPunch.click();
-                            resultMsg = await this.editPunchFillandApply(punchIn2, "In Punch");
+                            resultMsgError = await this.editPunchFillandApply(punchIn2, "In Punch");
+                            if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                                new throws(error);
+                            }
                             await this.page.waitForTimeout(500);
                             // Split the time string into hours and minutes
                             let [hours, minutes] = punchIn.split(":").map(Number);
@@ -271,7 +273,10 @@ export class WFMTimecardPage {
                         } else if ((punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
                             await this.page.waitForTimeout(2000);
                             await btnAddPunch.click();
-                            resultMsg = await this.editPunchFillandApply(punchOut2, "Out Punch");
+                            resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
+                            if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                                new throws(error);
+                            }
                             await this.page.waitForTimeout(1000);
                             if ((punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
                                 await txtInPunch2.fill(punchIn2);
@@ -284,7 +289,10 @@ export class WFMTimecardPage {
                         if (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null) {
                             await this.page.waitForTimeout(2000);
                             await btnAddPunch.click();
-                            resultMsg = await this.editPunchFillandApply(punchOut2, "Out Punch");
+                            resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
+                            if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                                new throws(error);
+                            }
                             await this.page.waitForTimeout(1000);
 
                             if ((punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
@@ -328,10 +336,20 @@ export class WFMTimecardPage {
                     }
                     await this.page.waitForTimeout(500);
                     await btnSave.click();
-                    return "Passed";
+
+                    const errorCheck = await this.page.locator('(//div[@class="multiple-lines-wrap"])[1]');
+                    if (await errorCheck.isVisible()) {
+                        errorMsgafterSave = "" + errorCheck.allInnerTexts();
+                    }
+                    if (errorMsgafterSave !== undefined && errorMsgafterSave !== null && errorMsgafterSave !== '') {
+                        new throws(error);
+                    } else {
+                        return "Passed";
+                    }
+
                 }
             } else {
-                return "No Entries";
+                return resultMsgError = "Error - " + resultMsgError + " No Entries or testdata issue";
             }
         } catch (error) {
             console.log(error);
@@ -341,7 +359,12 @@ export class WFMTimecardPage {
                 await this.page.waitForTimeout(500);
                 await this.page.locator('//button[@aria-label="Yes"]').click();
             }
-            return "Failed";
+            if (resultMsgError !== undefined && resultMsgError !== null && resultMsgError !== '') {
+                return resultMsgError;
+            } else if (errorMsgafterSave !== undefined && errorMsgafterSave !== null && errorMsgafterSave !== '') {
+                return errorMsgafterSave;
+            }
+
         }
     }
 
