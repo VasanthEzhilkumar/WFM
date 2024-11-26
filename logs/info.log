@@ -6289,3 +6289,10 @@
 {"level":"info","message":"Executing Step : Login into WFM Application"}
 {"level":"info","message":"Executing Step : Open schedule Planner page"}
 {"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Save the timesheet and validate if there are no errors "}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649023 Status : passed"}

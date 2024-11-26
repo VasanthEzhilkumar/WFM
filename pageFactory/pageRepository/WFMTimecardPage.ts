@@ -37,7 +37,9 @@ export class WFMTimecardPage {
         await this.EMP_SEARCHBAR.click();
         await this.EMP_SEARCHBAR.fill(EmpName);
         await this.EMP_LIST.click();
+    }
 
+    async selectPreviousPayPeriod() {
         await this.page.getByTitle('Select Timeframe').click();
         await this.page.getByText('Previous Pay Period').click();
         await this.page.waitForTimeout(1500);
@@ -45,8 +47,10 @@ export class WFMTimecardPage {
         const btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
         await txtListView.click();
         await btnLoadMore.click();
-
     }
+
+
+
     // async punchTime(index: number, inpunch: string, outpunch: string, addTime?: boolean): Promise<void> {
     //     // Format the index for locators based on the value of index
     //     const formattedIndex = index >= 10 ? `\\3${Math.floor(index / 10)} ${index % 10}` : `\\3${index}`;

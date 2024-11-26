@@ -56,18 +56,17 @@ for (const empId in groupedData) {
             await wfmhomepage.OpenTimeCardPage();
         });
 
-        // await test.step('Search for the Employee in Time Card Page', async () => {
-        await wfmtimecardpage.SearchEMP_Timecard(EmpName);
-
-        for (const data of dataSet) {
-
-            // Handle punch-in/punch-out actions for each day
-            const result = await wfmtimecardpage.pucnInPunchOutByDate(data.Date, String(data.PunchIn), String(data.PunchOut), String(data.PunchIn2), String(data.PunchOut2));
-            const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, data.EmpNum, data.Date);
-            //  const result = "Failed";
-            await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
-        }
-        // });
+        await test.step('Search for the Employee in Time Card Page', async () => {
+            await wfmtimecardpage.SearchEMP_Timecard(EmpName);
+            await wfmtimecardpage.selectPreviousPayPeriod();
+            for (const data of dataSet) {
+                // Handle punch-in/punch-out actions for each day
+                const result = await wfmtimecardpage.pucnInPunchOutByDate(data.Date, String(data.PunchIn), String(data.PunchOut), String(data.PunchIn2), String(data.PunchOut2));
+                const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, data.EmpNum, data.Date);
+                //it will write result to excel sheet by rowNumber(index)
+                await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
+            }
+        });
 
         await test.step('Save the timesheet and validate if there are no errors ', async () => {
             //await wfmtimecardpage.saveTimesheet();
