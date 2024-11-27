@@ -1,10 +1,10 @@
 import { BrowserContext, Locator, Page } from '@playwright/test';
 import { throws } from 'assert';
 import { error } from 'console';
-import { UnexpectedResponseException } from 'pdfjs-dist-es5';
-import { formatDiagnosticsWithColorAndContext } from 'typescript';
+import { WebActions } from '@lib/WebActions';
 
-export class WFMTimecardPage {
+
+export class WFMTimecardPage extends WebActions {
     readonly page: Page;
     readonly context: BrowserContext;
     readonly EMP_SELECTORDROPDOWN: Locator;
@@ -20,6 +20,7 @@ export class WFMTimecardPage {
 
 
     constructor(page: Page, context: BrowserContext) {
+        super(page, context);
         this.page = page;
         this.context = context;
         this.EMP_SELECTORDROPDOWN = page.getByLabel('Employee selector');
@@ -170,14 +171,20 @@ export class WFMTimecardPage {
         if (await alertMsg.isVisible()) {
             const alertPopupMsg = await alertMsg.allInnerTexts();
             console.log(alertPopupMsg);
+            const error1 = alertPopupMsg + "& find failed Screenshot Path:->" + super.takeScreenShot();
             await this.page.waitForTimeout(1000);
             await this.page.locator('//div[@class="text-right"]//button[text()="Cancel" and @id="punch_cancel" ]').click();
             if (alertPopupMsg !== null) {
-                return "" + alertPopupMsg;
+                return error1;
             }
         }
     }
 
+  /*
+  @Auther: Madhukar Kirkan
+  @Description: This function is used to fill Punch In-Out by selecting from the listview and returns any error messages.
+  @Date: 27/11/2024
+*/
     async pucnInPunchOutByDate(date: string, punchIn: string, punchOut: string, punchIn2: string, punchOut2: string): Promise<string> {
 
         // const btnPreviousDay = this.page.getByLabel('Previous Day');
@@ -347,6 +354,7 @@ export class WFMTimecardPage {
                     const errorCheck = await this.page.locator('(//div[@class="multiple-lines-wrap"])[1]');
                     if (await errorCheck.isVisible()) {
                         errorMsgafterSave = "" + errorCheck.allInnerTexts();
+                        errorMsgafterSave = errorMsgafterSave + "find failed screenshot --> " + super.takeScreenShot();
                     }
                     if (errorMsgafterSave !== undefined && errorMsgafterSave !== null && errorMsgafterSave !== '') {
                         new throws(error);
@@ -356,10 +364,11 @@ export class WFMTimecardPage {
 
                 }
             } else {
-                return resultMsgError = "Error - " + resultMsgError + " No Entries or testdata issue";
+                return resultMsgError = "Failed : " + resultMsgError + " No Entries or testdata issue";
             }
         } catch (error) {
             console.log(error);
+
             await this.page.waitForTimeout(1000);
             if (await this.page.locator('(//div[@class="text-right"]//button[text()="Cancel"])[1]').isVisible()) {
                 await this.page.locator('(//div[@class="text-right"]//button[text()="Cancel"])[1]').click();
@@ -367,9 +376,12 @@ export class WFMTimecardPage {
                 await this.page.locator('//button[@aria-label="Yes"]').click();
             }
             if (resultMsgError !== undefined && resultMsgError !== null && resultMsgError !== '') {
-                return resultMsgError;
+
+                return "Failed : " + resultMsgError;
             } else if (errorMsgafterSave !== undefined && errorMsgafterSave !== null && errorMsgafterSave !== '') {
-                return errorMsgafterSave;
+
+                return "Failed : " + errorMsgafterSave;
+
             }
 
         }

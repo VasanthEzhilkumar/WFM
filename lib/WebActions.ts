@@ -63,28 +63,36 @@ export class WebActions {
         return pageText;
     }
 
+    async takeScreenShot(): Promise<string> {
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+        // Take a screenshot and save it with a specific name
+        const screenshotPath = process.cwd() + "/WFMFailedScreenShot/" + timestamp + ".png";
+        await this.page.screenshot({ path: screenshotPath });
+        return screenshotPath;
+    }
+
     async getPDFText(filePath: any): Promise<string> {
         const dataBuffer = fs.readFileSync(filePath);
         const pdf = await pdfjslib.getDocument(dataBuffer).promise;
         const maxPages = pdf.numPages;
         const pageTextPromises = [];
         for (let pageNo = 1; pageNo <= maxPages; pageNo += 1) {
-          pageTextPromises.push(this.getPdfPageText(pdf, pageNo));
+            pageTextPromises.push(this.getPdfPageText(pdf, pageNo));
         }
         const pageTexts = await Promise.all(pageTextPromises);
         return pageTexts.join(' ');
-      }
+    }
 
-      async getEmployeeName(empNumber: string): Promise<string | null> {
+    async getEmployeeName(empNumber: string): Promise<string | null> {
         const EMP_NAME = this.page.locator(`[personnumber="${empNumber}"]`);
         const ariaLabel = await EMP_NAME.getAttribute('aria-label');
-        
+
         if (!ariaLabel) {
             console.error(`No element found with personnumber: ${empNumber}`);
             return null;
         }
-    
+
         return ariaLabel.toString();
-      }
+    }
 
 }

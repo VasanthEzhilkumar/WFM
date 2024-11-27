@@ -204,22 +204,31 @@ export const writeResultToExcel = async (filePath: string, sheetName: string, ro
             // Debug: Log the updated row
             console.log('Updated Row:', row);
 
-            // if (columnValue.includes('Passed')) {
-            //     // Apply green fill to the cell if the test passed
-            //     row[columnIndex].fill = {
-            //         type: 'pattern',
-            //         pattern: 'solid',
-            //         fgColor: { argb: 'FF00FF01' } // Green color
-            //     };
-            // } else {
-            //     // Apply red fill to the cell if the test failed
-            //     row[columnIndex].fill = {
-            //         type: 'pattern',
-            //         pattern: 'solid',
-            //         fgColor: { argb: 'FFFF0000' } // Red color
-            //     };
-            // }
+            // Apply cell background color based on the value of columnValue
+            let cellStyle: any = {
+                v: columnValue,  // The cell value
+                t: 's',  // The type (string in this case)
+                s: {} // Style will be added here
+            };
 
+            if (columnValue.includes('Passed')) {
+                // Apply green fill to the cell if the test passed
+                cellStyle.s.fill = {
+                    type: 'pattern',
+                    pattern: 'solid',
+                    fgColor: { rgb: 'FF00FF01' } // Green color
+                };
+            } else {
+                // Apply red fill to the cell if the test failed
+                cellStyle.s.fill = {
+                    type: 'pattern',
+                    pattern: 'solid',
+                    fgColor: { rgb: 'FFFF0000' } // Red color
+                };
+            }
+
+            // Assign the styled cell to the correct column in the row
+            row[columnIndex] = cellStyle;
             // Convert rows back to sheet format
             const updatedSheet = XLSX.utils.aoa_to_sheet(rows as any);
 

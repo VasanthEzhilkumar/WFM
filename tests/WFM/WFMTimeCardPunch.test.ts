@@ -27,7 +27,7 @@ const groupedData = sheetsJson[sheetName].reduce((acc, row) => {
     acc[row.EmpNum].push(row);
     return acc;
 }, {});
-//let rowNumber = 0;
+
 // Iterate over each grouped dataset and run the test
 for (const empId in groupedData) {
     const dataSet = groupedData[empId];
@@ -63,7 +63,7 @@ for (const empId in groupedData) {
                 // Handle punch-in/punch-out actions for each day
                 const result = await wfmtimecardpage.pucnInPunchOutByDate(data.Date, String(data.PunchIn), String(data.PunchOut), String(data.PunchIn2), String(data.PunchOut2));
                 const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, data.EmpNum, data.Date);
-                //it will write result to excel sheet by rowNumber(index)
+                //It will write result to excel sheet by rowNumber(index)
                 await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
             }
         });
