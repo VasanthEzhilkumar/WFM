@@ -331,7 +331,7 @@ export class WFMTimecardPage extends WebActions {
                 await btncancel.click();
                 await this.page.waitForTimeout(500);
                 if (await btnYes.isVisible()) {
-                    await this.page.waitForTimeout(500);
+                    //await this.page.waitForTimeout(500);
                     await btnYes.click();
                 } else {
                     if (await btncancel.isVisible()) {
