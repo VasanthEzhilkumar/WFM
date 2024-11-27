@@ -1,7 +1,7 @@
+import { WebActions } from '@lib/WebActions';
 import { BrowserContext, Locator, Page } from '@playwright/test';
 import { throws } from 'assert';
 import { error } from 'console';
-import { WebActions } from '@lib/WebActions';
 
 
 export class WFMTimecardPage extends WebActions {
@@ -49,35 +49,6 @@ export class WFMTimecardPage extends WebActions {
         await txtListView.click();
         await btnLoadMore.click();
     }
-
-
-
-    // async punchTime(index: number, inpunch: string, outpunch: string, addTime?: boolean): Promise<void> {
-    //     // Format the index for locators based on the value of index
-    //     const formattedIndex = index >= 10 ? `\\3${Math.floor(index / 10)} ${index % 10}` : `\\3${index}`;
-
-    //     // Create locators with the properly formatted index
-    //     const inpunchLocator = this.page.locator(`[id="${formattedIndex}_inpunch"]`);
-    //     const outpunchLocator = this.page.locator(`[id="${formattedIndex}_outpunch"]`);
-    //     const addButtonLocator = this.page.locator(`[id="${formattedIndex}_add"] span`);
-
-    //     // Perform the punch-in and punch-out actions
-    //     await inpunchLocator.click();
-    //     await this.page.getByRole('textbox').fill(inpunch.toString());
-    //     await outpunchLocator.click();
-    //     await this.page.getByRole('textbox').fill(outpunch.toString());
-
-    //     // Handle the "add time" condition
-    //     if (addTime) {
-    //         await addButtonLocator.click();
-    //     } else {
-    //         // Increment the index and format it again
-    //         index = index + 1;
-    //         const formattedNextIndex = index >= 10 ? `\\3${Math.floor(index / 10)} ${index % 10}` : `\\3${index}`;
-    //         await this.page.locator(`[id="${formattedNextIndex}_inpunch"]`).dblclick();
-    //         await this.page.waitForTimeout(3000);
-    //     }
-    // }
 
     async punchTime(index: number, inpunch: string, outpunch: string, addTime?: boolean): Promise<void> {
         // Format the index for locators based on the value of index
@@ -145,14 +116,6 @@ export class WFMTimecardPage extends WebActions {
     }
 
 
-    async randomClick(index: number) {
-        index = index + 1;
-        const formattedNextIndex = index >= 10 ? `\\3${Math.floor(index / 10)} ${index % 10}` : `\\3${index}`;
-        if (await this.page.locator(`[id="${formattedNextIndex}_inpunch"]`).count() > 0) {
-            await this.page.locator(`[id="${formattedNextIndex}_inpunch"]`).dblclick();
-        }
-    }
-
 
     async editPunchFillandApply(inputString: string, selectPunch: string): Promise<string> {
         await this.page.waitForTimeout(1000);
@@ -171,7 +134,7 @@ export class WFMTimecardPage extends WebActions {
         if (await alertMsg.isVisible()) {
             const alertPopupMsg = await alertMsg.allInnerTexts();
             console.log(alertPopupMsg);
-            const error1 = alertPopupMsg + "& find failed Screenshot Path:->" + super.takeScreenShot();
+            const error1 = alertPopupMsg + "& find failed Screenshot Path:->" + String(await super.takeScreenShot());
             await this.page.waitForTimeout(1000);
             await this.page.locator('//div[@class="text-right"]//button[text()="Cancel" and @id="punch_cancel" ]').click();
             if (alertPopupMsg !== null) {
@@ -180,11 +143,11 @@ export class WFMTimecardPage extends WebActions {
         }
     }
 
-  /*
-  @Auther: Madhukar Kirkan
-  @Description: This function is used to fill Punch In-Out by selecting from the listview and returns any error messages.
-  @Date: 27/11/2024
-*/
+    /*
+    @Auther: Madhukar Kirkan
+    @Description: This function is used to fill Punch In-Out by selecting from the listview and returns any error messages.
+    @Date: 27/11/2024
+  */
     async pucnInPunchOutByDate(date: string, punchIn: string, punchOut: string, punchIn2: string, punchOut2: string): Promise<string> {
 
         // const btnPreviousDay = this.page.getByLabel('Previous Day');
@@ -201,8 +164,6 @@ export class WFMTimecardPage extends WebActions {
         const btnSave = this.page.getByRole('button', { name: 'Save' });
         const btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
         // const btnLoadMore = this.page.locator('(//*[text()="Load More"]/parent::button[@type="button"])[1]');
-
-
         // Tue 10/01
         let dateArray = date.split(" ");
         const weekday = dateArray[0].trim();
@@ -214,7 +175,6 @@ export class WFMTimecardPage extends WebActions {
         const selectListViewForPucnhInOut = this.page.locator("//div[@class='tk-calendar-box']//div[contains(text(),'" + weekday + "')]/following-sibling::div[contains(text(),'" + dateDigit + "')]");
         //--------------------------------------------------------------------------------------------------------
         try {
-
             const punchValues = [punchIn, punchOut, punchIn2, punchOut2];
             const isAnyDefined = punchValues.some(value => value !== null && value !== undefined && value !== '');
             await this.page.waitForTimeout(500);
@@ -225,14 +185,13 @@ export class WFMTimecardPage extends WebActions {
                     await btnLoadMore.scrollIntoViewIfNeeded();
                     await btnLoadMore.click();
                 }
-
                 if (await selectListViewForPucnhInOut.count() > 0) {
                     await selectListViewForPucnhInOut.click();
                     await this.page.waitForTimeout(500);
                     if (punchIn !== '' && punchIn !== undefined && punchIn !== null) {
                         await txtInPunch.fill(punchIn);
                         await this.page.keyboard.press("Tab");
-                        await this.page.waitForTimeout(500);
+                        //await this.page.waitForTimeout(500);
                     }
                     if (punchOut !== '' && punchOut !== undefined && punchOut !== null) {
                         if (punchIn !== null && punchIn !== '') {
@@ -244,18 +203,18 @@ export class WFMTimecardPage extends WebActions {
                                 await this.page.waitForTimeout(500);
                                 await txtOutPunch2.fill(punchOut);
                                 await this.page.keyboard.press("Tab");
-                                await this.page.waitForTimeout(500);
+                                //await this.page.waitForTimeout(500);
                             } else {
                                 await this.page.waitForTimeout(500);
                                 await txtOutPunch.fill(punchOut);
                                 await this.page.keyboard.press("Tab");
-                                await this.page.waitForTimeout(500);
+                                //await this.page.waitForTimeout(500);
                             }
                         } else {
                             await this.page.waitForTimeout(500);
                             await txtOutPunch.fill(punchOut);
                             await this.page.keyboard.press("Tab");
-                            await this.page.waitForTimeout(500);
+                            //await this.page.waitForTimeout(500);
                         }
                     }
                     if ((punchIn !== '' && punchIn !== undefined && punchIn !== null) || (punchOut !== '' && punchOut !== undefined && punchOut !== null) && (punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
@@ -275,11 +234,11 @@ export class WFMTimecardPage extends WebActions {
                             if (punchInNumber > 14 && punchInNumber < 15) {
                                 await txtOutPunch21.fill(punchOut2);
                                 await this.page.keyboard.press("Tab");
-                                await this.page.waitForTimeout(500);
+                                // await this.page.waitForTimeout(500);
                             } else if ((punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
                                 await txtOutPunch2.fill(punchOut2);
                                 await this.page.keyboard.press("Tab");
-                                await this.page.waitForTimeout(500);
+                                // await this.page.waitForTimeout(500);
                             }
 
                         } else if ((punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
@@ -294,8 +253,7 @@ export class WFMTimecardPage extends WebActions {
                             if ((punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
                                 await txtInPunch2.fill(punchIn2);
                                 await this.page.keyboard.press("Tab");
-                                await this.page.waitForTimeout(500);
-
+                                // await this.page.waitForTimeout(500);
                             }
                         }
                     } else if ((punchIn !== '' && punchIn !== undefined && punchIn !== null) || (punchOut !== '' && punchOut !== undefined && punchOut !== null) && (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
@@ -307,8 +265,7 @@ export class WFMTimecardPage extends WebActions {
                             if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
                                 new throws(error);
                             }
-                            await this.page.waitForTimeout(1000);
-
+                            await this.page.waitForTimeout(700);
                             if ((punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
                                 await txtInPunch2.fill(punchIn2);
                                 await this.page.keyboard.press("Tab");
@@ -333,55 +290,61 @@ export class WFMTimecardPage extends WebActions {
                                     await this.page.waitForTimeout(500);
                                     await txtOutPunch21.fill(punchOut2);
                                     await this.page.keyboard.press("Tab");
-                                    await this.page.waitForTimeout(500);
+                                    //await this.page.waitForTimeout(500);
                                 } else {
                                     await this.page.waitForTimeout(500);
                                     await txtOutPunch.fill(punchOut2);
                                     await this.page.keyboard.press("Tab");
-                                    await this.page.waitForTimeout(500);
+                                    // await this.page.waitForTimeout(500);
                                 }
                             } else {
                                 await this.page.waitForTimeout(500);
                                 await txtOutPunch2.fill(punchOut2);
                                 await this.page.keyboard.press("Tab");
-                                await this.page.waitForTimeout(500);
+                                //await this.page.waitForTimeout(500);
                             }
                         }
                     }
                     await this.page.waitForTimeout(500);
                     await btnSave.click();
-
+                    await this.page.waitForTimeout(500);
                     const errorCheck = await this.page.locator('(//div[@class="multiple-lines-wrap"])[1]');
                     if (await errorCheck.isVisible()) {
                         errorMsgafterSave = "" + errorCheck.allInnerTexts();
-                        errorMsgafterSave = errorMsgafterSave + "find failed screenshot --> " + super.takeScreenShot();
+                        errorMsgafterSave = errorMsgafterSave + "& find failed screenshot --> " + String(await super.takeScreenShot());
                     }
                     if (errorMsgafterSave !== undefined && errorMsgafterSave !== null && errorMsgafterSave !== '') {
                         new throws(error);
                     } else {
                         return "Passed";
                     }
-
                 }
             } else {
-                return resultMsgError = "Failed : " + resultMsgError + " No Entries or testdata issue";
+                return resultMsgError = "Failed : " + resultMsgError + " No valid entries or test data issue.";
             }
         } catch (error) {
             console.log(error);
-
-            await this.page.waitForTimeout(1000);
-            if (await this.page.locator('(//div[@class="text-right"]//button[text()="Cancel"])[1]').isVisible()) {
-                await this.page.locator('(//div[@class="text-right"]//button[text()="Cancel"])[1]').click();
+            const btncancel = await this.page.locator('(//div[@class="text-right"]//button[text()="Cancel"])[1]');
+            const btnYes = await this.page.locator('//button[@aria-label="Yes"]');
+            await this.page.waitForTimeout(500);
+            if (await btncancel.isVisible()) {
+                await btncancel.click();
                 await this.page.waitForTimeout(500);
-                await this.page.locator('//button[@aria-label="Yes"]').click();
+                if (await btnYes.isVisible()) {
+                    await this.page.waitForTimeout(500);
+                    await btnYes.click();
+                } else {
+                    if (await btncancel.isVisible()) {
+                        await btncancel.click();
+                        await this.page.waitForTimeout(500);
+                        await btnYes.click();
+                    }
+                }
             }
             if (resultMsgError !== undefined && resultMsgError !== null && resultMsgError !== '') {
-
                 return "Failed : " + resultMsgError;
             } else if (errorMsgafterSave !== undefined && errorMsgafterSave !== null && errorMsgafterSave !== '') {
-
                 return "Failed : " + errorMsgafterSave;
-
             }
 
         }

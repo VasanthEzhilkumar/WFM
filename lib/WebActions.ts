@@ -5,6 +5,7 @@ import { BrowserContext, expect } from '@playwright/test';
 import { Workbook } from 'exceljs';
 import { testConfig } from '../testConfig';
 import * as pdfjslib from 'pdfjs-dist-es5';
+import { describe } from 'node:test';
 
 export class WebActions {
     readonly page: Page;
@@ -63,12 +64,17 @@ export class WebActions {
         return pageText;
     }
 
+    /*
+    @Auther: Madhukar Kirkan
+    @Description : This function is used to take screenshot and will return screenshot of failed testcases.
+    @Date : 27/11/2024
+    */
     async takeScreenShot(): Promise<string> {
         const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
         // Take a screenshot and save it with a specific name
-        const screenshotPath = process.cwd() + "/WFMFailedScreenShot/" + timestamp + ".png";
+        const screenshotPath = process.cwd() + "\\WFMFailedScreenShot\\" + timestamp + ".png";
         await this.page.screenshot({ path: screenshotPath });
-        return screenshotPath;
+        return screenshotPath.toString();
     }
 
     async getPDFText(filePath: any): Promise<string> {
