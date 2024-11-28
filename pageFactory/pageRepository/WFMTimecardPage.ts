@@ -15,6 +15,15 @@ export class WFMTimecardPage extends WebActions {
     readonly EMP_NAME: Locator;
     readonly TIMECARD_SAVE: Locator;
     readonly TIMECARD_TOTAL: Locator
+    //Loctors for punch in -out
+    readonly txtInPunch: Locator;
+    readonly txtInPunch2: Locator;
+    readonly txtOutPunch: Locator;
+    readonly txtOutPunch2: Locator;
+    readonly txtOutPunch21: Locator;
+    readonly btnAddPunch: Locator;
+    readonly btnSave: Locator;
+    readonly btnLoadMore: Locator;
     ariaLabel: string;
 
 
@@ -31,6 +40,15 @@ export class WFMTimecardPage extends WebActions {
         this.EMP_NAME = page.locator('[personnumber="80010054"]');
         this.TIMECARD_SAVE = page.getByTitle('Save').locator('div').nth(1);
         this.TIMECARD_TOTAL = page.getByRole('tab', { name: 'Totals' });
+        //locators for punch in-out
+        this.txtInPunch = this.page.locator('#segment0inPunch');
+        this.txtInPunch2 = this.page.locator('#segment1inPunch');
+        this.txtOutPunch = this.page.locator('#segment0outPunch');
+        this.txtOutPunch2 = this.page.locator('//input[@id="segment1outPunch"]');
+        this.txtOutPunch21 = this.page.locator('//input[@id="segment2outPunch"]');
+        this.btnAddPunch = this.page.getByRole('button', { name: 'Add Punch' });
+        this.btnSave = this.page.getByRole('button', { name: 'Save' });
+        this.btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
     }
 
     async SearchEMP_Timecard(EmpName: string): Promise<void> {
@@ -122,20 +140,20 @@ export class WFMTimecardPage extends WebActions {
         await this.page.locator('//div[@data-component="timeComponent"]//input[@id="punch-effective-time_inptext"]').focus();
         await this.page.waitForTimeout(1000);
         await this.page.locator('//div[@data-component="timeComponent"]//input[@id="punch-effective-time_inptext"]').fill(inputString);
-        await this.page.waitForTimeout(1000);
+        // await this.page.waitForTimeout(1000);
         await this.page.keyboard.press('Tab');
         await this.page.locator('//button[@type="button" and @aria-labelledby="punch-editor-override-label"]').click({ 'force': true });
         await this.page.locator("//a/span[text() ='" + selectPunch + "']").scrollIntoViewIfNeeded();
         await this.page.locator("//a/span[text() ='" + selectPunch + "']").click();
         await this.page.getByRole('button', { name: 'Apply' }).click({ 'force': true });
-        await this.page.waitForTimeout(1000);
+        // await this.page.waitForTimeout(1000);
         const alertMsg = await this.page.locator('//div[@class="msg-wrapper alert alert-error"or @class="inline-error"]');
         await this.page.waitForTimeout(1000);
         if (await alertMsg.isVisible()) {
             const alertPopupMsg = await alertMsg.allInnerTexts();
             console.log(alertPopupMsg);
             const error1 = alertPopupMsg + "& find failed Screenshot Path:->" + String(await super.takeScreenShot());
-            await this.page.waitForTimeout(1000);
+            // await this.page.waitForTimeout(1000);
             await this.page.locator('//div[@class="text-right"]//button[text()="Cancel" and @id="punch_cancel" ]').click();
             if (alertPopupMsg !== null) {
                 return error1;
@@ -150,21 +168,7 @@ export class WFMTimecardPage extends WebActions {
   */
     async pucnInPunchOutByDate(date: string, punchIn: string, punchOut: string, punchIn2: string, punchOut2: string): Promise<string> {
 
-        // const btnPreviousDay = this.page.getByLabel('Previous Day');
-        // const btnNextDay = this.page.getByLabel('Next Day');
-        const txtInPunch = this.page.locator('#segment0inPunch');
-        const txtInPunch2 = this.page.locator('#segment1inPunch');
-        const txtOutPunch = this.page.locator('#segment0outPunch');
-        const txtOutPunch2 = this.page.locator('//input[@id="segment1outPunch"]');
-        const txtOutPunch21 = this.page.locator('//input[@id="segment2outPunch"]');
-        const btnAddPunch = this.page.getByRole('button', { name: 'Add Punch' });
-        // const dropDownSelect = this.page.locator('#punch-editor-override_inptxt');
-        // const btnApply = this.page.getByRole('button', { name: 'Apply' });
-        // const txtDate = this.page.getByText('10/03/');
-        const btnSave = this.page.getByRole('button', { name: 'Save' });
-        const btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
-        // const btnLoadMore = this.page.locator('(//*[text()="Load More"]/parent::button[@type="button"])[1]');
-        // Tue 10/01
+
         let dateArray = date.split(" ");
         const weekday = dateArray[0].trim();
         let month = dateArray[1].split("/")[0].trim();
@@ -180,16 +184,21 @@ export class WFMTimecardPage extends WebActions {
             await this.page.waitForTimeout(500);
             if (isAnyDefined) {
                 await this.page.waitForTimeout(1000);
-                if (await btnLoadMore.count() > 0 && await btnLoadMore.count()) {
-                    await this.page.waitForTimeout(500);
-                    await btnLoadMore.scrollIntoViewIfNeeded();
-                    await btnLoadMore.click();
+                if (await selectListViewForPucnhInOut.count() > 0) {
+                    console.log("List view for punch In-Out is present on screen");
+                } else {
+                    if (await this.btnLoadMore.count() > 0) {
+                        await this.page.waitForTimeout(500);
+                        await this.btnLoadMore.scrollIntoViewIfNeeded();
+                        await this.btnLoadMore.click();
+                    }
                 }
+
                 if (await selectListViewForPucnhInOut.count() > 0) {
                     await selectListViewForPucnhInOut.click();
-                    await this.page.waitForTimeout(500);
+                    // await this.page.waitForTimeout(500);
                     if (punchIn !== '' && punchIn !== undefined && punchIn !== null) {
-                        await txtInPunch.fill(punchIn);
+                        await this.txtInPunch.fill(punchIn);
                         await this.page.keyboard.press("Tab");
                         //await this.page.waitForTimeout(500);
                     }
@@ -200,19 +209,19 @@ export class WFMTimecardPage extends WebActions {
                             // Combine hours and minutes into a decimal number (e.g., 9 + 16/60 = 9.2666...)
                             let punchInNumber = hours + minutes / 60;
                             if (punchInNumber > 9) {
-                                await this.page.waitForTimeout(500);
-                                await txtOutPunch2.fill(punchOut);
+                                // await this.page.waitForTimeout(500);
+                                await this.txtOutPunch2.fill(punchOut);
                                 await this.page.keyboard.press("Tab");
                                 //await this.page.waitForTimeout(500);
                             } else {
-                                await this.page.waitForTimeout(500);
-                                await txtOutPunch.fill(punchOut);
+                                // await this.page.waitForTimeout(500);
+                                await this.txtOutPunch.fill(punchOut);
                                 await this.page.keyboard.press("Tab");
                                 //await this.page.waitForTimeout(500);
                             }
                         } else {
-                            await this.page.waitForTimeout(500);
-                            await txtOutPunch.fill(punchOut);
+                            // await this.page.waitForTimeout(500);
+                            await this.txtOutPunch.fill(punchOut);
                             await this.page.keyboard.press("Tab");
                             //await this.page.waitForTimeout(500);
                         }
@@ -220,7 +229,7 @@ export class WFMTimecardPage extends WebActions {
                     if ((punchIn !== '' && punchIn !== undefined && punchIn !== null) || (punchOut !== '' && punchOut !== undefined && punchOut !== null) && (punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
                         if (punchIn2 !== '' && punchIn2 !== null) {
                             await this.page.waitForTimeout(1500);
-                            await btnAddPunch.click();
+                            await this.btnAddPunch.click();
                             await this.page.waitForTimeout(500);
                             resultMsgError = await this.editPunchFillandApply(punchIn2, "In Punch");
                             if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
@@ -232,26 +241,26 @@ export class WFMTimecardPage extends WebActions {
                             // Combine hours and minutes into a decimal number (e.g., 9 + 16/60 = 9.2666...)
                             let punchInNumber = hours + minutes / 60;
                             if (punchInNumber > 14 && punchInNumber < 15) {
-                                await txtOutPunch21.fill(punchOut2);
+                                await this.txtOutPunch21.fill(punchOut2);
                                 await this.page.keyboard.press("Tab");
                                 // await this.page.waitForTimeout(500);
                             } else if ((punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
-                                await txtOutPunch2.fill(punchOut2);
+                                await this.txtOutPunch2.fill(punchOut2);
                                 await this.page.keyboard.press("Tab");
                                 // await this.page.waitForTimeout(500);
                             }
 
                         } else if ((punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
                             await this.page.waitForTimeout(1500);
-                            await btnAddPunch.click();
+                            await this.btnAddPunch.click();
                             await this.page.waitForTimeout(500);
                             resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
                             if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
                                 new throws(error);
                             }
-                            await this.page.waitForTimeout(1000);
+                            // await this.page.waitForTimeout(1000);
                             if ((punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
-                                await txtInPunch2.fill(punchIn2);
+                                await this.txtInPunch2.fill(punchIn2);
                                 await this.page.keyboard.press("Tab");
                                 // await this.page.waitForTimeout(500);
                             }
@@ -259,25 +268,25 @@ export class WFMTimecardPage extends WebActions {
                     } else if ((punchIn !== '' && punchIn !== undefined && punchIn !== null) || (punchOut !== '' && punchOut !== undefined && punchOut !== null) && (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
                         if (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null) {
                             await this.page.waitForTimeout(1500);
-                            await btnAddPunch.click();
+                            await this.btnAddPunch.click();
                             await this.page.waitForTimeout(500);
                             resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
                             if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
                                 new throws(error);
                             }
-                            await this.page.waitForTimeout(700);
+                            // await this.page.waitForTimeout(700);
                             if ((punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
-                                await txtInPunch2.fill(punchIn2);
+                                await this.txtInPunch2.fill(punchIn2);
                                 await this.page.keyboard.press("Tab");
-                                await this.page.waitForTimeout(500);
+                                // await this.page.waitForTimeout(500);
                             }
                         }
                     }
                     if ((punchIn === '' || punchIn === null) && (punchOut === '' || punchOut === null)) {
 
                         if (punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null) {
-                            await this.page.waitForTimeout(500);
-                            await txtInPunch.fill(punchIn2);
+                            // await this.page.waitForTimeout(500);
+                            await this.txtInPunch.fill(punchIn2);
                             await this.page.keyboard.press("Tab");
                         }
                         if (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null) {
@@ -287,26 +296,26 @@ export class WFMTimecardPage extends WebActions {
                                 // Combine hours and minutes into a decimal number (e.g., 9 + 16/60 = 9.2666...)
                                 let punchInNumber = hours + minutes / 60;
                                 if (punchInNumber > 9 || punchInNumber > 14) {
-                                    await this.page.waitForTimeout(500);
-                                    await txtOutPunch21.fill(punchOut2);
+                                    // await this.page.waitForTimeout(500);
+                                    await this.txtOutPunch21.fill(punchOut2);
                                     await this.page.keyboard.press("Tab");
                                     //await this.page.waitForTimeout(500);
                                 } else {
-                                    await this.page.waitForTimeout(500);
-                                    await txtOutPunch.fill(punchOut2);
+                                    // await this.page.waitForTimeout(500);
+                                    await this.txtOutPunch.fill(punchOut2);
                                     await this.page.keyboard.press("Tab");
                                     // await this.page.waitForTimeout(500);
                                 }
                             } else {
-                                await this.page.waitForTimeout(500);
-                                await txtOutPunch2.fill(punchOut2);
+                                // await this.page.waitForTimeout(500);
+                                await this.txtOutPunch2.fill(punchOut2);
                                 await this.page.keyboard.press("Tab");
                                 //await this.page.waitForTimeout(500);
                             }
                         }
                     }
                     await this.page.waitForTimeout(500);
-                    await btnSave.click();
+                    await this.btnSave.click();
                     await this.page.waitForTimeout(500);
                     const errorCheck = await this.page.locator('(//div[@class="multiple-lines-wrap"])[1]');
                     if (await errorCheck.isVisible()) {
