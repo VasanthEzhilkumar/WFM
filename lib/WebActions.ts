@@ -5,6 +5,7 @@ import { BrowserContext, expect } from '@playwright/test';
 import { Workbook } from 'exceljs';
 import { testConfig } from '../testConfig';
 import * as pdfjslib from 'pdfjs-dist-es5';
+import { describe } from 'node:test';
 
 export class WebActions {
     readonly page: Page;
@@ -63,28 +64,41 @@ export class WebActions {
         return pageText;
     }
 
+    /*
+    @Auther: Madhukar Kirkan
+    @Description : This function is used to take screenshot and will return screenshot of failed testcases.
+    @Date : 27/11/2024
+    */
+    async takeScreenShot(): Promise<string> {
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+        // Take a screenshot and save it with a specific name
+        const screenshotPath = process.cwd() + "\\WFMFailedScreenShot\\" + timestamp + ".png";
+        await this.page.screenshot({ path: screenshotPath });
+        return screenshotPath.toString();
+    }
+
     async getPDFText(filePath: any): Promise<string> {
         const dataBuffer = fs.readFileSync(filePath);
         const pdf = await pdfjslib.getDocument(dataBuffer).promise;
         const maxPages = pdf.numPages;
         const pageTextPromises = [];
         for (let pageNo = 1; pageNo <= maxPages; pageNo += 1) {
-          pageTextPromises.push(this.getPdfPageText(pdf, pageNo));
+            pageTextPromises.push(this.getPdfPageText(pdf, pageNo));
         }
         const pageTexts = await Promise.all(pageTextPromises);
         return pageTexts.join(' ');
-      }
+    }
 
-      async getEmployeeName(empNumber: string): Promise<string | null> {
+    async getEmployeeName(empNumber: string): Promise<string | null> {
         const EMP_NAME = this.page.locator(`[personnumber="${empNumber}"]`);
         const ariaLabel = await EMP_NAME.getAttribute('aria-label');
-        
+
         if (!ariaLabel) {
             console.error(`No element found with personnumber: ${empNumber}`);
             return null;
         }
-    
+
         return ariaLabel.toString();
-      }
+    }
 
 }
