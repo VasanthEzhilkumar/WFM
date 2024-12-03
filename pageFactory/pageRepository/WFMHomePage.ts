@@ -7,7 +7,7 @@ import exp from 'constants';
 
 
 
-export class WFMHomePage {
+export class WFMHomePage extends WebActions {
     readonly page: Page;
     readonly context: BrowserContext;
     readonly MANAGESCHEDULE: Locator;
@@ -40,12 +40,21 @@ export class WFMHomePage {
     readonly runIntegration: Locator;
     readonly selectIntegrationslovakia: Locator;
     readonly dataViewReports: Locator;
-    readonly reportLibrary:Locator
+    readonly reportLibrary: Locator;
+    readonly administrationMenu: Locator;
+    readonly dataImportToolLink: Locator;
+    readonly importExportDataMenu: Locator;
+    readonly dataShift: Locator;
+    readonly viewTempplateLink: Locator;
+    readonly openFilelink: Locator;
+    readonly btnChooseFile: Locator;
+    readonly btnrefresh: Locator;
 
 
 
 
     constructor(page: Page, context: BrowserContext) {
+        super(page, context);
         this.page = page;
         this.context = context;
         this.TIMECARDS = page.getByRole('link', { name: 'All Timecards' })
@@ -77,6 +86,14 @@ export class WFMHomePage {
         this.selectIntegrationslovakia = page.getByRole('dialog').getByRole('list').locator('div').filter({ hasText: 'Payroll Export - Slovakia' }).nth(4)
         this.dataViewReports = page.getByLabel('Dataviews & Reports Menu');
         this.reportLibrary = page.getByLabel('Report Library link');
+        this.administrationMenu = page.getByLabel('Administration Menu');
+        this.dataImportToolLink = page.getByLabel('Data Import Tool link');
+        this.importExportDataMenu = page.locator("(//button[@aria-label='Import/Export Data Menu'])[1]");
+        this.dataShift = page.getByText('CloseCancel Data - Shift');
+        this.viewTempplateLink = page.getByLabel('View Template');
+        this.openFilelink = page.getByLabel('Open File');
+        this.btnChooseFile = page.getByRole('button', { name: 'Choose File' });
+        this.btnrefresh = page.getByLabel('{{ lastRefreshOn }}');
     }
 
     async clickonTimeCard(): Promise<void> {
@@ -101,11 +118,11 @@ export class WFMHomePage {
         await this.SCHEDULEPLANNERLINK.click()
     }
 
-    async openMaintenanceMenu(): Promise<void>{
+    async openMaintenanceMenu(): Promise<void> {
         await this.maintenanaceMainMenu.click();
     }
 
-    async openReportView(): Promise<void>{
+    async openReportView(): Promise<void> {
         await this.dataViewReports.click();
         await this.reportLibrary.click();
     }
@@ -124,6 +141,69 @@ export class WFMHomePage {
 
     async clicktimeoff(): Promise<void> {
         await this.timeOff.click()
+    }
+
+    async clickAdministrationAndOpenDataImportLink() {
+        await this.administrationMenu.click()
+        await this.dataImportToolLink.click()
+    }
+
+    // const frames = tab.frames();
+    // for (const frame of frames) {
+    //     const iframeElement = await frame.getByLabel('{{ lastRefreshOn }}');
+    //     if (await iframeElement.isVisible()) {
+    //         await iframeElement.click();
+    //     }
+    // }
+
+    async clickImportExportData(filePath: string) {
+        try {
+            const tab = await super.switchBetweenTabs("Data Import Tool");
+            // await tab.locator("(//button[@aria-label='Import/Export Data Menu'])[1]").focus();
+            await tab.locator("(//button[@aria-label='Import/Export Data Menu'])[1]").click();
+            await tab.getByText('CloseCancel AOID COID Import').click();
+            await this.page.waitForTimeout(2000);
+            await tab.getByLabel('demo-tree').getByText('Data - Shift').click();
+            await this.page.waitForTimeout(2000);
+            await tab.getByLabel('View Template').click();
+            await this.page.waitForTimeout(500);
+            await tab.getByLabel('Open File').click();
+            await this.page.waitForTimeout(500);
+
+            // Click the button that triggers the file input dialog
+            const uploadButton = await tab.locator("//*[text()='Choose File']/ancestor::button[@role='button']");
+            await uploadButton.click();
+            await super.uploadFile("");
+            
+            // Locate the hidden file input element
+            // const fileInput = await tab.locator("//*[text()='Choose File']/ancestor::button[@role='button']");
+
+            // Define the path to the file you want to upload
+            // const filePath1 = filePath.resolve(__dirname, 'H:WFM/Data.txt'); // Replace with the correct file path
+
+            // Set the file input value (simulate file selection)
+            // await fileInput.setInputFiles(filePath);
+
+        } catch (error) {
+            console.error();
+        }
+
+    }
+
+    async selectATemplateToImportData() {
+        await this.dataShift.click()
+        await this.page.waitForTimeout(2000);
+        await this.viewTempplateLink.click();
+    }
+
+    async clickOnOpenFile() {
+
+        await this.dataShift.click()
+        await this.page.waitForTimeout(2000);
+        await this.viewTempplateLink.click();
+        await this.page.waitForTimeout(2000);
+        await this.btnChooseFile.click();
+        await this.page.waitForTimeout(2000);
     }
 
     async enterTimeoffDetails(payCode: string): Promise<void> {
