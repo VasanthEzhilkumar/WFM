@@ -1,9 +1,9 @@
 import test from '@lib/BaseTest';
-import { getEmployeeNumbers, writeResultsToExcel, writeResultToExcel } from '@lib/Excel';
+import { getEmployeeNumbers, writeResultToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import * as path from 'path';
 
-const excelFileName = 'RuleTypeValidation_Amy2.xlsx';
+const excelFileName = 'ScheduleImport_Test.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 const results: { empNumber: string, ruleViolations: string[] }[] = [];
@@ -13,10 +13,9 @@ for (const sheetName in sheetsJson) {
 
     dataSet.forEach((data, index) => {
         // Create a unique title by appending the sheet name and the index
-        const testTitle = `@WFM SchedulePanner Import for ${data.TestCases}`;
+        const testTitle = `@WFM schedule planner import(Auto) for ${data.TestCases || `Testcases ${index + 1}`} in sheet ${sheetName} (Row ${index + 1})`;
 
-        test(`@WFM Schedule Planner Import (Auto) for ${data.TestCases}`, async ({ loginPage, wfmhomepage }) => {
-
+        test(testTitle, async ({ loginPage, wfmhomepage }) => {
             await test.step('Navigate to Application', async () => {
                 await loginPage.navigateToURL();
             });
@@ -34,11 +33,10 @@ for (const sheetName in sheetsJson) {
 
             await test.step('Open Import/ Export and Upload File', async () => {
                 //  const result = await wfmhomepage.clickImportExportData("H:\\WFM\\Data\\Emp_ImportData.csv");
-                const result = await wfmhomepage.clickImportExportData(data.filePaths);
+                const result = await wfmhomepage.clickImportExportData(data.FilePaths);
                 //const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, data.EmpNum, data.Date);
                 await writeResultToExcel(excelFilePath, sheetName, index + 1, result, 'TestResult');
             });
-
         });
     });
 }
