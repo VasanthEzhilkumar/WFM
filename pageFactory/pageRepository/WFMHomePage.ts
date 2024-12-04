@@ -4,6 +4,7 @@ import { testConfig } from '../../testConfig';
 import { PrimaryExpression, forEachChild } from 'typescript';
 import moment from 'moment';
 import exp from 'constants';
+import { clear } from 'console';
 
 
 
@@ -40,7 +41,9 @@ export class WFMHomePage {
     readonly runIntegration: Locator;
     readonly selectIntegrationslovakia: Locator;
     readonly dataViewReports: Locator;
-    readonly reportLibrary:Locator
+    readonly reportLibrary: Locator
+    readonly addshift: Locator;
+
 
 
 
@@ -77,6 +80,8 @@ export class WFMHomePage {
         this.selectIntegrationslovakia = page.getByRole('dialog').getByRole('list').locator('div').filter({ hasText: 'Payroll Export - Slovakia' }).nth(4)
         this.dataViewReports = page.getByLabel('Dataviews & Reports Menu');
         this.reportLibrary = page.getByLabel('Report Library link');
+        this.addshift = page.getByRole('button', { name: 'Add Shift' });
+
     }
 
     async clickonTimeCard(): Promise<void> {
@@ -101,11 +106,11 @@ export class WFMHomePage {
         await this.SCHEDULEPLANNERLINK.click()
     }
 
-    async openMaintenanceMenu(): Promise<void>{
+    async openMaintenanceMenu(): Promise<void> {
         await this.maintenanaceMainMenu.click();
     }
 
-    async openReportView(): Promise<void>{
+    async openReportView(): Promise<void> {
         await this.dataViewReports.click();
         await this.reportLibrary.click();
     }
@@ -290,4 +295,64 @@ export class WFMHomePage {
         await this.page.waitForLoadState('domcontentloaded');
 
     }
+    async clickAddShift(): Promise<void> {
+        await this.addshift.click();
+    }
+    async enterstarttimeendtime(ScheduleStartTime: string, ScheduleEndTime: string, START_DATE: string, END_Date: string) {
+        await this.page.waitForTimeout(500);
+
+        await this.page.locator("//input[@id='krntime_start_0_inptext']").clear();
+        await this.page.locator("//input[@id='krntime_start_0_inptext']").type(ScheduleStartTime.toString());
+        await this.page.keyboard.press("Tab");
+        await this.page.waitForTimeout(500);
+        await this.page.getByRole('textbox', { name: 'End Time' }).clear();
+        await this.page.getByRole('textbox', { name: 'End Time' }).fill(ScheduleEndTime.toString());
+        await this.page.keyboard.press("Tab");
+        await this.page.keyboard.press("Enter");
+
+
+
+        if (START_DATE != "NaN" && START_DATE != "N/A" && START_DATE != undefined) {
+            await this.page.getByLabel('Start Date').clear();
+            await this.page.getByLabel('Start Date').fill(START_DATE.toString());
+        }
+        if (END_Date != "NaN" && END_Date != "N/A" && END_Date != undefined) {
+            await this.page.getByLabel('End Date').clear();
+            await this.page.getByLabel('End Date').fill(END_Date.toString());
+        }
+        await this.page.locator("(//button[@id='wfs.addshift.btn.apply'])[1]").click();
+        await this.page.waitForTimeout(500);
+
+        //for Save the schedule front end
+        //await this.page.locator('//i[@class="icon-k-save button-highlight"]').click();
+    }
+
+    //2-24-
+    async validateSchedulePlanner(): Promise<string> {
+        const locator = await this.page.locator("//div[@id='inpage-text-0-']//div[@class='multiple-lines-wrap']");
+
+        // Check if the element is visible
+        const isVisible = await locator.isVisible();
+
+        if (isVisible) {
+            return "Failed" + await locator.allInnerTexts.toString();
+        } else {
+            return "Passed";
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
