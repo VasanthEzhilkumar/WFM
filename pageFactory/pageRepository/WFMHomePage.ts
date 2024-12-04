@@ -166,8 +166,8 @@ export class WFMHomePage extends WebActions {
             // Click the button that triggers the file input dialog
             const uploadButton = await tab.locator("//*[text()='Choose File']/ancestor::button[@role='button']");
             await uploadButton.click();
-            //await this.page.waitForTimeout(2000);
-            await this.page.waitForEvent("filechooser");
+            await this.page.waitForTimeout(2000);
+            //await this.page.waitForEvent("filechooser");
             await super.uploadFile(filePath.toString());
             await this.page.waitForTimeout(2000);
             const fileName = filePath.split('\\')[3];

@@ -7050,3 +7050,8 @@
 {"level":"info","message":"Executing Step : Login into WFM Application"}
 {"level":"info","message":"Executing Step : click on Administration from Menu And Open DataImport tool "}
 {"level":"info","message":"Executing Step : Open Import/ Export and Upload File"}
+{"level":"info","message":"Test Case Started : @WFM schedule planner import(Auto) for Test_1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : click on Administration from Menu And Open DataImport tool "}
+{"level":"info","message":"Executing Step : Open Import/ Export and Upload File"}
