@@ -6637,3 +6637,411 @@
 {"level":"info","message":"Executing Step : Navigate to Application"}
 {"level":"info","message":"Executing Step : Login into WFM Application"}
 {"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Completed : @WFM Schedule Import for undefined Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Completed : @WFM Schedule Import for undefined Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Completed : @WFM Schedule Import for undefined Status : passed"}
+{"level":"error","message":"Error: Cannot find module 'robotjs'\nRequire stack:\n- H:\\WFM\\pageFactory\\pageRepository\\WFMHomePage.ts\n- H:\\WFM\\lib\\BaseTest.ts\n- H:\\WFM\\tests\\WFM\\WFMScheduleImport.test.ts\n- H:\\WFM\\node_modules\\@playwright\\test\\node_modules\\playwright\\lib\\transform\\transform.js\n- H:\\WFM\\node_modules\\@playwright\\test\\node_modules\\playwright\\lib\\common\\esmLoaderHost.js\n- H:\\WFM\\node_modules\\@playwright\\test\\node_modules\\playwright\\lib\\common\\process.js"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Completed : @WFM Schedule Import for undefined Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Completed : @WFM Schedule Import for undefined Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for Test_1"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : click on Administration from Menu And Open DataImport tool "}
+{"level":"info","message":"Executing Step : Open Import/ Export and Upload File"}
+{"level":"info","message":"Test Case Completed : @WFM Schedule Import for Test_1 Status : failed"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for Test_1"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : click on Administration from Menu And Open DataImport tool "}
+{"level":"info","message":"Executing Step : Open Import/ Export and Upload File"}
+{"level":"info","message":"Test Case Completed : @WFM Schedule Import for Test_1 Status : failed"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for Test_1"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : click on Administration from Menu And Open DataImport tool "}
+{"level":"info","message":"Executing Step : Open Import/ Export and Upload File"}
+{"level":"info","message":"Test Case Completed : @WFM Schedule Import for Test_1 Status : failed"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for Test_1"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : click on Administration from Menu And Open DataImport tool "}
+{"level":"info","message":"Executing Step : Open Import/ Export and Upload File"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Import for Test_1"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : click on Administration from Menu And Open DataImport tool "}
+{"level":"info","message":"Executing Step : Open Import/ Export and Upload File"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"error","message":"Error: duplicate test title \"@WFM Schedule Import(Auto) for \", first declared in tests\\WFM\\WFMScheduleImport.test.ts:22"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Planner Import (Auto) for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : click on Administration from Menu And Open DataImport tool "}
+{"level":"info","message":"Executing Step : Open Import/ Export and Upload File"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Planner Import (Auto) for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : click on Administration from Menu And Open DataImport tool "}
+{"level":"info","message":"Executing Step : Open Import/ Export and Upload File"}

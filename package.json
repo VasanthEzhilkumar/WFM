@@ -39,6 +39,7 @@
     "pdfjs-dist-es5": "^2.13.216",
     "pg": "^8.11.5",
     "playwright": "^1.48.2",
+    "python": "^0.0.4",
     "typescript": "^5.4.5",
     "unzipper": "^0.12.3",
     "winston": "^3.13.0",

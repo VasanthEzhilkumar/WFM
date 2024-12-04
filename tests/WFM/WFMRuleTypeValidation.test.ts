@@ -6,7 +6,6 @@ import * as path from 'path';
 const excelFileName = 'RuleTypeValidation_Amy2.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
-
 const results: { empNumber: string, ruleViolations: string[] }[] = [];
 
 for (const sheetName in sheetsJson) {
@@ -17,7 +16,7 @@ for (const sheetName in sheetsJson) {
         const testTitle = `@WFM Validate Rule type for ${data.EmpNum || `Employee ${index + 1}`} in sheet ${sheetName} (Row ${index + 1})`;
 
         test(testTitle, async ({ loginPage, webActions, wfmhomepage, wfmscheduleplannerpage }) => {
-            await test.step(`Navigate to Application`, async () => {
+            await test.step(`Navigateto Application`, async () => {
                 await loginPage.navigateToURL();
             });
 
@@ -41,7 +40,7 @@ for (const sheetName in sheetsJson) {
 
                 // Ensure ruleViolations is an array
                 const violationArray = Array.isArray(ruleViolations) ? ruleViolations : [ruleViolations];
-                
+
                 results.push({ empNumber: data.EmpNum, ruleViolations: violationArray });
 
                 writeResultsToExcel(excelFilePath, sheetName, index, "", ruleViolations);

@@ -1,14 +1,11 @@
-import { Page, BrowserContext, Locator, expect } from '@playwright/test';
 import { WebActions } from "@lib/WebActions";
-import { testConfig } from '../../testConfig';
-import { PrimaryExpression, forEachChild } from 'typescript';
+import { BrowserContext, Locator, Page, expect } from '@playwright/test';
 import moment from 'moment';
-import exp from 'constants';
-
-
+import { throws } from "node:assert";
+import { error } from "node:console";
 
 export class WFMHomePage extends WebActions {
-    readonly page: Page;
+    public page: Page;
     readonly context: BrowserContext;
     readonly MANAGESCHEDULE: Locator;
     readonly MAINMENU: Locator;
@@ -157,54 +154,42 @@ export class WFMHomePage extends WebActions {
     // }
 
     async clickImportExportData(filePath: string) {
+        let errorMessage = null;
         try {
             const tab = await super.switchBetweenTabs("Data Import Tool");
-            // await tab.locator("(//button[@aria-label='Import/Export Data Menu'])[1]").focus();
+            this.page = tab;
             await tab.locator("(//button[@aria-label='Import/Export Data Menu'])[1]").click();
             await tab.getByText('CloseCancel AOID COID Import').click();
-            await this.page.waitForTimeout(2000);
             await tab.getByLabel('demo-tree').getByText('Data - Shift').click();
-            await this.page.waitForTimeout(2000);
             await tab.getByLabel('View Template').click();
-            await this.page.waitForTimeout(500);
             await tab.getByLabel('Open File').click();
-            await this.page.waitForTimeout(500);
-
             // Click the button that triggers the file input dialog
             const uploadButton = await tab.locator("//*[text()='Choose File']/ancestor::button[@role='button']");
             await uploadButton.click();
-            await super.uploadFile("");
-            
-            // Locate the hidden file input element
-            // const fileInput = await tab.locator("//*[text()='Choose File']/ancestor::button[@role='button']");
+            //await this.page.waitForTimeout(2000);
+            await this.page.waitForEvent("filechooser");
+            await super.uploadFile(filePath.toString());
+            await this.page.waitForTimeout(2000);
+            const fileName = filePath.split('\\')[3];
+            // Optionally, submit the form or verify the success message
+            const successMessage = await tab.locator('//div[contains(@class,"document-list ")]').textContent();
+            errorMessage = await tab.getByText('Supported file type is .csv.').textContent().trim();
 
-            // Define the path to the file you want to upload
-            // const filePath1 = filePath.resolve(__dirname, 'H:WFM/Data.txt'); // Replace with the correct file path
-
-            // Set the file input value (simulate file selection)
-            // await fileInput.setInputFiles(filePath);
-
+            if (await successMessage.includes(fileName) && errorMessage.includes(undefined)) {
+                await expect(successMessage).toHaveText(fileName)
+                await tab.getByLabel('Upload', { exact: true }).click();
+            } else {
+                await tab.getByLabel('Cancel').click();
+                await new throws(error);
+            }
+            return tab;
         } catch (error) {
             console.error();
+            return error + errorMessage;
         }
 
     }
 
-    async selectATemplateToImportData() {
-        await this.dataShift.click()
-        await this.page.waitForTimeout(2000);
-        await this.viewTempplateLink.click();
-    }
-
-    async clickOnOpenFile() {
-
-        await this.dataShift.click()
-        await this.page.waitForTimeout(2000);
-        await this.viewTempplateLink.click();
-        await this.page.waitForTimeout(2000);
-        await this.btnChooseFile.click();
-        await this.page.waitForTimeout(2000);
-    }
 
     async enterTimeoffDetails(payCode: string): Promise<void> {
 

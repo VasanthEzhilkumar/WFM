@@ -107,15 +107,15 @@ export class WebActions {
 
     async uploadFile(filePath: any) {
         // Use Node.js to execute AutoHotkey script (or another external automation tool)
-        exec('H:/WFM/lib/uploadFileScript.ahk', (err, stdout, stderr) => {
+        exec(`"H:\\WFM\\lib\\FileUploadScript\\autoit-v3.1.0\\AutoIt3.exe" "H:\\WFM\\lib\\FileUploadScript\\uploadFilescriptAutoIT.AU3" "${filePath}"`, (err, stdout, stderr) => {
             if (err) {
-                console.error('Error executing AutoHotkey script:', err);
+                console.error('Error executing AutoIT script:', err);
                 return;
             }
-            console.log('AutoHotkey script executed:', stdout);
+            console.log('AutoIT script executed:', stdout);
         });
-
     }
+
     async getPDFText(filePath: any): Promise<string> {
         const dataBuffer = fs.readFileSync(filePath);
         const pdf = await pdfjslib.getDocument(dataBuffer).promise;
