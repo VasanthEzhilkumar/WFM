@@ -35,6 +35,7 @@
     "exceljs": "^4.4.0",
     "momen": "^0.0.1-security",
     "moment": "^2.30.1",
+    "node.js": "^0.0.1-security",
     "npm": "^10.7.0",
     "pdfjs-dist-es5": "^2.13.216",
     "pg": "^8.11.5",

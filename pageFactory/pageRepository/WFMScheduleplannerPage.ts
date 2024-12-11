@@ -32,7 +32,7 @@ export class WFMSchedulePlannerPage {
         this.EMP_RELOAD = page.getByRole('button', { name: ' Reload' });
         this.EMP_Select = page.getByRole('button', { name: 'Select people' });
         this.EMP_Selected = page.getByRole('menu', { name: 'Select people' }).locator('label');
-        this.CurrentPayPeriod=page.getByTitle('Select Timeframe');
+        this.CurrentPayPeriod=page.locator('[id="schedule\\.timeframe\\.selector_timeFrame"]')//page.getByTitle('Select Timeframe');
         this.SelectRange=page.getByRole('button', { name: 'Select Range' });
         this.Apply=page.getByRole('button', { name: 'Apply', exact: true })
 
@@ -69,7 +69,7 @@ export class WFMSchedulePlannerPage {
     }
 
     async setCurrentPayPeriod(StartDate: any , EndDate:any) {
-        await this.page.waitForTimeout(500);
+        await this.page.waitForTimeout(1000);
         await this.CurrentPayPeriod.click();
         await this.page.waitForTimeout(500);
         await this.SelectRange.click();
@@ -96,7 +96,7 @@ export class WFMSchedulePlannerPage {
     }
 
 
-    async SearchEmpRuleViolation(ariaLabel: string, Rule: string, date: string): Promise<string> {
+    async SearchEmpRuleViolation(ariaLabel: string, Rule: string, date: string,exp:string): Promise<string> {
 
         
 
@@ -143,13 +143,31 @@ export class WFMSchedulePlannerPage {
             const cleanedRule = Rule.replace(/[\s,.]+/g, '').toLowerCase();
             const cleanedDescription = trimmedDescription.replace(/[\s,.]+/g, '').toLowerCase();
 
+            //     if (trimmedDate === date && cleanedRule.includes(cleanedDescription)) {
+            //         return 'Passed';
+            //     } 
+
+            // }
+        
+            // return "Failed"
+        
             if (trimmedDate === date && cleanedRule.includes(cleanedDescription)) {
-                return 'Passed';
-            } 
-
+                // if (exp === 'Yes') {
+                //     return 'Passed';
+                // }
+                    // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"
+    return exp === 'Yes' ? 'Passed' : 'Failed';
+            }
         }
-
-        return "Failed"
+                // If the first condition fails, check the value of exp
+                if (exp === 'No') {
+                    return 'Passed';
+                } else {
+                    return 'Failed';
+                }
+                // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"
+    return exp === 'No' ? 'Passed' : 'Failed';
+        
 
 
     }

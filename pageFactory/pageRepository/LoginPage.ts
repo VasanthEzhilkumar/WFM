@@ -66,6 +66,7 @@ export class LoginPage {
 
     async changelanguage(): Promise<void> {
 
+        await this.page.getByRole('link', { name: '' })
         await this.page.getByRole('link', { name: 'American English' }).click();
 
     }
