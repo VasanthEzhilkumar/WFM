@@ -5103,6 +5103,8 @@
 {"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
 {"level":"info","message":"Executing Step : Open schedule Planner page"}
 {"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10648977"}
+<<<<<<< HEAD
+=======
 {"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
 {"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : passed"}
 {"level":"info","message":"Test Case Started : @WFM Time card punch for 10649012"}
@@ -6473,6 +6475,7 @@
 {"level":"info","message":"Executing Step : Open TimeCard page"}
 {"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
 {"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649012 Status : failed"}
+<<<<<<< HEAD
 {"level":"info","message":"Test Case Started : @WFM Schedule Import for undefined"}
 {"level":"info","message":"Executing Step : Navigate to Application"}
 {"level":"info","message":"Executing Step : Login into WFM Application"}
@@ -7509,3 +7512,6 @@
 {"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
 {"level":"info","message":"Executing Step : Validate the Exceptions in Time Card Page after Punch In-Out "}
 {"level":"info","message":"Test Case Completed : @WFM Time card Exceptions for 10649012 Status : passed"}
+=======
+>>>>>>> 27f4b8dde0c19d0b0f625bc7d725e39b29c5f888
+>>>>>>> e175ba28c4f03dfcf11c58d2daa57fb88c47622d
