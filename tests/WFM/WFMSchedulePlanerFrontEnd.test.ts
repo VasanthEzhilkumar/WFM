@@ -1,9 +1,7 @@
 import test from '@lib/BaseTest';
 import { writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
-import { CurrentPayPeriodPage } from 'pageFactory/commonPages/CurrentPayPeriodPage';
 import path from 'path';
-import { expect } from '@playwright/test';
 
 
 // Define the relative directory path to your Excel file

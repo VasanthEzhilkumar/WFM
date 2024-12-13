@@ -1,13 +1,8 @@
 import { WebActions } from "@lib/WebActions";
 import { BrowserContext, Locator, Page, expect } from '@playwright/test';
 import moment from 'moment';
-<<<<<<< HEAD
 import { throws } from "node:assert";
 import { error } from "node:console";
-=======
-import exp from 'constants';
-import { clear } from 'console';
->>>>>>> Gayatri
 
 export class WFMHomePage extends WebActions {
     public page: Page;
@@ -42,7 +37,6 @@ export class WFMHomePage extends WebActions {
     readonly runIntegration: Locator;
     readonly selectIntegrationslovakia: Locator;
     readonly dataViewReports: Locator;
-<<<<<<< HEAD
     readonly reportLibrary: Locator;
     readonly administrationMenu: Locator;
     readonly dataImportToolLink: Locator;
@@ -52,11 +46,9 @@ export class WFMHomePage extends WebActions {
     readonly openFilelink: Locator;
     readonly btnChooseFile: Locator;
     readonly btnrefresh: Locator;
-=======
-    readonly reportLibrary: Locator
+    //readonly reportLibrary: Locator
     readonly addshift: Locator;
 
->>>>>>> Gayatri
 
 
 
@@ -94,7 +86,6 @@ export class WFMHomePage extends WebActions {
         this.selectIntegrationslovakia = page.getByRole('dialog').getByRole('list').locator('div').filter({ hasText: 'Payroll Export - Slovakia' }).nth(4)
         this.dataViewReports = page.getByLabel('Dataviews & Reports Menu');
         this.reportLibrary = page.getByLabel('Report Library link');
-<<<<<<< HEAD
         this.administrationMenu = page.getByLabel('Administration Menu');
         this.dataImportToolLink = page.getByLabel('Data Import Tool link');
         this.importExportDataMenu = page.locator("(//button[@aria-label='Import/Export Data Menu'])[1]");
@@ -103,10 +94,8 @@ export class WFMHomePage extends WebActions {
         this.openFilelink = page.getByLabel('Open File');
         this.btnChooseFile = page.getByRole('button', { name: 'Choose File' });
         this.btnrefresh = page.getByLabel('{{ lastRefreshOn }}');
-=======
         this.addshift = page.getByRole('button', { name: 'Add Shift' });
 
->>>>>>> Gayatri
     }
 
     async clickonTimeCard(): Promise<void> {
