@@ -4,7 +4,7 @@ import { getRowNumberByCellValue, writeResultToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 
 // Define the relative directory path to your Excel file
-const excelFileName = 'TimecardExceptions_Template.xlsx';
+const excelFileName = 'TimecardPunchExceptions.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 // Convert the Excel sheets to JSON format
