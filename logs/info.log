@@ -8265,3 +8265,140 @@
 >>>>>>> e175ba28c4f03dfcf11c58d2daa57fb88c47622d
 =======
 >>>>>>> Gayatri
+{"level":"info","message":"Test Case Started : @WFM Time card Exceptions for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Executing Step : Validate the Exceptions in Time Card Page after Punch In-Out "}
+{"level":"info","message":"Test Case Completed : @WFM Time card Exceptions for 10649012 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card Exceptions for 10649023"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Executing Step : Validate the Exceptions in Time Card Page after Punch In-Out "}
+{"level":"info","message":"Test Case Completed : @WFM Time card Exceptions for 10649023 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 4) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 5)"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 5) Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 4) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 5)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 5) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 6)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 6) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 6)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 6) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 4) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 5)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 5) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 6)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Pay Code and Total for Employee 10649012 in sheet Tabelle1 (Row 6) Status : passed"}
