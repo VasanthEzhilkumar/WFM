@@ -1,8 +1,12 @@
 
 import * as ExcelJS from 'exceljs';
+<<<<<<< HEAD
 import * as path from 'path';
 import * as xlsx from 'xlsx';
 import * as XLSX from 'xlsx';
+=======
+//import * as XLSX from 'xlsx';
+>>>>>>> Gayatri
 
 
 export function getEmployeeNumbers(): string[] {
@@ -118,6 +122,7 @@ export function getEmployeeNumbers(): string[] {
 //       // Set the status in the correct column
 //       statusCell.value = status;
 
+<<<<<<< HEAD
 //       // Apply color formatting based on the status
 //     //   if (status === 'Failed') {
 //     //       statusCell.fill = {
@@ -132,6 +137,8 @@ export function getEmployeeNumbers(): string[] {
 //     //           fgColor: { argb: 'FF00FF00' } // Green color
 //     //       };
 //     //   }
+=======
+>>>>>>> Gayatri
 
 //       row.commit();
 //       await workbook.xlsx.writeFile(filePath);

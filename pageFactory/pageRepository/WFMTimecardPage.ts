@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import { WebActions } from '@lib/WebActions';
 import { BrowserContext, Locator, Page } from '@playwright/test';
 import { throws } from 'assert';
 import { error } from 'console';
+=======
+import { Page, BrowserContext, Locator, expect } from '@playwright/test';
+import { exit } from 'process';
+>>>>>>> Gayatri
 
 
 export class WFMTimecardPage extends WebActions {
@@ -15,6 +20,7 @@ export class WFMTimecardPage extends WebActions {
     readonly EMP_NAME: Locator;
     readonly TIMECARD_SAVE: Locator;
     readonly TIMECARD_TOTAL: Locator
+<<<<<<< HEAD
     //Loctors for punch in -out
     readonly txtInPunch: Locator;
     readonly txtInPunch2: Locator;
@@ -27,7 +33,11 @@ export class WFMTimecardPage extends WebActions {
     readonly CurrentPayPeriod: Locator;
     readonly SelectRange: Locator;
     readonly Apply: Locator;
+=======
+
+>>>>>>> Gayatri
     ariaLabel: string;
+
 
 
 
@@ -97,6 +107,7 @@ export class WFMTimecardPage extends WebActions {
         await this.page.waitForTimeout(500);
 
     }
+<<<<<<< HEAD
 
     async punchTime(index: number, inpunch: string, outpunch: string, addTime?: boolean): Promise<void> {
         // Format the index for locators based on the value of index
@@ -598,6 +609,44 @@ export class WFMTimecardPage extends WebActions {
     }
 
 
+=======
+    async selectPreviousPayPeriod() {
+        await this.page.getByTitle('Select Timeframe').click();
+        await this.page.getByText('Previous Pay Period').click();
+        await this.page.waitForTimeout(1500);
+        const txtListView = this.page.getByLabel('List View');
+        const btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
+        await txtListView.click();
+        await btnLoadMore.click();
+    }
+    // async punchTime(index: number, inpunch: string, outpunch: string, addTime?: boolean): Promise<void> {
+    //     // Format the index for locators based on the value of index
+    //     const formattedIndex = index >= 10 ? `\\3${Math.floor(index / 10)} ${index % 10}` : `\\3${index}`;
+
+    //     // Create locators with the properly formatted index
+    //     const inpunchLocator = this.page.locator(`[id="${formattedIndex}_inpunch"]`);
+    //     const outpunchLocator = this.page.locator(`[id="${formattedIndex}_outpunch"]`);
+    //     const addButtonLocator = this.page.locator(`[id="${formattedIndex}_add"] span`);
+
+    //     // Perform the punch-in and punch-out actions
+    //     await inpunchLocator.click();
+    //     await this.page.getByRole('textbox').fill(inpunch.toString());
+    //     await outpunchLocator.click();
+    //     await this.page.getByRole('textbox').fill(outpunch.toString());
+
+    //     // Handle the "add time" condition
+    //     if (addTime) {
+    //         await addButtonLocator.click();
+    //     } else {
+    //         // Increment the index and format it again
+    //         index = index + 1;
+    //         const formattedNextIndex = index >= 10 ? `\\3${Math.floor(index / 10)} ${index % 10}` : `\\3${index}`;
+    //         await this.page.locator(`[id="${formattedNextIndex}_inpunch"]`).dblclick();
+    //         await this.page.waitForTimeout(3000);
+    //     }
+    // }
+
+>>>>>>> Gayatri
     async ValidateTotal(Paycode: string, Totalvalue: string): Promise<string> {
         await this.TIMECARD_TOTAL.click();
         await this.page.waitForTimeout(3000);
@@ -678,5 +727,67 @@ export class WFMTimecardPage extends WebActions {
         console.log("Save successful. Button is disabled.");
     }
 
+    async ValidateTotal2(Paycode: string, Totalvalue: string, Exp: string): Promise<string> {
+        // Click on the TIME CARD TOTAL element
+        await this.TIMECARD_TOTAL.click();
+        await this.page.waitForTimeout(3000);
+     
+        // Locate the grid container
+        const gridContainer = this.page.locator('.ui-grid-viewport .ui-grid-canvas');
+     
+        // Get all rows at once
+        const rows = gridContainer.locator('.ui-grid-row');
+        const rowCount = await rows.count();
+        console.log(`Total rows: ${rowCount}`);
+     
+        let isValidRowFound = false;
+     
+        // Process all rows
+        for (let rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+            const row = rows.nth(rowIndex);
+            const cells = row.locator('.ui-grid-cell');
+     
+            // Extract text content for all cells in the current row
+            const cellTexts = await cells.evaluateAll((cellElements) => {
+                return cellElements.map(cell => cell.textContent?.trim() || '');
+            });
+     
+            // Flags for the required values
+            let hasPaycode = false;
+            let hasTotalvalue = false;
 
+     
+            // Process each cell's text content for the current row
+
+            cellTexts.forEach((cellText) => {
+                console.log(cellText);
+                if (cellText === Paycode) {
+                    hasPaycode = true;
+                }
+                if (cellText === Totalvalue) {
+                    hasTotalvalue = true;
+                }
+            });
+     
+            // Validate if the row meets all criteria
+            if (hasPaycode && hasTotalvalue &&Exp==='Yes') {
+                isValidRowFound = true;
+                console.log(`Valid row found at index ${rowIndex + 1}`);
+                return 'Passed';
+            }
+            // Validate if the row meets all criteria 
+            if (hasPaycode && hasTotalvalue &&Exp==='No') {
+                isValidRowFound = true;
+                console.log("Valid row found at index ${rowIndex + 1}");
+                return 'Failed';
+                
+            }
+             
+        }
+     
+        if (!isValidRowFound) {
+            console.log('No valid row found.');
+            return 'Validation Failed' +'No valid row found';
+        }
+    }
 }

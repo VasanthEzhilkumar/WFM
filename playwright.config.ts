@@ -13,13 +13,21 @@ const config: PlaywrightTestConfig = {
   globalSetup: `./global-setup`,
 
   //sets timeout for each test case
+<<<<<<< HEAD
   timeout: 600000,
 
+=======
+  timeout: 1000000,
+>>>>>>> Gayatri
 
   //number of retries if test case fails
   retries: 0,
   workers: 4,
+<<<<<<< HEAD
   fullyParallel: false,
+=======
+  fullyParallel : false,
+>>>>>>> Gayatri
 
   //Reporters
   reporter: [[`./CustomReporterConfig.ts`], [`allure-playwright`], [`html`, { outputFolder: 'html-report', open: 'never' }]],
