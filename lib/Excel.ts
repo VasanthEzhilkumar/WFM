@@ -113,20 +113,6 @@ export const writeResultsToExcel = async (filePath: string, sheetName: string, r
       // Set the status in the correct column
       statusCell.value = status;
 
-      // Apply color formatting based on the status
-    //   if (status === 'Failed') {
-    //       statusCell.fill = {
-    //           type: 'pattern',
-    //           pattern: 'solid',
-    //           fgColor: { argb: 'FFFF0000' } // Red color
-    //       };
-    //   } else if (status === 'Passed') {
-    //       statusCell.fill = {
-    //           type: 'pattern',
-    //           pattern: 'solid',
-    //           fgColor: { argb: 'FF00FF00' } // Green color
-    //       };
-    //   }
 
       row.commit();
       await workbook.xlsx.writeFile(filePath);

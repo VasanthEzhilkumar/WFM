@@ -1,4 +1,5 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test';
+import { exit } from 'process';
 
 export class WFMTimecardPage {
     readonly page: Page;
@@ -11,6 +12,7 @@ export class WFMTimecardPage {
     readonly EMP_NAME: Locator;
     readonly TIMECARD_SAVE: Locator;
     readonly TIMECARD_TOTAL: Locator
+
     ariaLabel: string;
 
 
@@ -35,6 +37,15 @@ export class WFMTimecardPage {
         await this.EMP_SEARCHBAR.fill(EmpName);
         await this.EMP_LIST.click();
 
+    }
+    async selectPreviousPayPeriod() {
+        await this.page.getByTitle('Select Timeframe').click();
+        await this.page.getByText('Previous Pay Period').click();
+        await this.page.waitForTimeout(1500);
+        const txtListView = this.page.getByLabel('List View');
+        const btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
+        await txtListView.click();
+        await btnLoadMore.click();
     }
     // async punchTime(index: number, inpunch: string, outpunch: string, addTime?: boolean): Promise<void> {
     //     // Format the index for locators based on the value of index
@@ -62,122 +73,6 @@ export class WFMTimecardPage {
     //         await this.page.waitForTimeout(3000);
     //     }
     // }
-
-    async punchTime(index: number, inpunch: string, outpunch: string, addTime?: boolean): Promise<void> {
-        // Format the index for locators based on the value of index
-        const formattedIndex = index >= 10 ? `\\3${Math.floor(index / 10)} ${index % 10}` : `\\3${index}`;
-    
-        // Create locators with the properly formatted index
-        const inpunchLocator = this.page.locator(`[id="${formattedIndex}_inpunch"]`);
-        const outpunchLocator = this.page.locator(`[id="${formattedIndex}_outpunch"]`);
-        const addButtonLocator = this.page.locator(`[id="${formattedIndex}_add"] span`);
-    
-        // Retry function for click and fill actions
-        async function retryClickAndFill(clickLocator: Locator, inputText: any, retries = 2) {
-            let attempts = 0;
-            while (attempts < retries) {
-                try {
-                    // Try clicking the locator
-                    await clickLocator.click();
-                    
-                    // Wait for the textbox to appear and fill the value
-                    await this.page.getByRole('textbox').fill(inputText.toString());
-                    
-                    // If the fill was successful, break the loop
-                    break;
-                } catch (error) {
-                    console.log(`Attempt ${attempts + 1} failed: ${error.message}`);
-                    attempts++;
-                    
-                    // If maximum attempts reached, throw an error
-                    if (attempts >= retries) {
-                        throw new Error(`Failed to fill the textbox after ${retries} attempts`);
-                    }
-    
-                    // Optional: Add a short delay before retrying
-                    await this.page.waitForTimeout(500);
-                }
-            }
-        }
-    
-        // Perform the punch-in and punch-out actions with retry logic
-        await retryClickAndFill.call(this, inpunchLocator, inpunch); // Apply retry logic for inpunch
-        await retryClickAndFill.call(this, outpunchLocator, outpunch); // Apply retry logic for outpunch
-    
-        // Handle the "add time" condition
-        if (addTime) {
-            await addButtonLocator.click();
-            await this.page.waitForTimeout(1000);
-        } else {
-            // Increment the index and format it again
-            index = index + 1;
-            const formattedNextIndex = index >= 10 ? `\\3${Math.floor(index / 10)} ${index % 10}` : `\\3${index}`;
-            if (await this.page.locator(`[id="${formattedNextIndex}_inpunch"]`).count() > 0) {
-                await this.page.locator(`[id="${formattedNextIndex}_inpunch"]`).dblclick();
-            } else {
-                console.log('Next punch not found, skipping...');
-            }
-           // await this.page.locator(`[id="${formattedNextIndex}_inpunch"]`).dblclick();
-            await this.page.waitForTimeout(3000);
-        }
-    }
-    
-
-    async punchInOutMultipleDays(date: string, punchIn: any, punchOut: any, punchIn2: any, punchOut2: any): Promise<string> {
-
-        try {
-            const gridContainer = this.page.locator('.ui-grid-viewport .ui-grid-canvas');
-
-            // Get all rows in the grid
-            const rows = gridContainer.locator('.ui-grid-row');
-            const rowCount = await rows.count();
-            console.log(`Total rows: ${rowCount}`);
-
-            let punchSuccess = false;
-
-            for (let rowIndex = 0; rowIndex < rowCount; rowIndex++) {
-                const row = rows.nth(rowIndex);
-
-                // Locate the cell in the current row containing the date
-                const cell = row.locator('.ui-grid-cell .ui-grid-cell-contents[title*="' + date + '"]');
-
-                if (await cell.count() > 0) {
-                    console.log(`Date ${date} found in Row ${rowIndex + 1}`);
-
-                    // If punchIn2 is empty, pass false for the "isFirstPunch" argument
-                    const isFirstPunch = punchIn2 && punchIn2.trim() !== '' ? true : false;
-
-                    // Punch in/out for the first punch (rowIndex)
-                    await this.punchTime(rowIndex, punchIn, punchOut, isFirstPunch);
-
-                    // Skip the second punch if punchIn2 is empty or blank
-                    if (punchIn2 && punchIn2.trim() !== '') {
-
-                        await this.punchTime(rowIndex + 1, punchIn2, punchOut2, false);
-                    } else {
-                        console.log(`Skipping punchIn2 for Row ${rowIndex + 2} due to empty punchIn2 value`);
-                    }
-
-                    punchSuccess = true;
-                    break;
-
-
-                }
-            }
-            // Return success if the punch was performed, else return failure
-            // if (punchSuccess) {
-            //     console.log("Punch operation completed successfully.");
-            //     return "Passed";
-            // } else {
-            //     console.error(`No row found for the date ${date}.`);
-            //     return "Failed";
-            // }
-        } catch (error) {
-            console.error(`Error during punch operation: ${error.message}`);
-            return "Failed";
-        }
-    }
-
 
     async ValidateTotal(Paycode: string, Totalvalue: string): Promise<string> {
         await this.TIMECARD_TOTAL.click();
@@ -263,10 +158,67 @@ export class WFMTimecardPage {
         console.log("Save successful. Button is disabled.");
     }
 
+    async ValidateTotal2(Paycode: string, Totalvalue: string, Exp: string): Promise<string> {
+        // Click on the TIME CARD TOTAL element
+        await this.TIMECARD_TOTAL.click();
+        await this.page.waitForTimeout(3000);
+     
+        // Locate the grid container
+        const gridContainer = this.page.locator('.ui-grid-viewport .ui-grid-canvas');
+     
+        // Get all rows at once
+        const rows = gridContainer.locator('.ui-grid-row');
+        const rowCount = await rows.count();
+        console.log(`Total rows: ${rowCount}`);
+     
+        let isValidRowFound = false;
+     
+        // Process all rows
+        for (let rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+            const row = rows.nth(rowIndex);
+            const cells = row.locator('.ui-grid-cell');
+     
+            // Extract text content for all cells in the current row
+            const cellTexts = await cells.evaluateAll((cellElements) => {
+                return cellElements.map(cell => cell.textContent?.trim() || '');
+            });
+     
+            // Flags for the required values
+            let hasPaycode = false;
+            let hasTotalvalue = false;
 
+     
+            // Process each cell's text content for the current row
+
+            cellTexts.forEach((cellText) => {
+                console.log(cellText);
+                if (cellText === Paycode) {
+                    hasPaycode = true;
+                }
+                if (cellText === Totalvalue) {
+                    hasTotalvalue = true;
+                }
+            });
+     
+            // Validate if the row meets all criteria
+            if (hasPaycode && hasTotalvalue &&Exp==='Yes') {
+                isValidRowFound = true;
+                console.log(`Valid row found at index ${rowIndex + 1}`);
+                return 'Passed';
+            }
+            // Validate if the row meets all criteria 
+            if (hasPaycode && hasTotalvalue &&Exp==='No') {
+                isValidRowFound = true;
+                console.log("Valid row found at index ${rowIndex + 1}");
+                return 'Failed';
+                
+            }
+             
+        }
+     
+        if (!isValidRowFound) {
+            console.log('No valid row found.');
+            return 'Validation Failed' +'No valid row found';
+        }
+    }
 }
-
-
-
-
-

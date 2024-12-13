@@ -16,13 +16,16 @@ export class CurrentPayPeriodPage {
     }
 
 
-    async setCurrentPayPeriod(StartDate: string, EndDate: string) {
-        await this.page.waitForTimeout(500);
+    async setCurrentPayPeriod(StartDate: any , EndDate:any) {
+        await this.page.waitForTimeout(1000);
         await this.CurrentPayPeriod.click();
+        await this.page.waitForTimeout(500);
         await this.SelectRange.click();
-        await this.page.locator("//input[@id='startDateTimeInput']").type(StartDate);
         await this.page.waitForTimeout(2000);
-        await this.page.locator("//input[@id='endDateTimeInput']").type(EndDate);
+        await this.page.locator("//input[@id='startDateTimeInput']").type(StartDate.toString());
+        //await this.page.getByLabel('Start Date').type(StartDate.toString());
+        await this.page.waitForTimeout(2000);
+        await this.page.locator("//input[@id='endDateTimeInput']").type(EndDate.toString());
         await this.page.waitForTimeout(2000);
         await this.Apply.click();
         await this.page.waitForTimeout(500);
