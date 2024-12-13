@@ -166,23 +166,36 @@ export class WFMHomePage extends WebActions {
             // Click the button that triggers the file input dialog
             const uploadButton = await tab.locator("//*[text()='Choose File']/ancestor::button[@role='button']");
             await uploadButton.click();
-            await this.page.waitForTimeout(2000);
+            await this.page.waitForTimeout(5000);
             //await this.page.waitForEvent("filechooser");
             await super.uploadFile(filePath.toString());
             await this.page.waitForTimeout(2000);
             const fileName = filePath.split('\\')[3];
             // Optionally, submit the form or verify the success message
             const successMessage = await tab.locator('//div[contains(@class,"document-list ")]').textContent();
-            errorMessage = await tab.getByText('Supported file type is .csv.').textContent().trim();
+            const errorMessageLocator = await tab.getByText('Supported file type is .csv.');
+            if (await errorMessageLocator.isVisible()) {
+                errorMessage = errorMessageLocator.textContent();
+            }
 
-            if (await successMessage.includes(fileName) && errorMessage.includes(undefined)) {
-                await expect(successMessage).toHaveText(fileName)
+            if (await successMessage.includes(fileName) && errorMessage === null) {
+                await expect(successMessage).toEqual(fileName)
                 await tab.getByLabel('Upload', { exact: true }).click();
+                //await tab.getByLabel('Save records').click();
+                const status = await tab.locator("(//div[@col-id='templateName' and text()='Data - Shift']/following-sibling::div[@col-id='status'])[1]");
+                while (await status.allInnerTexts() !== 'Success' || await status.allInnerTexts() !== 'Errors') {
+                    await tab.locator('[id="lastRefreshButton"]').click();
+                }
+                const errorCol = await tab.locator("(//div[@col-id='templateName' and text()='People - Person Load']/following-sibling::*[@col-id='error'])[1]//div//ukg-link");
+                if ((await status.textContent()) === 'Errors') {
+                    errorCol.click();
+                } else {
+                    return "Passed";
+                }
             } else {
                 await tab.getByLabel('Cancel').click();
                 await new throws(error);
             }
-            return tab;
         } catch (error) {
             console.error();
             return error + errorMessage;

@@ -27,7 +27,7 @@ const groupedData = sheetsJson[sheetName].reduce((acc, row) => {
     acc[row.EmpNum].push(row);
     return acc;
 }, {});
-
+let index = 0;
 // Iterate over each grouped dataset and run the test
 for (const empId in groupedData) {
     const dataSet = groupedData[empId];
@@ -58,7 +58,8 @@ for (const empId in groupedData) {
 
         await test.step('Search for the Employee in Time Card Page', async () => {
             await wfmtimecardpage.SearchEMP_Timecard(EmpName);
-            await wfmtimecardpage.selectPreviousPayPeriod();
+            await wfmtimecardpage.selectPayPeriodBydateRange(String(dataSet[index].StartDate), String(dataSet[index].EndDate));
+            await wfmtimecardpage.clickListViewAndclickOnLoadMore();
             for (const data of dataSet) {
                 // Handle punch-in/punch-out actions for each day
                 const result = await wfmtimecardpage.pucnInPunchOutByDate(data.Date, String(data.PunchIn), String(data.PunchOut), String(data.PunchIn2), String(data.PunchOut2));
@@ -66,6 +67,7 @@ for (const empId in groupedData) {
                 //It will write result to excel sheet by rowNumber(index)
                 await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
             }
+            index = index + 1;
         });
 
         await test.step('Save the timesheet and validate if there are no errors ', async () => {

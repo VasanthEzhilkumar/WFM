@@ -24,6 +24,9 @@ export class WFMTimecardPage extends WebActions {
     readonly btnAddPunch: Locator;
     readonly btnSave: Locator;
     readonly btnLoadMore: Locator;
+    readonly CurrentPayPeriod: Locator;
+    readonly SelectRange: Locator;
+    readonly Apply: Locator;
     ariaLabel: string;
 
 
@@ -49,6 +52,9 @@ export class WFMTimecardPage extends WebActions {
         this.btnAddPunch = this.page.getByRole('button', { name: 'Add Punch' });
         this.btnSave = this.page.getByRole('button', { name: 'Save' });
         this.btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
+        this.CurrentPayPeriod = page.getByTitle('Select Timeframe');
+        this.SelectRange = page.getByRole('button', { name: 'Select Range' });
+        this.Apply = page.getByRole('button', { name: 'Apply' });
     }
 
     async SearchEMP_Timecard(EmpName: string): Promise<void> {
@@ -66,6 +72,30 @@ export class WFMTimecardPage extends WebActions {
         const btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
         await txtListView.click();
         await btnLoadMore.click();
+    }
+
+    async clickListViewAndclickOnLoadMore() {
+        const txtListView = this.page.getByLabel('List View');
+        const btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
+        await txtListView.click();
+        await btnLoadMore.click();
+    }
+
+    async selectPayPeriodBydateRange(StartDate: string, EndDate: string) {
+
+        await this.page.waitForTimeout(500);
+        await this.CurrentPayPeriod.click();
+        await this.SelectRange.click();
+        await this.page.waitForTimeout(500);
+        await this.page.locator("(//input[@id='startDateTimeInput'])[1]").fill(StartDate);
+        await this.page.keyboard.press('Tab');
+        await this.page.waitForTimeout(1000);
+        await this.page.locator("(//input[@id='endDateTimeInput'])[1]").fill(EndDate);
+        await this.page.keyboard.press('Tab');
+        // await this.page.waitForTimeout(2000);
+        await this.Apply.click();
+        await this.page.waitForTimeout(500);
+
     }
 
     async punchTime(index: number, inpunch: string, outpunch: string, addTime?: boolean): Promise<void> {
@@ -162,6 +192,102 @@ export class WFMTimecardPage extends WebActions {
     }
 
     /*
+   @Auther: Madhukar Kirkan
+   @Description: This function is valid TimeCard Exceptions such as early in-out, late in-out, long break and out of sequense.
+   @Date: 27/11/2024
+ */
+    async puchExceptions(date: string, exceptions: string, expectedCondition: string): Promise<string> {
+        let dateArray = date.split(" ");
+        const weekday = dateArray[0].trim();
+        let month = dateArray[1].split("/")[0].trim();
+        let dateDigit = dateArray[1].split("/")[1].trim();
+        let resultMsgError = "";
+        let errorMsgafterSave = "";
+        let flag = false;
+        //----------------------------------------------------------------------------------------------------
+        const selectListViewForPucnhInOut = this.page.locator("//div[@class='tk-calendar-box']//div[contains(text(),'" + weekday + "')]/following-sibling::div[contains(text(),'" + dateDigit + "')]");
+        //--------------------------------------------------------------------------------------------------------
+
+        try {
+            await this.page.waitForTimeout(1000);
+            if (await selectListViewForPucnhInOut.count() > 0) {
+                console.log("List view for punch In-Out is present on screen");
+            } else {
+                if (await this.btnLoadMore.count() > 0) {
+                    await this.page.waitForTimeout(500);
+                    await this.btnLoadMore.scrollIntoViewIfNeeded();
+                    await this.btnLoadMore.click();
+                }
+            }
+
+            if (await selectListViewForPucnhInOut.count() > 0) {
+                await selectListViewForPucnhInOut.click();
+                const actualExceptions = await this.getExceptions();
+                //await this.page.waitForTimeout(500);
+                const btncancel = await this.page.locator('(//div[@class="text-right"]//button[text()="Cancel"])[1]');
+                const btnYes = await this.page.locator('//button[@aria-label="Yes"]');
+                await this.page.waitForTimeout(500);
+                if (await btncancel.isVisible()) {
+                    await btncancel.click();
+                    await this.page.waitForTimeout(500);
+                    if (await btnYes.isVisible()) {
+                        await btnYes.click();
+                    }
+                }
+
+                // Check if actualException is a valid non-empty value
+                let flag = actualExceptions !== undefined && actualExceptions !== null && actualExceptions !== '';
+
+                // Normalize the expected condition by replacing "@" with a space
+                let expectedConditionArray = exceptions.replace("@", " ");
+                let actualException =actualExceptions.trim();
+                // Check if actualException matches the expected condition
+                const isConditionMet = (actualException.includes(expectedConditionArray) && expectedCondition === 'Yes') ||
+                    (!actualException.includes(expectedConditionArray) && expectedCondition === 'No');
+
+                // Return "Passed" or "Failed" based on the flag
+                if (flag) {
+                    return isConditionMet ? "Passed" : "Failed";
+                } else {
+                    return isConditionMet ? "Passed" : "Failed";
+                }
+            }
+        }
+        catch (error) {
+            console.log(error);
+            return "Failed";
+        }
+
+    }
+
+
+    async getExceptions(): Promise<string> {
+        let exceptionsArray = "";
+        let j = 1;
+        try {
+            const exception = await this.page.locator('//div[@class="tk-exception"]//span[@class="tk-exception-text"]/span[@class="tk-exception-value"]');
+            await this.page.waitForTimeout(2000);
+            const exceptionsCount = await exception.count();
+
+            for (let i = 0; i < exceptionsCount; i++) {
+                const exceptionByIndex = await this.page.locator('(//div[@class="tk-exception"]//span[@class="tk-exception-text"]/span[@class="tk-exception-value"])[' + j + ']');
+                await this.page.waitForTimeout(1500);
+                const textValue = await exceptionByIndex.textContent();
+                exceptionsArray = exceptionsArray + textValue + " ";
+                j = j + 1;
+            }
+            return exceptionsArray;
+        } catch (error) {
+            console.log("Error -" + error);
+            return error;
+        }
+
+
+    }
+
+
+
+    /*
     @Auther: Madhukar Kirkan
     @Description: This function is used to fill Punch In-Out by selecting from the listview and returns any error messages.
     @Date: 27/11/2024
@@ -196,140 +322,183 @@ export class WFMTimecardPage extends WebActions {
 
                 if (await selectListViewForPucnhInOut.count() > 0) {
                     await selectListViewForPucnhInOut.click();
-                    // await this.page.waitForTimeout(500);
-                    if (punchIn !== '' && punchIn !== undefined && punchIn !== null) {
-                        await this.txtInPunch.fill(punchIn);
-                        await this.page.keyboard.press("Tab");
-                        //await this.page.waitForTimeout(500);
-                    }
-                    if (punchOut !== '' && punchOut !== undefined && punchOut !== null) {
-                        if (punchIn !== null && punchIn !== '') {
-                            // Split the time string into hours and minutes
-                            let [hours, minutes] = punchIn.split(":").map(Number);
-                            // Combine hours and minutes into a decimal number (e.g., 9 + 16/60 = 9.2666...)
-                            let punchInNumber = hours + minutes / 60;
-                            if (punchInNumber > 9) {
-                                // await this.page.waitForTimeout(500);
-                                await this.txtOutPunch2.fill(punchOut);
-                                await this.page.keyboard.press("Tab");
-                                //await this.page.waitForTimeout(500);
-                            } else {
-                                // await this.page.waitForTimeout(500);
-                                await this.txtOutPunch.fill(punchOut);
-                                await this.page.keyboard.press("Tab");
-                                //await this.page.waitForTimeout(500);
+
+                    if (weekday.includes('Sat') || weekday.includes('Sun')) {
+                        if (punchIn !== null && punchIn !== '' && punchIn !== undefined) {
+                            await this.page.waitForTimeout(1500);
+                            await this.btnAddPunch.click();
+                            await this.page.waitForTimeout(500);
+                            resultMsgError = await this.editPunchFillandApply(punchIn, "In Punch");
+                            if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                                new throws(error);
                             }
-                        } else {
-                            // await this.page.waitForTimeout(500);
                             await this.txtOutPunch.fill(punchOut);
                             await this.page.keyboard.press("Tab");
-                            //await this.page.waitForTimeout(500);
-                        }
-                    }
-                    if ((punchIn !== '' && punchIn !== undefined && punchIn !== null) || (punchOut !== '' && punchOut !== undefined && punchOut !== null) && (punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
-                        if (punchIn2 !== '' && punchIn2 !== null) {
+                        } else if (punchOut !== '' && punchOut !== undefined && punchOut !== null) {
                             await this.page.waitForTimeout(1500);
                             await this.btnAddPunch.click();
                             await this.page.waitForTimeout(500);
-                            resultMsgError = await this.editPunchFillandApply(punchIn2, "In Punch");
+                            resultMsgError = await this.editPunchFillandApply(punchOut, "Out Punch");
                             if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
                                 new throws(error);
                             }
-                            await this.page.waitForTimeout(500);
-                            // Split the time string into hours and minutes
-                            let [hours, minutes] = punchIn.split(":").map(Number);
-                            // Combine hours and minutes into a decimal number (e.g., 9 + 16/60 = 9.2666...)
-                            let punchInNumber = hours + minutes / 60;
-                            if (punchInNumber > 14 && punchInNumber < 15) {
-                                await this.txtOutPunch21.fill(punchOut2);
-                                await this.page.keyboard.press("Tab");
-                                // await this.page.waitForTimeout(500);
-                            } else if ((punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
-                                await this.txtOutPunch2.fill(punchOut2);
-                                await this.page.keyboard.press("Tab");
-                                // await this.page.waitForTimeout(500);
-                            }
-
-                        } else if ((punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
-                            await this.page.waitForTimeout(1500);
-                            await this.btnAddPunch.click();
-                            await this.page.waitForTimeout(500);
-                            resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
-                            if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
-                                new throws(error);
-                            }
-                            // await this.page.waitForTimeout(1000);
-                            if ((punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
-                                await this.txtInPunch2.fill(punchIn2);
-                                await this.page.keyboard.press("Tab");
-                                // await this.page.waitForTimeout(500);
-                            }
-                        }
-                    } else if ((punchIn !== '' && punchIn !== undefined && punchIn !== null) || (punchOut !== '' && punchOut !== undefined && punchOut !== null) && (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
-                        if (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null) {
-                            await this.page.waitForTimeout(1500);
-                            await this.btnAddPunch.click();
-                            await this.page.waitForTimeout(500);
-                            resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
-                            if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
-                                new throws(error);
-                            }
-                            // await this.page.waitForTimeout(700);
-                            if ((punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
-                                await this.txtInPunch2.fill(punchIn2);
-                                await this.page.keyboard.press("Tab");
-                                // await this.page.waitForTimeout(500);
-                            }
-                        }
-                    }
-                    if ((punchIn === '' || punchIn === null) && (punchOut === '' || punchOut === null)) {
-
-                        if (punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null) {
-                            // await this.page.waitForTimeout(500);
-                            await this.txtInPunch.fill(punchIn2);
+                            await this.txtInPunch.fill(punchIn);
                             await this.page.keyboard.press("Tab");
                         }
-                        if (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null) {
+
+                        await this.page.waitForTimeout(500);
+                        await this.btnSave.click();
+                        await this.page.waitForTimeout(500);
+                        const errorCheck = await this.page.locator('(//div[@class="multiple-lines-wrap"])[1]');
+                        if (await errorCheck.isVisible()) {
+                            errorMsgafterSave = "" + errorCheck.allInnerTexts();
+                            errorMsgafterSave = errorMsgafterSave + "& find failed screenshot --> " + String(await super.takeScreenShot());
+                        }
+                        if (errorMsgafterSave !== undefined && errorMsgafterSave !== null && errorMsgafterSave !== '') {
+                            new throws(error);
+                        } else {
+                            return "Passed";
+                        }
+                    } else {
+                        if (punchIn !== '' && punchIn !== undefined && punchIn !== null) {
+                            await this.txtInPunch.fill(punchIn);
+                            await this.page.keyboard.press("Tab");
+                            await this.page.waitForTimeout(500);
+                        }
+                        if (punchOut !== '' && punchOut !== undefined && punchOut !== null) {
                             if (punchIn !== null && punchIn !== '') {
                                 // Split the time string into hours and minutes
                                 let [hours, minutes] = punchIn.split(":").map(Number);
                                 // Combine hours and minutes into a decimal number (e.g., 9 + 16/60 = 9.2666...)
                                 let punchInNumber = hours + minutes / 60;
-                                if (punchInNumber > 9 || punchInNumber > 14) {
+                                //|| punchInNumber < 8.44
+                                if (punchInNumber > 9) {
                                     // await this.page.waitForTimeout(500);
-                                    await this.txtOutPunch21.fill(punchOut2);
+                                    await this.txtOutPunch2.fill(punchOut);
                                     await this.page.keyboard.press("Tab");
                                     //await this.page.waitForTimeout(500);
                                 } else {
-                                    // await this.page.waitForTimeout(500);
-                                    await this.txtOutPunch.fill(punchOut2);
+                                    await this.page.waitForTimeout(500);
+                                    await this.txtOutPunch.fill(punchOut);
                                     await this.page.keyboard.press("Tab");
-                                    // await this.page.waitForTimeout(500);
+                                    //await this.page.waitForTimeout(500);
                                 }
                             } else {
-                                // await this.page.waitForTimeout(500);
-                                await this.txtOutPunch2.fill(punchOut2);
+                                await this.page.waitForTimeout(500);
+                                await this.txtOutPunch.fill(punchOut);
                                 await this.page.keyboard.press("Tab");
                                 //await this.page.waitForTimeout(500);
                             }
                         }
+                        if ((punchIn !== '' && punchIn !== undefined && punchIn !== null) || (punchOut !== '' && punchOut !== undefined && punchOut !== null) && (punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
+                            if (punchIn2 !== '' && punchIn2 !== null && punchIn2 !== undefined) {
+                                await this.page.waitForTimeout(1500);
+                                await this.btnAddPunch.click();
+                                await this.page.waitForTimeout(500);
+                                resultMsgError = await this.editPunchFillandApply(punchIn2, "In Punch");
+                                if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                                    new throws(error);
+                                }
+
+                                if (punchOut2 !== '' && punchOut2 !== null && punchOut2 !== undefined) {
+                                    await this.page.waitForTimeout(1000);
+                                    await this.btnAddPunch.click();
+                                    await this.page.waitForTimeout(500);
+                                    await this.page.waitForTimeout(500);
+                                    resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
+                                    if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                                        new throws(error);
+                                    }
+                                }
+                              
+
+                            } else if ((punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
+                                await this.page.waitForTimeout(1500);
+                                await this.btnAddPunch.click();
+                                await this.page.waitForTimeout(500);
+                                resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
+                                if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                                    new throws(error);
+                                }
+                                if ((punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null)) {
+                                    await this.page.waitForTimeout(1000);
+                                    await this.btnAddPunch.click();
+                                    await this.page.waitForTimeout(500);
+                                    resultMsgError = await this.editPunchFillandApply(punchIn2, "In Punch");
+                                    if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                                        new throws(error);
+                                    }
+                                }
+
+                            }
+                        } else if ((punchIn !== '' && punchIn !== undefined && punchIn !== null) || (punchOut !== '' && punchOut !== undefined && punchOut !== null) && (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null)) {
+                            if (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null) {
+                                await this.page.waitForTimeout(1500);
+                                await this.btnAddPunch.click();
+                                await this.page.waitForTimeout(500);
+                                resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
+                                if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                                    new throws(error);
+                                }
+                                await this.page.waitForTimeout(1500);
+                                await this.btnAddPunch.click();
+                                await this.page.waitForTimeout(500);
+                                resultMsgError = await this.editPunchFillandApply(punchIn2, "In Punch");
+                                if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                                    new throws(error);
+                                }
+                          
+                            }
+                        }
+                        if ((punchIn === '' || punchIn === null) && (punchOut === '' || punchOut === null)) {
+
+                            if (punchIn2 !== '' && punchIn2 !== undefined && punchIn2 !== null) {
+                                // await this.page.waitForTimeout(500);
+                                await this.txtInPunch.fill(punchIn2);
+                                await this.page.keyboard.press("Tab");
+                            }
+                            if (punchOut2 !== '' && punchOut2 !== undefined && punchOut2 !== null) {
+                                if (punchIn !== null && punchIn !== '') {
+                                    // Split the time string into hours and minutes
+                                    let [hours, minutes] = punchIn.split(":").map(Number);
+                                    // Combine hours and minutes into a decimal number (e.g., 9 + 16/60 = 9.2666...)
+                                    let punchInNumber = hours + minutes / 60;
+                                    if (punchInNumber > 9 || punchInNumber > 14) {
+                                        // await this.page.waitForTimeout(500);
+                                        await this.txtOutPunch21.fill(punchOut2);
+                                        await this.page.keyboard.press("Tab");
+                                        //await this.page.waitForTimeout(500);
+                                    } else {
+                                        // await this.page.waitForTimeout(500);
+                                        await this.txtOutPunch.fill(punchOut2);
+                                        await this.page.keyboard.press("Tab");
+                                        // await this.page.waitForTimeout(500);
+                                    }
+                                } else {
+                                    // await this.page.waitForTimeout(500);
+                                    await this.txtOutPunch2.fill(punchOut2);
+                                    await this.page.keyboard.press("Tab");
+                                    //await this.page.waitForTimeout(500);
+                                }
+                            }
+                        }
+                        await this.page.waitForTimeout(500);
+                        await this.btnSave.click();
+                        await this.page.waitForTimeout(500);
+                        const errorCheck = await this.page.locator('(//div[@class="multiple-lines-wrap"])[1]');
+                        if (await errorCheck.isVisible()) {
+                            errorMsgafterSave = "" + errorCheck.allInnerTexts();
+                            errorMsgafterSave = errorMsgafterSave + "& find failed screenshot --> " + String(await super.takeScreenShot());
+                        }
+                        if (errorMsgafterSave !== undefined && errorMsgafterSave !== null && errorMsgafterSave !== '') {
+                            new throws(error);
+                        } else {
+                            return "Passed";
+                        }
                     }
-                    await this.page.waitForTimeout(500);
-                    await this.btnSave.click();
-                    await this.page.waitForTimeout(500);
-                    const errorCheck = await this.page.locator('(//div[@class="multiple-lines-wrap"])[1]');
-                    if (await errorCheck.isVisible()) {
-                        errorMsgafterSave = "" + errorCheck.allInnerTexts();
-                        errorMsgafterSave = errorMsgafterSave + "& find failed screenshot --> " + String(await super.takeScreenShot());
-                    }
-                    if (errorMsgafterSave !== undefined && errorMsgafterSave !== null && errorMsgafterSave !== '') {
-                        new throws(error);
-                    } else {
-                        return "Passed";
-                    }
+                } else {
+                    return resultMsgError = "Failed : " + resultMsgError + " No valid entries or test data issue.";
                 }
-            } else {
-                return resultMsgError = "Failed : " + resultMsgError + " No valid entries or test data issue.";
             }
         } catch (error) {
             console.log(error);
