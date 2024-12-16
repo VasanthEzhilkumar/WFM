@@ -76,6 +76,10 @@ export class WFMSchedulePlannerPage {
 
 
     async SearchEmpRuleViolation(ariaLabel: string, Rule: string, date: string): Promise<string> {
+
+        
+
+
         await this.EMP_Select.click();
         await this.EMP_SEARCHBAR.fill(ariaLabel);
         await this.page.waitForTimeout(3000);

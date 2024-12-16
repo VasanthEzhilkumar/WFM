@@ -1,15 +1,11 @@
-import { Page, BrowserContext, Locator, expect } from '@playwright/test';
 import { WebActions } from "@lib/WebActions";
-import { testConfig } from '../../testConfig';
-import { PrimaryExpression, forEachChild } from 'typescript';
+import { BrowserContext, Locator, Page, expect } from '@playwright/test';
 import moment from 'moment';
-import exp from 'constants';
-import { clear } from 'console';
+import { throws } from "node:assert";
+import { error } from "node:console";
 
-
-
-export class WFMHomePage {
-    readonly page: Page;
+export class WFMHomePage extends WebActions {
+    public page: Page;
     readonly context: BrowserContext;
     readonly MANAGESCHEDULE: Locator;
     readonly MAINMENU: Locator;
@@ -41,7 +37,16 @@ export class WFMHomePage {
     readonly runIntegration: Locator;
     readonly selectIntegrationslovakia: Locator;
     readonly dataViewReports: Locator;
-    readonly reportLibrary: Locator
+    readonly reportLibrary: Locator;
+    readonly administrationMenu: Locator;
+    readonly dataImportToolLink: Locator;
+    readonly importExportDataMenu: Locator;
+    readonly dataShift: Locator;
+    readonly viewTempplateLink: Locator;
+    readonly openFilelink: Locator;
+    readonly btnChooseFile: Locator;
+    readonly btnrefresh: Locator;
+    //readonly reportLibrary: Locator
     readonly addshift: Locator;
 
 
@@ -49,6 +54,7 @@ export class WFMHomePage {
 
 
     constructor(page: Page, context: BrowserContext) {
+        super(page, context);
         this.page = page;
         this.context = context;
         this.TIMECARDS = page.getByRole('link', { name: 'All Timecards' })
@@ -80,6 +86,14 @@ export class WFMHomePage {
         this.selectIntegrationslovakia = page.getByRole('dialog').getByRole('list').locator('div').filter({ hasText: 'Payroll Export - Slovakia' }).nth(4)
         this.dataViewReports = page.getByLabel('Dataviews & Reports Menu');
         this.reportLibrary = page.getByLabel('Report Library link');
+        this.administrationMenu = page.getByLabel('Administration Menu');
+        this.dataImportToolLink = page.getByLabel('Data Import Tool link');
+        this.importExportDataMenu = page.locator("(//button[@aria-label='Import/Export Data Menu'])[1]");
+        this.dataShift = page.getByText('CloseCancel Data - Shift');
+        this.viewTempplateLink = page.getByLabel('View Template');
+        this.openFilelink = page.getByLabel('Open File');
+        this.btnChooseFile = page.getByRole('button', { name: 'Choose File' });
+        this.btnrefresh = page.getByLabel('{{ lastRefreshOn }}');
         this.addshift = page.getByRole('button', { name: 'Add Shift' });
 
     }
@@ -130,6 +144,70 @@ export class WFMHomePage {
     async clicktimeoff(): Promise<void> {
         await this.timeOff.click()
     }
+
+    async clickAdministrationAndOpenDataImportLink() {
+        await this.administrationMenu.click()
+        await this.dataImportToolLink.click()
+    }
+
+    // const frames = tab.frames();
+    // for (const frame of frames) {
+    //     const iframeElement = await frame.getByLabel('{{ lastRefreshOn }}');
+    //     if (await iframeElement.isVisible()) {
+    //         await iframeElement.click();
+    //     }
+    // }
+
+    async clickImportExportData(filePath: string) {
+        let errorMessage = null;
+        try {
+            const tab = await super.switchBetweenTabs("Data Import Tool");
+            this.page = tab;
+            await tab.locator("(//button[@aria-label='Import/Export Data Menu'])[1]").click();
+            await tab.getByText('CloseCancel AOID COID Import').click();
+            await tab.getByLabel('demo-tree').getByText('Data - Shift').click();
+            await tab.getByLabel('View Template').click();
+            await tab.getByLabel('Open File').click();
+            // Click the button that triggers the file input dialog
+            const uploadButton = await tab.locator("//*[text()='Choose File']/ancestor::button[@role='button']");
+            await uploadButton.click();
+            await this.page.waitForTimeout(5000);
+            //await this.page.waitForEvent("filechooser");
+            await super.uploadFile(filePath.toString());
+            await this.page.waitForTimeout(2000);
+            const fileName = filePath.split('\\')[3];
+            // Optionally, submit the form or verify the success message
+            const successMessage = await tab.locator('//div[contains(@class,"document-list ")]').textContent();
+            const errorMessageLocator = await tab.getByText('Supported file type is .csv.');
+            if (await errorMessageLocator.isVisible()) {
+                errorMessage = errorMessageLocator.textContent();
+            }
+
+            if (await successMessage.includes(fileName) && errorMessage === null) {
+                await expect(successMessage).toEqual(fileName)
+                await tab.getByLabel('Upload', { exact: true }).click();
+                //await tab.getByLabel('Save records').click();
+                const status = await tab.locator("(//div[@col-id='templateName' and text()='Data - Shift']/following-sibling::div[@col-id='status'])[1]");
+                while (await status.allInnerTexts() !== 'Success' || await status.allInnerTexts() !== 'Errors') {
+                    await tab.locator('[id="lastRefreshButton"]').click();
+                }
+                const errorCol = await tab.locator("(//div[@col-id='templateName' and text()='People - Person Load']/following-sibling::*[@col-id='error'])[1]//div//ukg-link");
+                if ((await status.textContent()) === 'Errors') {
+                    errorCol.click();
+                } else {
+                    return "Passed";
+                }
+            } else {
+                await tab.getByLabel('Cancel').click();
+                await new throws(error);
+            }
+        } catch (error) {
+            console.error();
+            return error + errorMessage;
+        }
+
+    }
+
 
     async enterTimeoffDetails(payCode: string): Promise<void> {
 

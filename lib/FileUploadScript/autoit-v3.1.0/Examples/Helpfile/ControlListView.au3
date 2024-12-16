@@ -1,0 +1,5 @@
+ControlListView("C:\Program Files\NSIS", "", "SysListView321", "SelectAll")
+ControlListView("C:\Program Files\NSIS", "", "SysListView321", "Deselect", 2, 5)
+MsgBox(0, "", ControlListView("C:\Program Files\NSIS", "", "SysListView321", "GetText", 9, 0) )
+MsgBox(0, "", ControlListView("C:\Program Files\NSIS", "", "SysListView321", "FindItem", "14 KB", 1) )
+MsgBox(0, "", ControlListView("C:\Program Files\NSIS", "", "SysListView321", "GetSelected", 1) )

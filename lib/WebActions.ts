@@ -5,6 +5,8 @@ import { BrowserContext, expect } from '@playwright/test';
 import { Workbook } from 'exceljs';
 import { testConfig } from '../testConfig';
 import * as pdfjslib from 'pdfjs-dist-es5';
+import { describe } from 'node:test';
+import { exec } from 'child_process';
 
 export class WebActions {
     readonly page: Page;
@@ -63,28 +65,77 @@ export class WebActions {
         return pageText;
     }
 
+    /*
+    @Auther: Madhukar Kirkan
+    @Description : This function is used to take screenshot and will return screenshot of failed testcases.
+    @Date : 27/11/2024
+    */
+    async takeScreenShot(): Promise<string> {
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+        // Take a screenshot and save it with a specific name
+        const screenshotPath = process.cwd() + "\\WFMFailedScreenShot\\" + timestamp + ".png";
+        await this.page.screenshot({ path: screenshotPath });
+        return screenshotPath.toString();
+    }
+
+    /*
+   @Auther: Madhukar Kirkan
+   @Description : This method is used to switch between Tabs in browser by title of tabs.
+   @Param : titleVar need to pass title of the page.
+   @Date : 02/12/2024
+   */
+    async switchBetweenTabs(titleVar: string) {
+        await this.page.waitForTimeout(2000);
+        // Get all the open pages (tabs) in the context
+        const allTabs = await this.context.pages();
+        let tab: any = null;
+        // Loop through all the tabs
+        for (tab of allTabs) {
+            // Get the title of the current tab
+            const tabTitle = await tab.title();
+            // Check if the tab's title includes the search string
+            if (tabTitle.includes(titleVar)) {
+                // Bring the tab to the front if it matches the title
+                await tab.bringToFront();
+                console.log(`Switched to tab with title: ${tabTitle}`);
+                await tab.waitForLoadState('load');
+                break; // Once the tab is found, exit the loop
+            }
+        }
+        return tab;
+    }
+
+    async uploadFile(filePath: any) {
+        // Use Node.js to execute AutoHotkey script (or another external automation tool)
+        exec(`"H:\\WFM\\lib\\FileUploadScript\\autoit-v3.1.0\\AutoIt3.exe" "H:\\WFM\\lib\\FileUploadScript\\uploadFilescriptAutoIT.AU3" "${filePath}"`, (err, stdout, stderr) => {
+            if (err) {
+                console.error('Error executing AutoIT script:', err);
+                return;
+            }
+            console.log('AutoIT script executed:', stdout);
+        });
+    }
+
     async getPDFText(filePath: any): Promise<string> {
         const dataBuffer = fs.readFileSync(filePath);
         const pdf = await pdfjslib.getDocument(dataBuffer).promise;
         const maxPages = pdf.numPages;
         const pageTextPromises = [];
         for (let pageNo = 1; pageNo <= maxPages; pageNo += 1) {
-          pageTextPromises.push(this.getPdfPageText(pdf, pageNo));
+            pageTextPromises.push(this.getPdfPageText(pdf, pageNo));
         }
         const pageTexts = await Promise.all(pageTextPromises);
         return pageTexts.join(' ');
-      }
+    }
 
-      async getEmployeeName(empNumber: string): Promise<string | null> {
+    async getEmployeeName(empNumber: string): Promise<string | null> {
         const EMP_NAME = this.page.locator(`[personnumber="${empNumber}"]`);
         const ariaLabel = await EMP_NAME.getAttribute('aria-label');
-        
         if (!ariaLabel) {
             console.error(`No element found with personnumber: ${empNumber}`);
             return null;
         }
-    
         return ariaLabel.toString();
-      }
-
+    }
 }
+

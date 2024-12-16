@@ -104,7 +104,7 @@ export class LoginPage {
         //await this.page.pause();
 
     }
-    async logininASUser(): Promise<void>{
+    async logininASUser(): Promise<void> {
         await this.USERNAMEWFM_EDITBOX.fill(testConfig.WFMUsrUsername);
         await this.PASSWORDWFM_EDITBOX.fill(testConfig.WFMUsrPassword);
         await this.WFMLOGIN_BUTTON.click()
@@ -154,21 +154,21 @@ export class LoginPage {
                 let startDate = moment(startDateStr);
                 let endDate = moment(endDateStr);
                 let dates: string[] = [];
-            
+
                 while (startDate <= endDate) {
                     let toDate = startDate.format('YYYY-MM-DD'); // Format the date to match your date picker
                     dates.push(toDate);
-            
+
                     // Build your XPath selector dynamically for the current date
                     const dateSelector = `//td[@data-date="${toDate}"]`;
-            
+
                     // Click on the date in the date picker
                     await this.page.locator(dateSelector).first().click();
-            
+
                     // Increment the start date by one day
                     startDate = startDate.add(1, 'days');
                 }
-            
+
                 return dates;
             }
             // Usage example

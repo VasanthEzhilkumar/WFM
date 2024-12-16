@@ -1,8 +1,7 @@
 
 import test from '@lib/BaseTest';
-import { writeResultsToExcel } from '@lib/Excel';
+import { getRowNumberByCellValue, writeResultToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
-import path from 'path';
 
 // Define the relative directory path to your Excel file
 const excelFileName = 'TimecardPunch_Amy2.xlsx';
@@ -28,7 +27,7 @@ const groupedData = sheetsJson[sheetName].reduce((acc, row) => {
     acc[row.EmpNum].push(row);
     return acc;
 }, {});
-
+let index = 0;
 // Iterate over each grouped dataset and run the test
 for (const empId in groupedData) {
     const dataSet = groupedData[empId];
@@ -59,17 +58,20 @@ for (const empId in groupedData) {
 
         await test.step('Search for the Employee in Time Card Page', async () => {
             await wfmtimecardpage.SearchEMP_Timecard(EmpName);
-
+            await wfmtimecardpage.selectPayPeriodBydateRange(String(dataSet[index].StartDate), String(dataSet[index].EndDate));
+            await wfmtimecardpage.clickListViewAndclickOnLoadMore();
             for (const data of dataSet) {
                 // Handle punch-in/punch-out actions for each day
-               //const  result = await wfmtimecardpage.punchInOutMultipleDays(data.Date, data.PunchIn, data.PunchOut, data.PunchIn2, data.PunchOut2);
-             
+                const result = await wfmtimecardpage.pucnInPunchOutByDate(data.Date, String(data.PunchIn), String(data.PunchOut), String(data.PunchIn2), String(data.PunchOut2));
+                const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, data.EmpNum, data.Date);
+                //It will write result to excel sheet by rowNumber(index)
+                await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
             }
+            index = index + 1;
         });
 
-        await test.step('Save the timesheet and validate if there are no errors ', async() => {
-            
-            await wfmtimecardpage.saveTimesheet();
+        await test.step('Save the timesheet and validate if there are no errors ', async () => {
+            // await wfmtimecardpage.saveTimesheet();
         })
     });
 }
