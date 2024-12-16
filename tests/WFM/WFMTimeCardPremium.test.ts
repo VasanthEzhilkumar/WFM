@@ -48,7 +48,7 @@ for (const sheetName in sheetsJson) {
                 //step added to select the payrange 
                 await currentPayPeriodPage.setCurrentPayPeriod(data.FromDate, data.ToDate);
                 //step added for validation for Paycode and Totals
-                const result = await wfmtimecardpage.ValidateTotal2(data.Paycode, data.Total,data.Exp);
+                const result = await wfmtimecardpage.ValidateTotal2(data.Paycode, data.Total,data.Expected);
                 writeResultsToExcel(excelFilePath, sheetName, index, "", result);
             });
         });
