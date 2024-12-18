@@ -211,7 +211,7 @@ export class WFMHomePage extends WebActions {
 
     async enterTimeoffDetails(payCode: string): Promise<void> {
 
-        //await this.page.getByTitle(`${payCode}`).click();//('SK-Annual Leave')
+        await this.page.getByTitle(`${payCode}`).click();//('SK-Annual Leave')
         await this.apply.click();
 
     }
@@ -264,20 +264,24 @@ export class WFMHomePage extends WebActions {
             // Get the formatted date and the day of the week
             const toDate = startDate.format('YYYY-MM-DD');
             const dayName = startDate.format('dddd'); // Get the full name of the day
+            await this.page.waitForTimeout(500);
             // Construct the aria-label based on the date and day name
             const ariaLabel = `${toDate} ${dayName} unselected`;
-            const dateSelector = `//td[@aria-label='${ariaLabel}']`;
+            const dateSelector1 = `//td[@aria-label='${ariaLabel}']`;
+            const dateSelector = `//td[@data-date='${toDate}' and @role='button']`;
             await this.page.waitForTimeout(500);
-
             const elements = await this.page.locator(dateSelector);
             const count = await elements.count();
             const targetElement = elements.first();
-
             await targetElement.focus();
             await this.page.waitForTimeout(500);
             await targetElement.click({ force: true });
-
-
+            const toCheckElement = await this.page.locator(dateSelector1).first();
+            if (await toCheckElement.count() > 0) {
+                await targetElement.focus();
+                await this.page.waitForTimeout(500);
+                await targetElement.click({ force: true });
+            }
             // Create a locator for the date element
 
             // Increment the start date by one day

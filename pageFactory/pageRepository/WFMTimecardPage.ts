@@ -95,7 +95,7 @@ export class WFMTimecardPage extends WebActions {
         await this.page.locator("(//input[@id='endDateTimeInput'])[1]").fill(EndDate);
         await this.page.keyboard.press('Tab');
         // await this.page.waitForTimeout(2000);
-        await this.Apply.click();
+        await this.Apply.first().click();
         await this.page.waitForTimeout(500);
 
     }

@@ -5,7 +5,7 @@ import path from 'path';
 
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
-const excelFileName = 'Timecard_Total_Amy2.xlsx';
+const excelFileName = 'WFMAddingPaycodes_EnterTimeOFF_SK_REG.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 // Convert the Excel sheets to JSON format
@@ -37,25 +37,21 @@ for (const sheetName in sheetsJson) {
             });
 
             await test.step('Select Timeoff for the Emp', async () => {
+                await wfmtimecardpage.selectPayPeriodBydateRange(String(data.RangeStartDate), String(data.RangeEndDate));
                 await wfmhomepage.rightclickEmp(data.EmpID);
                 await wfmhomepage.clicktimeoff();
-                await wfmhomepage.enterTimeoffDetails("SK-Annual Leave");
+                await wfmhomepage.enterTimeoffDetails(data.Paycode);
             });
 
             await test.step('Select the dates ', async () => {
-                await wfmhomepage.selectDatesandSubmit('2024-11-01', '2024-11-01');
+                await wfmhomepage.selectDatesandSubmit(data.StartDate, data.EndDate);
 
             });
 
             await test.step('Validate the Timeoff', async () => {
-                await wfmhomepage.validateTimeoff(data.EmpID,"SK-Annual Leave",'2024-11-11', '2024-11-12')
+                await wfmhomepage.validateTimeoff(data.EmpID, data.Paycode, data.StartDate, data.EndDate)
             })
 
-            // await test.step('Search for the Employee in Time Card Page', async () => {
-            //     await wfmtimecardpage.SearchEMP_Timecard(EmpName || `Employee ${index + 1}`);
-            //     const result = await wfmtimecardpage.ValidateTotal(data.Paycode, data.Total);
-            //     writeResultsToExcel(excelFilePath, sheetName, index, "", result);
-            // });
         });
     });
 }
