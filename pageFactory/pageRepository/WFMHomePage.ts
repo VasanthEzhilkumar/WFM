@@ -48,10 +48,7 @@ export class WFMHomePage extends WebActions {
     readonly btnrefresh: Locator;
     //readonly reportLibrary: Locator
     readonly addshift: Locator;
-
-
-
-
+    readonly dataViewLibrary: Locator;
 
     constructor(page: Page, context: BrowserContext) {
         super(page, context);
@@ -95,6 +92,7 @@ export class WFMHomePage extends WebActions {
         this.btnChooseFile = page.getByRole('button', { name: 'Choose File' });
         this.btnrefresh = page.getByLabel('{{ lastRefreshOn }}');
         this.addshift = page.getByRole('button', { name: 'Add Shift' });
+        this.dataViewLibrary = page.getByLabel('Dataview Library link');
 
     }
 
@@ -113,6 +111,10 @@ export class WFMHomePage extends WebActions {
 
     async ClickonMainMenu(): Promise<void> {
         await this.MAINMENU.click()
+    }
+    async openDataView(): Promise<void> {
+        await this.dataViewReports.click();
+        await this.dataViewLibrary.click();
     }
 
     async openSchedulePlannerPage(): Promise<void> {
