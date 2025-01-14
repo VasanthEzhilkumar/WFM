@@ -4,7 +4,7 @@ import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import { WFMSchedulePlannerPage } from '@pages/WFMScheduleplannerPage';
 import * as path from 'path';
 
-const excelFileName = 'CopyofRuleTypeValidationAndreNeg.xlsx';
+const excelFileName = 'CZ-FT40-RV10012025_Updated.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 
@@ -23,7 +23,7 @@ for (const sheetName in sheetsJson) {
             });
 
             await test.step('Login into WFM Application', async () => {
-                //await loginPage.changelanguage();
+                await loginPage.changelanguage();
                 await loginPage.logininASManager();
             });
 
@@ -39,7 +39,7 @@ for (const sheetName in sheetsJson) {
             await test.step(`Search for the Employee Rule Violation: ${data.EmpNum}`, async () => {
                 await wfmscheduleplannerpage.setCurrentPayPeriod(data.FromDate, data.ToDate)
                 const empName = await wfmscheduleplannerpage.clickonRuleViolationTab(data.EmpNum);
-                const ruleViolations = await wfmscheduleplannerpage.SearchEmpRuleViolation(empName.toString(), data.ExpectedDescription, data.Date,data.Expected);
+                const ruleViolations = await wfmscheduleplannerpage.SearchEmpRuleViolation(empName.toString(), data.ExpectedDescription, data.Date,data.Expected,data.Severity);
 
                 // Ensure ruleViolations is an array
                 const violationArray = Array.isArray(ruleViolations) ? ruleViolations : [ruleViolations];

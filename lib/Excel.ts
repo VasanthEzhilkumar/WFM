@@ -168,3 +168,68 @@ export const writeResultsToExcel = async (filePath: string, sheetName: string, r
     }
 };
 
+
+export const writeResultsToExcelwithComment = async (
+    filePath: string,
+    sheetName: string,
+    rowIndex: number,
+    empNum: string,
+    status: string,
+    testComment: string // Add this parameter for the TestComment
+) => {
+    const workbook = new ExcelJS.Workbook();
+    await workbook.xlsx.readFile(filePath);
+    const worksheet = workbook.getWorksheet(sheetName);
+
+    let statusCol = -1;
+    let commentCol = -1;
+
+    const targetColumn = empNum === 'EmpResult' ? 'EmpTestResult' : 'TestResult';
+    const commentColumn = 'TestComment'; // Column for the comment
+
+    // Find the column indexes
+    const headerRow = worksheet.getRow(1);
+    headerRow.eachCell((cell, colNumber) => {
+        if (cell.value === targetColumn) {
+            statusCol = colNumber;
+        }
+        if (cell.value === commentColumn) {
+            commentCol = colNumber;
+        }
+    });
+
+    // If the comment column is not found, add it
+    if (commentCol === -1) {
+        commentCol = headerRow.cellCount + 1;
+        headerRow.getCell(commentCol).value = commentColumn;
+        headerRow.commit();
+    }
+
+    if (statusCol === -1) {
+        console.error(`Column ${targetColumn} not found`);
+        return;
+    }
+
+    const row = worksheet.getRow(rowIndex + 2);
+    const statusCell = row.getCell(statusCol);
+    const commentCell = row.getCell(commentCol);
+
+    if (statusCell) {
+        console.log(`Writing status "${status}" to row ${rowIndex + 2}, column ${statusCol}`);
+        statusCell.value = status;
+    } else {
+        console.error(`Failed to find cell at row ${rowIndex + 2}, column ${statusCol}`);
+    }
+
+    if (commentCell) {
+        console.log(`Writing comment "${testComment}" to row ${rowIndex + 2}, column ${commentCol}`);
+        commentCell.value = testComment;
+    } else {
+        console.error(`Failed to find cell at row ${rowIndex + 2}, column ${commentCol}`);
+    }
+
+    row.commit();
+    await workbook.xlsx.writeFile(filePath);
+    console.log(`Successfully wrote status and comment for row ${rowIndex + 2}`);
+};
+

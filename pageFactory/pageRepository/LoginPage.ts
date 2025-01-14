@@ -66,8 +66,10 @@ export class LoginPage {
 
     async changelanguage(): Promise<void> {
 
-        await this.page.getByRole('link', { name: '' })
-        await this.page.getByRole('link', { name: 'American English' }).click();
+        await this.page.getByRole('link', { name: 'UK English' }).click();
+
+        // await this.page.getByRole('link', { name: '' })
+        // await this.page.getByRole('link', { name: 'American English' }).click();
 
     }
     async logininASWFMApplication(): Promise<void> {

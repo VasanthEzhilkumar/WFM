@@ -1,4 +1,5 @@
 import { Page, BrowserContext, Locator } from '@playwright/test';
+import { Console } from 'console';
 
 // Define the interface for rule violations
 interface RuleViolation {
@@ -73,11 +74,11 @@ export class WFMSchedulePlannerPage {
         await this.CurrentPayPeriod.click();
         await this.page.waitForTimeout(500);
         await this.SelectRange.click();
-        await this.page.waitForTimeout(2000);
+        await this.page.waitForTimeout(4000);
         await this.page.locator("//input[@id='startDateTimeInput']").type(StartDate.toString());
         await this.page.waitForTimeout(2000);
         await this.page.locator("//input[@id='endDateTimeInput']").type(EndDate.toString());
-        await this.page.waitForTimeout(2000);
+        await this.page.waitForTimeout(4000);
         await this.Apply.click();
         await this.page.waitForTimeout(500);
 
@@ -96,7 +97,7 @@ export class WFMSchedulePlannerPage {
     }
 
 
-    async SearchEmpRuleViolation(ariaLabel: string, Rule: string, date: string,exp:string): Promise<string> {
+    async SearchEmpRuleViolation(ariaLabel: string, Rule: string, date: string,exp:string,sev:string): Promise<string> {
 
         
 
@@ -124,7 +125,7 @@ export class WFMSchedulePlannerPage {
             const sanitizedRowDate = rowDate.trim();
 
             // Log the sanitized row date to debug
-            console.log(`Sanitized Row Date: "${sanitizedRowDate}"`);
+            //console.log(`Sanitized Row Date: "${sanitizedRowDate}"`);
 
             // Updated regular expression to match the date (in the format MM/DD/YYYY)
             const dateMatch = sanitizedRowDate.match(/(\d{1,2}\/\d{1,2}\/\d{4})/);
@@ -132,7 +133,7 @@ export class WFMSchedulePlannerPage {
             // Extracted date or an empty string if no match is found
             const trimmedDate = dateMatch ? dateMatch[0] : '';
 
-            console.log(trimmedDate); // Output: 8/22/2024
+            //console.log(trimmedDate); // Output: 8/22/2024
             const trimmedRuleType = ruleType?.trim() || '';
             const trimmedDescription = description?.trim() || '';
             // Validation: Check if the current row matches the provided date and Rule
@@ -150,19 +151,26 @@ export class WFMSchedulePlannerPage {
             // }
         
             // return "Failed"
-        
-            if (trimmedDate === date && cleanedRule.includes(cleanedDescription)) {
-                // if (exp === 'Yes') {
-                //     return 'Passed';
-                // }
-                    // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"
-    return exp === 'Yes' ? 'Passed' : 'Failed';
+            
+            if (cleanedDescription.includes(cleanedRule) && severity.includes(sev)) {
+                console.log("Rule & Description Present",cleanedRule)
+                return exp === 'Yes' ? 'Passed' : 'Failed';
             }
+        
+//             if (trimmedDate === date && cleanedRule.includes(cleanedDescription)) {
+//                 // if (exp === 'Yes') {
+//                 //     return 'Passed';
+//                 // }
+//                     // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"
+//  2
+//             }
         }
                 // If the first condition fails, check the value of exp
-                if (exp === 'No') {
+              if (exp === 'No') {
+                    console.log( "Rule is not present and Expected is no ")
                     return 'Passed';
-                } else {
+              } else {
+                  console.log("Rule is not presnet and Expected is Yes ")
                     return 'Failed';
                 }
                 // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"
@@ -174,6 +182,7 @@ export class WFMSchedulePlannerPage {
 
 
 
+    
 
 
     async SearchEmpRution(ariaLabel: string, Rule: string, date: string): Promise<string> {
