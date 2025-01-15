@@ -4,7 +4,7 @@ import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import { WFMSchedulePlannerPage } from '@pages/WFMScheduleplannerPage';
 import * as path from 'path';
 
-const excelFileName = 'CZ-FT40-RV10012025_Updated.xlsx';
+const excelFileName = 'Part Time 20-4 Minor Sch rule Automation File.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 

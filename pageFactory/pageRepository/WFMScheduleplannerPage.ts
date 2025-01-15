@@ -167,10 +167,10 @@ export class WFMSchedulePlannerPage {
         }
                 // If the first condition fails, check the value of exp
               if (exp === 'No') {
-                    console.log( "Rule is not present and Expected is no ")
+                    console.log( Rule+" : Rule is not present and Expected is no ")
                     return 'Passed';
               } else {
-                  console.log("Rule is not presnet and Expected is Yes ")
+                  console.log(Rule+ " : Rule is not presnet and Expected is Yes ")
                     return 'Failed';
                 }
                 // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"

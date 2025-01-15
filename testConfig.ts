@@ -10,7 +10,7 @@ export const testConfig = {
     WFMPassword:'U2FsdGVkX18V5h3fyN7305Rg+oaJ6z76An0VSo6P62HeiqwLsRXOxlRANt5fWQ3g',
     WFMEmpUSername: `10649086`,
     WFMEmpPassword:'WFMManagerPassword@05!',
-//    WFMMgrUSername: `10648949`,
+//    WFMMgrUSername: `10648831`,
     //     WFMMgrPassword: 'WFMManagerPassword@06',
     WFMMgrUSername: `10550474`,
      WFMMgrPassword: 'PrimarkMgr123!',
