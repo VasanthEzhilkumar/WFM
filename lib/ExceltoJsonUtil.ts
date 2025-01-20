@@ -14,24 +14,17 @@ export function excelToJson(filePath: string): Record<string, any[]> {
     return sheetsJson;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> Ramchandra
 //Helper function to get the absolute path to the Excel file from a specific directory
 export function getExcelFilePath(fileName: string): string {
     const directory = path.resolve(__dirname,'../Data');
     return path.resolve(directory, fileName);
 }
-<<<<<<< HEAD
 export function readExcel(filePath: string):any[] {
     const workbook = XLSX.readFile(filePath);
     const sheetName = workbook.SheetNames[0];
     const sheet = workbook.Sheets[sheetName];
     return XLSX.utils.sheet_to_json(sheet);
 }
-=======
->>>>>>> Ramchandra
 
 // function excelDateToJSDate(excelDate: number): string {
 //     const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
