@@ -32,7 +32,7 @@ for (const sheetName in sheetsJson) {
             let EmpName: string;
 
             await test.step('Open ESS AVailability Pattern Request ', async () => {
-                await wfmhomepage.ClickonMainMenu();
+                await wfmhomepage.ClickonchangeMyAvailabilityRequest();
                 await wfmhomepage.openSchedulePlannerPage();
                 await wfmhomepage.openSchedulePlannerForEmployee(data.EmpID);
                 await wfmtimecardpage.selectPayPeriodBydateRange(String(data.RangeStartDate), String(data.RangeEndDate));

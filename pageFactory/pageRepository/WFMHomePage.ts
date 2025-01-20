@@ -7,6 +7,7 @@ import { waitOnEventOrTimeout } from "pdfjs-dist-es5/types/web/event_utils";
 
 export class WFMHomePage extends WebActions {
 
+
     public page: Page;
     readonly context: BrowserContext;
     readonly MANAGESCHEDULE: Locator;
@@ -128,6 +129,11 @@ export class WFMHomePage extends WebActions {
         await this.MAINMENU.click()
     }
 
+    async ClickonchangeMyAvailabilityRequest() {
+        await this.page.waitForTimeout(500);
+        await this.page.locator('#changeMyAvailabilityRequestButton').click();
+    }
+
     async openSchedulePlannerPage(): Promise<void> {
         await this.SCHEDULEPLANNERMENU.click()
         await this.SCHEDULEPLANNERLINK.click()
@@ -148,7 +154,6 @@ export class WFMHomePage extends WebActions {
     }
 
     async OpenTimeCardPage(): Promise<void> {
-
         await this.TIMECARD.click()
         await this.TIMECARDLINK.click()
     }
