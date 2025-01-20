@@ -782,4 +782,19 @@ export class WFMTimecardPage extends WebActions {
             return 'Validation Failed' + 'No valid row found';
         }
     }
+    //16-1-25
+    async ValidateSignOFF(): Promise<string> {
+        const locator = await this.page.locator("//div[@id='inpage-text-0-']//div[@class='multiple-lines-wrap']");
+
+        // Check if the element is visible
+        const isVisible = await locator.isVisible();
+
+        if (isVisible) {
+            return "Failed" + await locator.allInnerTexts.toString();
+        } else {
+            return "Passed";
+        }    
+
+    }
+
 }
