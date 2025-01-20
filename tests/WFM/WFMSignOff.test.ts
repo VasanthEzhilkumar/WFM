@@ -6,7 +6,7 @@ import path from 'path';
 
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
-const excelFileName = 'TimeCardPremiumN.xlsx';
+const excelFileName = 'Timecard_SignOFF.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 // Convert the Excel sheets to JSON format
@@ -18,7 +18,7 @@ for (const sheetName in sheetsJson) {
 
     dataSet.forEach((data, index) => {
         // Create a unique title by appending the sheet name and the index
-        const testTitle = `@WFM Validate Pay Code and Total for Employee ${data.EmpID || `Employee ${index + 1}`} in sheet ${sheetName} (Row ${index + 1})`;
+        const testTitle = `@WFM Validate SignOFF ${data.EmpNum || `Employee ${index + 1}`} in sheet ${sheetName} (Row ${index + 1})`;
         test(testTitle, async ({ loginPage, wfmhomepage, wfmtimecardpage, webActions, currentPayPeriodPage }) => {
             await test.step('Navigate to Application', async () => {
                 await loginPage.navigateToURL();
@@ -26,7 +26,7 @@ for (const sheetName in sheetsJson) {
 
             await test.step('Login into WFM Application', async () => {
                 await loginPage.changelanguage();
-                await loginPage.logininASManager();
+                await loginPage.logininfromExcelMgr(data.ManagerID,data.Password);
             });
 
             let EmpName: string;
@@ -38,19 +38,20 @@ for (const sheetName in sheetsJson) {
             });
 
             await test.step('Open TimeCard page', async () => {
-                //await wfmhomepage.TimeOff();
                 await wfmhomepage.ClickonMainMenu();
                 await wfmhomepage.OpenTimeCardPage();
             });
 
             await test.step('Search for the Employee in Time Card Page', async () => {
                 await wfmtimecardpage.SearchEMP_Timecard(EmpName || `Employee ${index + 1}`);
-                //step added to select the payrange 
-                await currentPayPeriodPage.selectPayPeriodBydateRange(data.FromDate, data.ToDate);
-                //step added for validation for Paycode and Totals
-                const result = await wfmtimecardpage.ValidateTotal2(data.Paycode, data.Total,data.Expected);
-                writeResultsToExcel(excelFilePath, sheetName, index, "", result);
+                await currentPayPeriodPage.selectPreviousPayPeriod();
             });
+
+            await test.step('Validate the SignOFF Button ', async () => {
+                const status = await  currentPayPeriodPage.signOffButton();
+                await writeResultsToExcel(excelFilePath, sheetName, index, "", status);
+            });
+            
         });
     });
 }

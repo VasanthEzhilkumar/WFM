@@ -46,7 +46,7 @@ for (const sheetName in sheetsJson) {
             await test.step('Search for the Employee in Time Card Page', async () => {
                 await wfmtimecardpage.SearchEMP_Timecard(EmpName || `Employee ${index + 1}`);
                 //step added to select the payrange 
-                await currentPayPeriodPage.setCurrentPayPeriod(data.StartDate, data.EndDate);
+                await currentPayPeriodPage.selectPayPeriodBydateRange(data.StartDate, data.EndDate);
                 const result = await wfmtimecardpage.ValidateTotal(data.Paycode, data.Total);
                 writeResultsToExcel(excelFilePath, sheetName, index, "", result);
             });

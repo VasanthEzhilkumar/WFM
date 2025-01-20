@@ -11,7 +11,7 @@ export const testConfig = {
     WFMEmpUSername: `10649086`,
     WFMEmpPassword:'WFMManagerPassword@05!',
    WFMMgrUSername: `10648949`,
-    WFMMgrPassword: 'PrimarkMgr123!',
+    WFMMgrPassword: 'WFMManagerPassword@09',
     WFMUsrUsername: 'vezhil@primark.ie',
     WFMUsrPassword: 'NewpasswordMicrosoft@14',
     

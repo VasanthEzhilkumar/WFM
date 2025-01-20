@@ -52,7 +52,7 @@ export class WFMDataLibraryPage {
             }
             else if (!flag && exp.toLowerCase() === 'no') {
                 await this.page.waitForTimeout(1000);
-                await writeResultsToExcel(excelFilePath, 'Sheet1', index, `Validation failed for ReportName: ${reportName}`, 'Passed:Negative Testing');
+                await writeResultsToExcel(excelFilePath, 'Sheet1', index, `Validation failed for ReportName: ${reportName}`, 'Passed');
             }
             
 

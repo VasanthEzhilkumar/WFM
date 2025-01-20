@@ -110,11 +110,23 @@ export class WFMHomePage extends WebActions {
     }
 
     async ClickonMainMenu(): Promise<void> {
-        await this.MAINMENU.click()
+        await this.page.waitForTimeout(500);
+        await this.MAINMENU.click();
+
     }
     async openDataView(): Promise<void> {
         await this.dataViewReports.click();
+        await this.page.waitForTimeout(500);
         await this.dataViewLibrary.click();
+        await this.page.waitForTimeout(500);
+    }
+    async isDataViewAvailable() {
+        try {
+            const dataViewElement = await this.page.locator("//div[@id='585_category'][@class='expander']"); // Replace with actual selector
+            return await dataViewElement.isVisible(); // Return true if DataView is visible
+        } catch (error) {
+            return false; // Return false if an error occurs (e.g., element not found)
+        }
     }
 
     async openSchedulePlannerPage(): Promise<void> {
