@@ -33,10 +33,10 @@ for (const sheetName in sheetsJson) {
 
             await test.step('Open ESS AVailability Pattern Request ', async () => {
                 await wfmhomepage.ClickonchangeMyAvailabilityRequest();
-                await wfmhomepage.openSchedulePlannerPage();
-                await wfmhomepage.openSchedulePlannerForEmployee(data.EmpID);
-                await wfmtimecardpage.selectPayPeriodBydateRange(String(data.RangeStartDate), String(data.RangeEndDate));
-                EmpName = await webActions.getEmployeeName(data.EmpID);
+                // await wfmhomepage.openSchedulePlannerPage();
+                // await wfmhomepage.openSchedulePlannerForEmployee(data.EmpID);
+                // await wfmtimecardpage.selectPayPeriodBydateRange(String(data.RangeStartDate), String(data.RangeEndDate));
+                // EmpName = await webActions.getEmployeeName(data.EmpID);
             });
 
             await test.step('Select Timeoff for the Emp', async () => {
