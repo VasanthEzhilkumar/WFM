@@ -110,6 +110,7 @@ export class WFMHomePage extends WebActions {
     async clickSettingMenuButton() {
         await this.page.waitForTimeout(500);
         await this.settingsMenuButton.click();
+
     }
 
     async clickonTimeCard(): Promise<void> {
@@ -470,7 +471,7 @@ export class WFMHomePage extends WebActions {
                 await this.page.waitForTimeout(500);
                 await targetElement.click({ force: true });
             }
-            // Create a locator for the date element
+ 
             // Increment the start date by one day
             startDate = startDate.add(1, 'days');
         }
@@ -506,7 +507,6 @@ export class WFMHomePage extends WebActions {
             return (`Reason "${Reason}" not found. Test failed.`);
             // throw new Error(`Reason "${Reason}" not found. Test failed.`);
         }
-
         await this.PICK_DATES.click();
         await this.START_DATE.fill(Start_Date);
         await this.END_DATE.clear();
