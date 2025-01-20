@@ -3,7 +3,7 @@ import { getEmployeeNumbers, writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import * as path from 'path';
 
-const excelFileName = 'TestRun.xlsx';
+const excelFileName = 'ShiftSwaps.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 const results: { empNumber: string, ruleViolations: string[] }[] = [];
@@ -13,16 +13,16 @@ for (const sheetName in sheetsJson) {
 
     dataSet.forEach((data, index) => {
         // Create a unique title by appending the sheet name and the index
-        const testTitle = `@WFM Validate Rule type for ${data.EmpNum || `Employee ${index + 1}`} in sheet ${sheetName} (Row ${index + 1})`;
+        const testTitle = `@WFM Shift Swaps between ${data.FirstEmpNumber} and ${data.SecondEmpNumber} in sheet ${sheetName} (Row ${index + 1})`;
 
         test(testTitle, async ({ loginPage, webActions, wfmhomepage, wfmscheduleplannerpage, wfmtimecardpage }) => {
             await test.step(`Navigateto Application`, async () => {
                 await loginPage.navigateToURL();
+                await loginPage.changelanguage();
             });
 
-            await test.step('Login into WFM Application', async () => {
-                await loginPage.changelanguage();
-                await loginPage.logininASManager();
+            await test.step('Login into WFM Application as First Employee', async () => {
+                await loginPage.logininfromExcel(data.FirstEmpNumber, data.FirstEmpPassword);
             });
 
             await test.step('Verify Manage schedule time card Exists', async () => {

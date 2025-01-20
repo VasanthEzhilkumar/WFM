@@ -8,7 +8,12 @@ import { WFMTimecardPage } from '@pages/WFMTimecardPage';
 import { WFMNotificationPage } from '@pages/WFMNotificationPage';
 import { WFMIntegrationPage } from '@pages/WFMIntegrationPage';
 import { CurrentPayPeriodPage } from 'pageFactory/commonPages/CurrentPayPeriodPage';
+<<<<<<< HEAD
 import { WFMDataLibraryPage } from '@pages/WFMDataLibraryPage';
+=======
+
+
+>>>>>>> Ramchandra
 
 const test = baseTest.extend<{
     webActions: WebActions;
@@ -20,7 +25,10 @@ const test = baseTest.extend<{
     wfmnotificationpage: WFMNotificationPage;
     wfmintegrationpage: WFMIntegrationPage;
     currentPayPeriodPage: CurrentPayPeriodPage;
+<<<<<<< HEAD
     wfmDatapage: WFMDataLibraryPage;
+=======
+>>>>>>> Ramchandra
    
 }>({
     webActions: async ({ page, context }, use) => {
@@ -47,10 +55,13 @@ const test = baseTest.extend<{
     currentPayPeriodPage: async({page,context}, use) =>{
         await use(new CurrentPayPeriodPage(page,context));
     },
+<<<<<<< HEAD
     wfmDatapage: async({page,context}, use) =>{
         await use(new WFMDataLibraryPage(page,context));
     },
 
+=======
+>>>>>>> Ramchandra
 
 
 

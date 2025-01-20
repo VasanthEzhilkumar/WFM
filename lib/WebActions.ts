@@ -65,6 +65,7 @@ export class WebActions {
         return pageText;
     }
 
+<<<<<<< HEAD
     async selectScheduleForEmployee(EmployeeID: any) {
         const inputEmployeeSearch = await this.page.getByLabel('Employee Search');
         // const searchByEmployeNameOrId = await this.page.getByLabel('Search by Employee Name or ID');
@@ -90,6 +91,8 @@ export class WebActions {
     }
 
 
+=======
+>>>>>>> Ramchandra
     /*
     @Auther: Madhukar Kirkan
     @Description : This function is used to take screenshot and will return screenshot of failed testcases.
