@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs", // CommonJS module system
+    "esModuleInterop": true, // Enable `import` for CommonJS modules                           /*This is for "path" module import*/
+    "baseUrl": ".", /* Specify the base directory to resolve non-relative module names. */
+    "paths": { /* Specify a set of entries that re-map imports to additional lookup locations. */
+      "@pages/*": [
+        "pageFactory/pageRepository/*"
+      ],
+      "@objects/*": [
+        "pageFactory/objectRepository/*"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ],
+    }
+    // Enable downlevelIteration
+  }
+}

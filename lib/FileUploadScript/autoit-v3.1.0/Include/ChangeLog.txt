@@ -1,0 +1,63 @@
+1.0.03 (6 February. 2005)
+	*** Updated all documentation to follow the standard used in the helpfile.
+	
+	Array.au3:
+	- Updated many Array Function with optional parameters like $iBase.(See helpfile for detail)
+	- Updated a couple of Function to make use of the new Redim function.
+	- Added: _ArraySort()
+	- Added: _ArrayTrim()
+	- Added: _ArrayCreate()
+	
+	Date.au3: 
+	- Added: _DateAdd, _DateDiff, _DateToDayValue, _DayValueToDate,
+	         _DateTimeFormat, _DayOfWeek, _DateIsValid,
+	         _Now(), Nowcalc(), Nowcalcdate(), _NowTime(),
+	         _NowDate(),_DaysInMonth()_DaysOfWeek()
+	
+	File.au3:
+	- Removed: _DirRemoveContents , obsolete, replaced by FileDelete() internal command.
+	- Removed: _FileAppend , obsolete, replaced by FileWriteLine("Filename",) internal command.
+	- Updated: _FileCountLines with a faster version created by Tylo.
+	- Added:   _TempFile()
+
+	Inet.au3 
+	- Added: _INetExplorerCapable, _INetMail, _GetIp
+	
+	Math.au3:
+	- Added:   _Ceil, _Floor, _MathCheckDiv, _MathCheckDiv
+		
+	Misc.au3:
+	- Added:  _Iif()
+
+	Process.au3:
+	- Updated: _RunDos because the default quotes gave problems in Win9x.
+	
+	String.au3:
+	- Added:  _StringProper(), _StringEncrypt(), _StringToHex(), HexToString()
+
+   Visa.au3:
+	- Added:  _viExecCommand,_viOpen, _viClose, _viFindGpib, _viSetTimeout, 
+	          _viSetAttribute, _viGTL, _viGpibBusReset
+
+
+1.0.02 (27th Feb. 2004)
+	- Added: _FileCountLines(), _DirRemoveContents()
+	- Added: _DateDaysInMonth()
+	- Added: _DateIsValidMonthNum(), _DateIsValidWeekdayNum(), _DateIsValidYear()
+	- Added: _TimeIsValidHour(), _TimeIsValidMinute(), _TimeIsValidSecond()
+	- Added: Usage syntax now included for documentation
+	- Added: Documentation updates
+	- Changed: _FileReadToArray() so it executes faster
+	- Changed: (Internal) Enhanced the way the date/time functions operate
+	- Changed: (Internal) File functions now use new file read/write syntax
+	- Fixed: _RunDOS() to support executing DOS commands with spaces in the command
+
+
+1.0.01 (5th Feb. 2004)
+	- Added: _ColorGetRed(), _ColorGetGreen(), _ColorGetBlue()
+	- Added: _RunDOS()
+	- Fixed: _TicksToTime() and _TimeToTicks()
+
+
+1.0.00 (21st Jan. 2004)
+	- Initial release
