@@ -16,7 +16,7 @@ export class CurrentPayPeriodPage {
         this.CurrentPayPeriod = page.getByTitle('Select Timeframe');
         this.SelectRange = page.getByRole('button', { name: 'Select Range' });
         this.Apply = page.getByRole('button', { name: 'Apply' });
-        this.ButtonTimeframe=page.getByTitle('Select Timeframe');
+        this.ButtonTimeframe=page.getByTitle('Select Time frame');
         this.PreviousPayPeriod=page.getByRole('option', { name: 'Previous Pay Period' });
         this.SignOff=page.getByLabel('Sign-Off', { exact: true });
 
@@ -42,7 +42,7 @@ export class CurrentPayPeriodPage {
 
     async selectPreviousPayPeriod() {
         await this.page.waitForTimeout(500);
-        await this.ButtonTimeframe.click();
+        await this.CurrentPayPeriod.click();
         await this.page.waitForTimeout(500);
         await this.PreviousPayPeriod.click();
         await this.page.waitForTimeout(500);

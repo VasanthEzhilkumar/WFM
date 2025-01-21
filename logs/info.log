@@ -10927,3 +10927,45 @@
 {"level":"info","message":"Executing Step : Open Maintenance Menu page"}
 {"level":"info","message":"Test Case Completed : @WFM Dataview Employee 120 in sheet Sheet1 (Row 120) Status : passed"}
 >>>>>>> Gayatri
+{"level":"info","message":"Test Case Started : @WFM Dataview Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Employee 1 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Schedule Planer Front End for 10648999 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Serach for employee and Add Shift"}
+{"level":"info","message":"Test Case Completed : @WFM Schedule Planer Front End for 10648999 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate SignOFF Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate SignOFF Employee 1 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate SignOFF Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Started : @WFM Validate SignOFF Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Test Case Started : @WFM Validate SignOFF Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Validate SignOFF Employee 1 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate SignOFF Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Open TimeCard page"}
+{"level":"info","message":"Executing Step : Search for the Employee in Time Card Page"}
+{"level":"info","message":"Executing Step : Validate the SignOFF Button "}
+{"level":"info","message":"Test Case Completed : @WFM Validate SignOFF Employee 1 in sheet Sheet1 (Row 1) Status : passed"}
