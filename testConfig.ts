@@ -17,7 +17,7 @@ export const testConfig = {
     WFMUsrUsername: 'vezhil@primark.ie',
     WFMUsrPassword: 'NewpasswordMicrosoft@14',
     
-    waitForElement: 60,
+    waitForElement: 60000,
     dbUsername: ``,
     dbPassword: ``,
     dbServerName: ``,

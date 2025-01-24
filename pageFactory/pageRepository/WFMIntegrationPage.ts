@@ -31,6 +31,10 @@ export class WFMIntegrationPage {
     readonly runIntbtn: Locator;
     readonly runSummary: Locator;
     readonly outputFiles: Locator;
+    readonly ignoreSignOffYes:Locator;
+    readonly CurrentPayPeriod: Locator;
+    readonly SelectRange: Locator;
+    readonly Apply: Locator;
 
 
 
@@ -41,11 +45,16 @@ export class WFMIntegrationPage {
         this.runIntegrationbtn = page.locator('div').filter({ hasText: /^Run an Integration$/ });
         this.selectIntegrationslovakia = page.getByRole('dialog').getByRole('list').locator('div').filter({ hasText: 'Payroll Export - Slovakia' }).nth(4)
         this.selectIntegration = page.getByRole('button', { name: 'Select' })
+        this.ignoreSignOffYes = page.getByText('Yes', { exact: true })
         this.closeIntegration = page.getByRole('button', { name: 'Payroll Export - Slovakia Close' })
         this.refreshIntegration = page.getByLabel('Refresh', { exact: true });
         this.runIntbtn = page.getByRole('button', { name: 'Run Integration' })
         this.runSummary = page.getByRole('tab', { name: ' Run Summary' })
         this.outputFiles = page.getByRole('tab', { name: ' Output Files' })
+                // this.CurrentPayPeriod = page.getByRole('button', { name: 'Current Schedule Period' });
+         this.CurrentPayPeriod = page.locator('(//span[@class="timeframe btn-link"]//button[contains(@title,"Select Time")])[2]');
+         this.SelectRange = page.getByRole('button', { name: 'Select Range' });
+         this.Apply = page.getByRole('button', { name: 'Apply' });
     }
 
     async SearchEMP_Timecard(EmpName: string): Promise<void> {
@@ -56,11 +65,14 @@ export class WFMIntegrationPage {
 
     }
 
-    async runIntegration(): Promise<string> {
+    async runIntegration(startDate,endDate): Promise<string> {
         await this.integrationLink.click();
         await this.runIntegrationbtn.click();
         await this.selectIntegrationslovakia.click();
         await this.selectIntegration.click();
+        await this.ignoreSignOffYes.click();
+        await this.selectPayPeriodBydateRange(startDate, endDate);
+
         await this.runIntbtn.click();
         // Capture the date and time when you click the run button
         const runTime = this.getFormattedDateTime();
@@ -68,6 +80,25 @@ export class WFMIntegrationPage {
         await this.closeIntegration.click()
 
         return runTime;
+
+    }
+
+    async selectPayPeriodBydateRange(StartDate: string, EndDate: string) {
+
+        await this.page.waitForTimeout(500);
+        await this.CurrentPayPeriod.click();
+        await this.SelectRange.click();
+        await this.page.locator("(//input[@id='startDateTimeInput'])[1]").focus();
+        await this.page.waitForTimeout(1000);
+        await this.page.locator("(//input[@id='startDateTimeInput'])[1]").fill(StartDate);
+        await this.page.waitForTimeout(200);
+        await this.page.locator("(//input[@id='endDateTimeInput'])[1]").focus();
+        await this.page.waitForTimeout(1000);
+        await this.page.locator("(//input[@id='endDateTimeInput'])[1]").fill(EndDate);
+        await this.page.waitForTimeout(200);
+        await this.Apply.first().focus();
+        await this.Apply.first().click();
+        await this.page.waitForTimeout(500);
 
     }
 
