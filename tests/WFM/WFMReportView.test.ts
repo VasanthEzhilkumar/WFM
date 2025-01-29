@@ -40,7 +40,7 @@ for (const sheetName in sheetsJson) {
 
             await test.step('Run the integration', async () => {
                // await wfmhomepage.rightclickEmp(data.EmpID);
-                 runTime = await wfmintegrationpage.runIntegration();
+                 runTime = await wfmintegrationpage.runIntegration(data.FromDate,data.ToDate);
                 //await wfmhomepage.enterTimeoffDetails("SK-Annual Leave");
             });
 

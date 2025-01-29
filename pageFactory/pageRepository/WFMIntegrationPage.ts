@@ -31,7 +31,7 @@ export class WFMIntegrationPage {
     readonly runIntbtn: Locator;
     readonly runSummary: Locator;
     readonly outputFiles: Locator;
-    readonly ignoreSignOffYes:Locator;
+    readonly ignoreSignOffYes: Locator;
     readonly CurrentPayPeriod: Locator;
     readonly SelectRange: Locator;
     readonly Apply: Locator;
@@ -51,10 +51,10 @@ export class WFMIntegrationPage {
         this.runIntbtn = page.getByRole('button', { name: 'Run Integration' })
         this.runSummary = page.getByRole('tab', { name: ' Run Summary' })
         this.outputFiles = page.getByRole('tab', { name: ' Output Files' })
-                // this.CurrentPayPeriod = page.getByRole('button', { name: 'Current Schedule Period' });
-         this.CurrentPayPeriod = page.locator('(//span[@class="timeframe btn-link"]//button[contains(@title,"Select Time")])[2]');
-         this.SelectRange = page.getByRole('button', { name: 'Select Range' });
-         this.Apply = page.getByRole('button', { name: 'Apply' });
+        // this.CurrentPayPeriod = page.getByRole('button', { name: 'Current Schedule Period' });
+        this.CurrentPayPeriod = page.locator('(//span[@class="timeframe btn-link"]//button[contains(@title,"Select Time")])[2]');
+        this.SelectRange = page.getByRole('button', { name: 'Select Range' });
+        this.Apply = page.getByRole('button', { name: 'Apply' });
     }
 
     async SearchEMP_Timecard(EmpName: string): Promise<void> {
@@ -65,7 +65,9 @@ export class WFMIntegrationPage {
 
     }
 
-    async runIntegration(startDate,endDate): Promise<string> {
+
+
+    async runIntegration(startDate, endDate): Promise<string> {
         await this.integrationLink.click();
         await this.runIntegrationbtn.click();
         await this.selectIntegrationslovakia.click();
@@ -162,9 +164,17 @@ export class WFMIntegrationPage {
 
         if (isStateVisible) {
             // Click the button after the state is visible
-            await this.page.getByRole('button', {
+
+            const buttons = await this.page.getByRole('button', {
                 name: new RegExp(`Integration Run Name Payroll Export - Slovakia-${runTime}.*Type Run now`),
-            }).click();
+            })
+            // Ensure at least one button matches the criteria
+            if (await buttons.count() > 0) {
+                // Click on the first matching button
+                await buttons.nth(0).click();
+            } else {
+                console.error("No buttons matching the selector were found.");
+            }
             console.log("Clicked the 'Run now' button");
             await this.runSummary.click();
             await this.outputFiles.click();
@@ -543,23 +553,23 @@ export class WFMIntegrationPage {
     async validateRowCount(csvFilePath: string, excelFilePath: string): Promise<{ isMatch: boolean; csvRowCount: number; excelRowCount: number }> {
         // Step 1: Read the CSV file
         const csvData: string[][] = await this.readCSV(csvFilePath);
-    
+
         // Step 2: Read the Excel file
         const excelData = this.readExcel(excelFilePath);
-    
+
         // Step 3: Get the row counts
         const csvRowCount = csvData.length;
         const excelRowCount = excelData.length;
-    
+
         console.log(`CSV Row Count: ${csvRowCount}, Excel Row Count: ${excelRowCount}`);
-    
+
         // Check if the counts match
         const isMatch = csvRowCount === excelRowCount;
-    
+
         // Return the result along with the row counts
         return { isMatch, csvRowCount, excelRowCount };
     }
-    
+
 }
 
 

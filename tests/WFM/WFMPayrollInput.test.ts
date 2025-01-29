@@ -84,7 +84,7 @@ import path from 'path';
 
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
-const excelFileName = 'PayrollInputAmySmokeTest.xlsx';
+const excelFileName = 'PayrollInput_SK_REG_COMPLETE.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 // Convert the Excel sheets to JSON format
@@ -100,7 +100,7 @@ for (const sheetName in sheetsJson) {
         const firstRow = dataSet[0]; // Assuming "From Date" and "To Date" are in the first row
         fromDate = firstRow.FromDate;
         toDate = firstRow.ToDate;
-        console.log(fromDate,toDate)
+        console.log(fromDate, toDate)
         break; // Exit after finding the first sheet's first row
     }
 }
@@ -126,16 +126,31 @@ test(`@WFM Validate Paycode`, async ({ loginPage, wfmhomepage, wfmintegrationpag
         // EmpName = await webActions.getEmployeeName(data.EmpID);
     });
 
-    let runTime: string;
+    //let runTime: string;
+    function formatDateToDDMMYYYY(date) {
+        const day = String(date.getDate()).padStart(2, '0'); // Get day and pad with 0 if needed
+        const month = String(date.getMonth() + 1).padStart(2, '0'); // Get month (0-based) and pad
+        const year = date.getFullYear(); // Get full year
+        return `${day}/${month}/${year}`;
+    }
+    let runTimeRaw : any
 
     await test.step('Run the integration', async () => {
-        runTime = await wfmintegrationpage.runIntegration(fromDate, toDate); // Pass the extracted dates
+         runTimeRaw = await wfmintegrationpage.runIntegration(fromDate, toDate);
+        //const runTimeRaw = await wfmintegrationpage.runIntegration(fromDate, toDate);
+        const runTimeDate = new Date(runTimeRaw); // Convert the raw string to a Date object
+        runTimeRaw = formatDateToDDMMYYYY(runTimeDate); // Format it to DD/MM/YYYY
+        console.log("RunTime: ", runTimeRaw);
+
+        console.log("RunTime : ", runTimeRaw) // Pass the extracted dates
     });
+  
+
 
     let csvFilePath: string;
 
     await test.step('Check Integration status', async () => {
-        csvFilePath = await wfmintegrationpage.checkIntegrationStatus(runTime);
+        csvFilePath = await wfmintegrationpage.checkIntegrationStatus(runTimeRaw);
     });
 
     await test.step('Validate the inputs in the file', async () => {
