@@ -16611,3 +16611,183 @@
 {"level":"info","message":"Executing Step : Validate the inputs in the file"}
 {"level":"info","message":"Executing Step : Validate the row count of CSV and Excel input file"}
 {"level":"info","message":"Test Case Completed : @WFM Validate Paycode Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10510166 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10510166"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10510166 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10510166 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10510166 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10510166 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10510166 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10510166 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select All the exception and provide justify reasons"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Full Time 40 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for undefined Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for undefined Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Test Case Started : @WFM Time card Exceptions for 10649012"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649101"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649101"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649101"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649101 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649101"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649101 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649101"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649101 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649101"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}

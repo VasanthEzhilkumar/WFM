@@ -116,6 +116,82 @@ export class WFMTimecardPage extends WebActions {
 
     }
 
+    async justifyExceptionstesting(empPayCodes: string): Promise<string> {
+        try {
+            const payCodes = empPayCodes.split(',').map(code => code.trim());
+
+            let warningIcons = await this.page.locator('.icon-k-warning');
+
+            let i = 0;
+            while (await warningIcons.count() > 0) {
+                // Fetch the latest warning icon dynamically
+                const firstIcon = warningIcons.first();
+
+                if (!firstIcon) break; // If no more icons, exit
+
+                await firstIcon.click({ button: 'right' });
+
+                await this.page.getByText('Justify Exception').click();
+
+                // Select pay code dynamically
+                const payCodeToSelect = i < payCodes.length ? payCodes[i] : payCodes[payCodes.length - 1];
+                await this.page.waitForTimeout(1000);
+                await this.page.getByLabel('Pay code', { exact: true }).selectOption(empPayCodes);
+                //await this.page.getByLabel('Pay code').nth(3).selectOption(payCodeToSelect);
+
+                // Approve justification
+                await this.page.locator('#justify-exception-approve').click();
+
+                // Optional: Wait for UI update before proceeding
+                await this.page.waitForTimeout(1000);
+
+                // Re-fetch the warning icons after modification
+                warningIcons = await this.page.locator('.icon-k-warning');
+
+                i++;
+                await this.page.waitForTimeout(1000);
+            }
+
+            return "Passed";
+        } catch (error) {
+            console.error("Justification failed:", error);
+            return "Failed";
+        }
+    }
+
+    async justifyExceptions(empPayCodes: string): Promise<string> {
+        try {
+            const payCodes = empPayCodes.split(',').map(code => code.trim());
+
+            let warningIcons = await this.page.locator('.icon-k-warning');
+
+            let i = 0;
+            const firstIcon = warningIcons.first();
+            await firstIcon.click({ button: 'right' });
+
+            await this.page.getByText('Justify Exception').click();
+
+            // Select pay code dynamically
+            const payCodeToSelect = i < payCodes.length ? payCodes[i] : payCodes[payCodes.length - 1];
+            await this.page.waitForTimeout(1000);
+            await this.page.getByLabel('Pay code', { exact: true }).selectOption(empPayCodes);
+            //await this.page.getByLabel('Pay code').nth(3).selectOption(payCodeToSelect);
+
+            // Approve justification
+            await this.page.locator('#justify-exception-approve').click();
+
+            // Optional: Wait for UI update before proceeding
+            await this.page.waitForTimeout(1000);
+
+            return "Passed";
+        } catch (error) {
+            console.error("Justification failed:", error);
+            return "Failed";
+        }
+    }
+
+
+
     async punchTime(index: number, inpunch: string, outpunch: string, addTime?: boolean): Promise<void> {
         // Format the index for locators based on the value of index
         const formattedIndex = index >= 10 ? `\\3${Math.floor(index / 10)} ${index % 10}` : `\\3${index}`;
@@ -925,7 +1001,7 @@ export class WFMTimecardPage extends WebActions {
             return "Failed" + await locator.allInnerTexts.toString();
         } else {
             return "Passed";
-        }    
+        }
 
     }
 

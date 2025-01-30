@@ -55,6 +55,7 @@ export class WFMHomePage extends WebActions {
     readonly settingsMenuButton: Locator;
 
     readonly dataViewLibrary: Locator;
+    readonly empSearchlabel : Locator;
 
     constructor(page: Page, context: BrowserContext) {
         super(page, context);
@@ -102,6 +103,7 @@ export class WFMHomePage extends WebActions {
         this.addshift = page.getByRole('button', { name: 'Add Shift' });
         this.settingsMenuButton = page.locator('//*[@automation-id="settingsMenuButton"]');
         this.dataViewLibrary = page.getByLabel('Dataview Library link');
+        this.empSearchlabel = page.getByLabel('Employee Search')
     }
 
     async clickDutyManger(DutyManager: any) {//SK-Duty Manager
@@ -126,6 +128,42 @@ export class WFMHomePage extends WebActions {
     async verfiyManageScheuleCard(): Promise<void> {
         await this.MANAGESCHEDULE.isVisible();
     }
+
+    async searchEmpviaEmpSearch(empId: string, option: string): Promise<void> {
+        try {
+            // Click the button to trigger the iframe load
+            await this.empSearchlabel.click();
+    
+            // Wait for the iframe to load
+            await this.page.waitForSelector('iframe[name^="portal-frame-"]', { timeout: 10000 });
+            const frame = this.page.frameLocator('iframe[name^="portal-frame-"]');
+    
+            // Fill the employee ID and click Search
+            await frame.getByLabel('Search by Employee Name or ID').fill(empId);
+            await frame.getByRole('button', { name: 'Search', exact: true }).click();
+    
+            // Wait for the results to load and select the item
+            await frame.getByLabel('Select Item').click();
+            await frame.getByLabel('Go To').click();
+    
+            // Select the option from the dropdown
+            await frame.getByRole('option', { name: option }).click();
+    
+            console.log(`Employee search completed for ID: ${empId} with option: ${option}`);
+        } catch (error) {
+            console.error(`Error during employee search: ${error.message}`);
+            throw new Error(`Failed to search employee: ${error.message}`);
+        }
+    }
+    //   this.page.frameLocator('iframe[name="portal-frame-264743002521"]').getByLabel('Search by Employee Name or ID').fill("10649101")
+    //   this.page.frameLocator('iframe[name="portal-frame-264743002521"]').locator('form div').filter({ hasText: 'Search' }).nth(2).click();
+    //  this.page.frameLocator('iframe[name="portal-frame-264743002521"]').getByLabel('Select Item').click();
+    //   this.page.frameLocator('iframe[name="portal-frame-264743002521"]').locator('#krn-slat-0-slat-area-2').first().click();
+    //   await this.page.frameLocator('iframe[name="portal-frame-264743002521"]').getByLabel('Select Item').check();
+    //   await this.page.frameLocator('iframe[name="portal-frame-264743002521"]').getByLabel('Go To').click();
+    //   await this.page.frameLocator('iframe[name="portal-frame-264743002521"]').getByRole('option', { name: 'Timecard' }).click();
+    
+
 
     async ClickonMainMenu(): Promise<void> {
         await this.page.waitForTimeout(500);
