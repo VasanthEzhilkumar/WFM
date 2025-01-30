@@ -16791,3 +16791,17 @@
 {"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
 {"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
 {"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649101"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649101 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Time card punch for 10649101"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Select Pay Period in the Timecard Page"}
+{"level":"info","message":"Executing Step : Select All the exceptions and provide justify reasons"}
+{"level":"info","message":"Test Case Completed : @WFM Time card punch for 10649101 Status : passed"}
