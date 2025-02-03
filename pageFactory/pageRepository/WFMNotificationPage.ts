@@ -1,4 +1,4 @@
-import { Page, BrowserContext, Locator,expect } from '@playwright/test';
+import { Page, BrowserContext, Locator, expect } from '@playwright/test';
 
 export class WFMNotificationPage {
     readonly page: Page;
@@ -8,6 +8,8 @@ export class WFMNotificationPage {
     readonly EMP_RELOAD: Locator;
     readonly EMP_Select: Locator;
     readonly EMP_Selected: Locator;
+    readonly EMP_AvailabiltyPatternRequest: Locator;
+
     employeeNumbers: string[];
 
     constructor(page: Page, context: BrowserContext) {
@@ -18,10 +20,12 @@ export class WFMNotificationPage {
         this.EMP_RELOAD = page.getByRole('button', { name: ' Reload' });
         this.EMP_Select = page.getByRole('button', { name: 'Select people' });
         this.EMP_Selected = page.getByRole('menu', { name: 'Select people' }).locator('label');
-        
+        this.EMP_AvailabiltyPatternRequest = page.getByText('Availability pattern requests');
     }
 
-    async SelectEmpRequests( start_Date: string, end_date: string ): Promise<string>{
+
+
+    async SelectEmpRequests(start_Date: string, end_date: string): Promise<string> {
 
         await this.EMP_REQUESTS.click();
         // Wait for the elements to be available
@@ -39,7 +43,7 @@ export class WFMNotificationPage {
                     const parts = cleanedText.split(':').map(part => part.trim());
                     let startDate = "";
                     let endDate = "";
-                    
+
                     for (let i = 0; i < parts.length; i++) {
                         if (parts[i].includes('Request Period')) {
                             const dateRange = parts[i + 1].split('-').map(date => date.trim());
@@ -54,9 +58,9 @@ export class WFMNotificationPage {
                     if (isRecordFound) {
                         const checkboxLocator = this.page.locator(`#cc-slats-${index}-slat-area-1`).getByLabel('Select Item');
                         await checkboxLocator.check();
-                        
+
                         await this.page.waitForLoadState('domcontentloaded');
-                        
+
                         // Validate and perform the appropriate action
                         const approvalRecommended = await this.page.getByText('Approval is recommended').isVisible();
                         const rejectionRecommended = await this.page.getByText('Rejection is recommended').isVisible();
@@ -84,16 +88,21 @@ export class WFMNotificationPage {
                     } else {
                         console.error('No records found for approval.');
                         return "Failed"
-                      //  throw new Error('Test failed: No records found for approval.');
+                        //  throw new Error('Test failed: No records found for approval.');
                     }
 
                 }
             }
-        } 
-            else {
-                console.log("No matching elements found.");
-            }
-    } 
+        }
+        else {
+            console.log("No matching elements found.");
+        }
+    }
+
+    async selectAvailabilityPatternRequests() {
+        await this.page.waitForTimeout(4000);
+        await this.EMP_AvailabiltyPatternRequest.click();
+    }
 
 
 

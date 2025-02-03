@@ -4,7 +4,8 @@ import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import path from 'path';
 
 // Define the relative directory path to your Excel file
-const excelFileName = 'LeaveRequest_Amy2.xlsx';
+// const excelFileName = 'LeaveRequest_Amy2.xlsx';
+const excelFileName = 'LeaveRequest_ESS_SK_REG_U.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 // Convert the Excel sheets to JSON format
@@ -17,7 +18,7 @@ for (const sheetName in sheetsJson) {
 
     dataSet.forEach((data, index) => {
         // Create a unique title by appending the sheet name and the index
-        const testTitle = `@WFM Validate Rule type for ${data.EmpNum || `Employee ${index + 1}`} in sheet ${sheetName} (Row ${index + 1})`;
+        const testTitle = `@WFM Leave Request for ${data.EmpNum || `Employee ${index + 1}`} in sheet ${sheetName} (Row ${index + 1})`;
 
         test(testTitle, async ({ loginPage, wfmhomepage, wfmnotificationpage }) => {
             await test.step('Navigate to Application', async () => {

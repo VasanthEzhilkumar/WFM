@@ -132,6 +132,14 @@ export class WFMHomePage extends WebActions {
         await this.MAINMENU.click();
 
     }
+
+    async ClickOnHomeLink(): Promise<void> {
+        await this.page.waitForTimeout(500);
+        //await this.page.getByLabel('Home link').click();
+        await this.page.getByRole('button', { name: 'Home' }).click();
+        await this.page.waitForTimeout(5000);
+    }
+
     async openDataView(): Promise<void> {
         await this.dataViewReports.click();
         await this.page.waitForTimeout(500);
@@ -375,10 +383,16 @@ export class WFMHomePage extends WebActions {
 
 
 
-    async clickDoneAndOpenScheduleForEmployee(empid: string): Promise<void> {
-        await expect(this.page.locator('#inpage-text-0-')).toContainText('Information Your time-off request has been approved.');
-        await this.done.click()
-        await super.selectScheduleForEmployee(empid);
+    async clickDoneAndOpenScheduleForEmployee(empid: string): Promise<string> {
+        try {
+            await expect(this.page.locator('#inpage-text-0-')).toContainText('Information Your time-off request has been approved.');
+            await this.done.click()
+            return "Passed";
+        } catch (error) {
+            return "Failed";
+        }
+
+        //await super.selectScheduleForEmployee(empid);
     }
 
     async validateAddPaycodes(empid: string, leaveType: string, startDateStr: any, endDateStr: string): Promise<string> {
@@ -488,7 +502,7 @@ export class WFMHomePage extends WebActions {
                 await this.page.waitForTimeout(500);
                 await targetElement.click({ force: true });
             }
- 
+
             // Increment the start date by one day
             startDate = startDate.add(1, 'days');
         }

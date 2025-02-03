@@ -98,6 +98,7 @@ export class WFMSchedulePlannerPage {
             const employeeOrg = await rows[i].locator('div:nth-child(4)').textContent();
             const ruleType = await rows[i].locator('div:nth-child(5)').textContent();
             const description = await rows[i].locator('div:nth-child(6)').textContent();
+            await rows[i].locator('div:nth-child(6)').scrollIntoViewIfNeeded();
             // Sanitize the string by trimming leading/trailing spaces
             const sanitizedRowDate = rowDate.trim();
 

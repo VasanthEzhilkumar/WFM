@@ -64,6 +64,14 @@ export class LoginPage {
 
     }
 
+
+    async logOut(): Promise<void> {
+        await this.page.waitForTimeout(500);
+        await this.page.getByLabel('Main Menu').click();
+        await this.page.waitForTimeout(500);
+        await this.page.getByLabel('Sign Out').click();
+    }
+
     async changelanguage(): Promise<void> {
         // await this.page.getByRole('link', { name: '' }).click();
         // await this.page.getByRole('link', { name: 'American English' }).click();

@@ -9,7 +9,8 @@ import { WFMNotificationPage } from '@pages/WFMNotificationPage';
 import { WFMIntegrationPage } from '@pages/WFMIntegrationPage';
 import { CurrentPayPeriodPage } from 'pageFactory/commonPages/CurrentPayPeriodPage';
 import { WFMDataLibraryPage } from '@pages/WFMDataLibraryPage';
-
+import { WFMAvailabilityChangePage } from 'pageFactory/pageRepository/WFMAvailabilityChangePage';
+import {WFMControlCentrePage} from 'pageFactory/pageRepository/WFMControlCentrePage';
 const test = baseTest.extend<{
     webActions: WebActions;
     loginPage: LoginPage;
@@ -21,7 +22,9 @@ const test = baseTest.extend<{
     wfmintegrationpage: WFMIntegrationPage;
     currentPayPeriodPage: CurrentPayPeriodPage;
     wfmDatapage: WFMDataLibraryPage;
-   
+    wfmavailibilityChangePage: WFMAvailabilityChangePage;
+    wfmControlCentrePage:WFMControlCentrePage;
+
 }>({
     webActions: async ({ page, context }, use) => {
         await use(new WebActions(page, context));
@@ -29,26 +32,32 @@ const test = baseTest.extend<{
     loginPage: async ({ page, context }, use) => {
         await use(new LoginPage(page, context));
     },
-    wfmhomepage: async ({page, context}, use) => {
+    wfmhomepage: async ({ page, context }, use) => {
         await use(new WFMHomePage(page, context));
     },
-    wfmscheduleplannerpage: async({page, context}, use) => {
+    wfmscheduleplannerpage: async ({ page, context }, use) => {
         await use(new WFMSchedulePlannerPage(page, context));
     },
-    wfmtimecardpage: async({page, context}, use) => {
+    wfmtimecardpage: async ({ page, context }, use) => {
         await use(new WFMTimecardPage(page, context));
     },
-    wfmnotificationpage: async({page,context}, use) =>{
-        await use(new WFMNotificationPage(page,context));
+    wfmnotificationpage: async ({ page, context }, use) => {
+        await use(new WFMNotificationPage(page, context));
     },
-    wfmintegrationpage: async({page,context}, use) =>{
-        await use(new WFMIntegrationPage(page,context));
+    wfmintegrationpage: async ({ page, context }, use) => {
+        await use(new WFMIntegrationPage(page, context));
     },
-    currentPayPeriodPage: async({page,context}, use) =>{
-        await use(new CurrentPayPeriodPage(page,context));
+    currentPayPeriodPage: async ({ page, context }, use) => {
+        await use(new CurrentPayPeriodPage(page, context));
     },
-    wfmDatapage: async({page,context}, use) =>{
-        await use(new WFMDataLibraryPage(page,context));
+    wfmDatapage: async ({ page, context }, use) => {
+        await use(new WFMDataLibraryPage(page, context));
+    },
+    wfmavailibilityChangePage: async ({ page, context }, use) => {
+        await use(new WFMAvailabilityChangePage(page, context));
+    },
+    wfmControlCentrePage:async ({ page, context }, use) => {
+        await use(new WFMControlCentrePage(page, context));
     },
 
 

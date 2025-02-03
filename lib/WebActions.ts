@@ -7,6 +7,7 @@ import { testConfig } from '../testConfig';
 import * as pdfjslib from 'pdfjs-dist-es5';
 import { describe } from 'node:test';
 import { exec } from 'child_process';
+import { Locator } from 'playwright';
 
 export class WebActions {
     readonly page: Page;
@@ -65,6 +66,33 @@ export class WebActions {
         return pageText;
     }
 
+    /*
+   @Auther: Madhukar Kirkan
+   @Description : This method is used to open schedule planner for particular employee.
+   @Date : 27/11/2024
+   */
+    async getEmployeeNameForEmployeeIDfromHomePage(EmployeeID: any): Promise<string> {
+        const inputEmployeeSearch = await this.page.getByLabel('Employee Search');
+        // const searchByEmployeNameOrId = await this.page.getByLabel('Search by Employee Name or ID');
+        const searchByEmployeNameOrId = await this.page.frameLocator('//*[@title="Embedded content"]').locator('//div[@class="search-input-container"]//input');
+        const search = await this.page.frameLocator('//*[@title="Embedded content"]').getByRole('button', { name: 'Search', exact: true });
+        await inputEmployeeSearch.click();
+        await this.page.waitForTimeout(500);
+        await searchByEmployeNameOrId.focus();
+        await searchByEmployeNameOrId.fill(String(EmployeeID));
+        await this.page.waitForTimeout(500);
+        await search.click();
+        await this.page.waitForTimeout(500);
+        let employeeName = await this.page.frameLocator('//*[@title="Embedded content"]').locator('//*[@role="listitem"]/div/*[@class="card__info ng-binding ng-scope mainTabularData"]').allInnerTexts();
+        await this.page.getByLabel('Close', { exact: true }).click();
+        return employeeName.toString().trim();
+    }
+
+    /*
+   @Auther: Madhukar Kirkan
+   @Description : This method is used to open schedule planner for particular employee.
+   @Date : 27/11/2024
+   */
     async selectScheduleForEmployee(EmployeeID: any) {
         const inputEmployeeSearch = await this.page.getByLabel('Employee Search');
         // const searchByEmployeNameOrId = await this.page.getByLabel('Search by Employee Name or ID');
@@ -78,15 +106,18 @@ export class WebActions {
         await this.page.waitForTimeout(500);
         await searchByEmployeNameOrId.focus();
         await searchByEmployeNameOrId.fill(String(EmployeeID));
+        // let employeeName = await searchByEmployeNameOrId.allInnerTexts();
         await this.page.waitForTimeout(500);
         await search.click();
         await this.page.waitForTimeout(500);
         await selectItem.click();
+
         await this.page.waitForTimeout(500);
         await goTO.click();
         await this.page.waitForTimeout(500);
         await optionSchedule.click();
         await this.page.waitForTimeout(500);
+        //return employeeName.toString().trim();
     }
 
 
@@ -130,6 +161,12 @@ export class WebActions {
         return tab;
     }
 
+    /*
+ @Auther: Madhukar Kirkan
+ @Description : This method is used to upload file if its windows based popup using AUTOIT tool.
+ @Param : filePath needs to be pass 
+ @Date : 02/12/2024
+ */
     async uploadFile(filePath: any) {
         // Use Node.js to execute AutoHotkey script (or another external automation tool)
         exec(`"H:\\WFM\\lib\\FileUploadScript\\autoit-v3.1.0\\AutoIt3.exe" "H:\\WFM\\lib\\FileUploadScript\\uploadFilescriptAutoIT.AU3" "${filePath}"`, (err, stdout, stderr) => {
@@ -162,5 +199,42 @@ export class WebActions {
         }
         return ariaLabel.toString();
     }
+
+    /*
+  @Auther: Madhukar Kirkan
+  @Description : This method is used to select value From Custom DropDown.
+  @Param : have to pass Locators and value that need to select.
+  @Date : 21/01/2025
+  */
+    async selectFromCustomDropDown(locator1: any, varString: string) {
+
+        try {
+            await this.page.waitForTimeout(1000);
+            await locator1.focus();
+            await locator1.scrollIntoViewIfNeeded();
+            // await this.page.keyboard.press('Enter');
+            const custumLocator = locator1.locator("(//*[@data-automation-label='" + varString + "' or text()='" + varString + "'])[1]");
+            await this.page.waitForTimeout(1000);
+            if (await custumLocator.isVisible() && await custumLocator.count() > 0) {
+                await custumLocator.scrollIntoViewIfNeeded();
+                await custumLocator.click();
+            }
+            // await this.page.waitForTimeout(this.timeOut);
+            console.log(`Selecting "${varString}" from Custom DropDown - into: ${locator1}`);
+        } catch (error) {
+            console.error(`Selecting  "${varString}" value from Custom DropDown- into: ${locator1} failed` + error);
+            throw error;
+        }
+    }
+
+    async excelDateToJSDate(excelDate: number): Promise<string> {
+        const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
+        const day = String(jsDate.getUTCDate()).padStart(2, '0'); // Get day and pad to 2 digits
+        const month = String(jsDate.getUTCMonth() + 1).padStart(2, '0'); // Get month (0-indexed, so add 1) and pad to 2 digits
+        const year = jsDate.getUTCFullYear(); // Get the full year
+        return `${day}/${month}/${year}`; // Format as dd/MM/yyyy
+    }
+
+
 }
 
