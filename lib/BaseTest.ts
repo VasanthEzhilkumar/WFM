@@ -10,7 +10,8 @@ import { WFMIntegrationPage } from '@pages/WFMIntegrationPage';
 import { CurrentPayPeriodPage } from 'pageFactory/commonPages/CurrentPayPeriodPage';
 import { WFMDataLibraryPage } from '@pages/WFMDataLibraryPage';
 import { WFMAvailabilityChangePage } from 'pageFactory/pageRepository/WFMAvailabilityChangePage';
-import {WFMControlCentrePage} from 'pageFactory/pageRepository/WFMControlCentrePage';
+import { WFMControlCentrePage } from 'pageFactory/pageRepository/WFMControlCentrePage';
+import { WFMReportLibraryPage } from '@pages/WFMReportLibraryPage';
 const test = baseTest.extend<{
     webActions: WebActions;
     loginPage: LoginPage;
@@ -23,7 +24,8 @@ const test = baseTest.extend<{
     currentPayPeriodPage: CurrentPayPeriodPage;
     wfmDatapage: WFMDataLibraryPage;
     wfmavailibilityChangePage: WFMAvailabilityChangePage;
-    wfmControlCentrePage:WFMControlCentrePage;
+    wfmControlCentrePage: WFMControlCentrePage;
+    wfmreportpage: WFMReportLibraryPage;
 
 }>({
     webActions: async ({ page, context }, use) => {
@@ -56,8 +58,11 @@ const test = baseTest.extend<{
     wfmavailibilityChangePage: async ({ page, context }, use) => {
         await use(new WFMAvailabilityChangePage(page, context));
     },
-    wfmControlCentrePage:async ({ page, context }, use) => {
+    wfmControlCentrePage: async ({ page, context }, use) => {
         await use(new WFMControlCentrePage(page, context));
+    },
+    wfmreportpage: async ({ page, context }, use) => {
+        await use(new WFMReportLibraryPage(page, context));
     },
 
 

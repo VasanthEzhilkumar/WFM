@@ -130,8 +130,11 @@ export const writeResultToExcel = async (filePath: string, sheetName: string, ro
     }
 };
 
-//export function async getRowNumberByCellValue(
-// Function to get row number by cell value
+/**
+ * @author : Madhukar Kirkan 
+ * @description : This method used to get current row number by employeeID and Date
+ * @param : empID,filepath,sheetName etc
+ */
 export const getRowNumberByCellValue = async (filePath: string, sheetName: string, empID: string, targetValue: string) => {
 
     // Read the Excel file
@@ -159,6 +162,49 @@ export const getRowNumberByCellValue = async (filePath: string, sheetName: strin
 
         // Check if the target value exists in the cleaned row
         if (cleanedRow.includes(targetValue) && cleanedRow.includes(empID)) {
+            // Return 1-based row number
+            return i;
+        }
+    }
+
+    // If the value was not found, return null
+    return null;
+};
+
+//export function async getRowNumberByCellValue(
+// Function to get row number by cell value
+/**
+ * @author : Madhukar Kirkan 
+ * @description : This method used to get current row number by employeeID
+ * @param : empID,filepath,sheetName etc
+ */
+export const getRowNumberByEmployeeID = async (filePath: string, sheetName: string, empID: string) => {
+
+    // Read the Excel file
+    let workbook = XLSX.readFile(filePath);
+
+    // Ensure the sheet exists
+    let sheet = workbook.Sheets[sheetName];
+    if (!sheet) {
+        console.error(`Sheet with name "${sheetName}" not found.`);
+        return null;
+    }
+
+    // Convert the sheet to JSON (array of rows) where each row is an array of cell values
+    const rows = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: '' }); // 'header: 1' to get rows as arrays
+
+    // Debug: Log the rows to inspect the structure
+    console.log('Rows:', rows);
+
+    // Loop through the rows to find the target value
+    for (let i: number = 0; i < rows.length; i++) {
+        const row: any = rows[i];
+
+        // Clean up any leading/trailing whitespace from each cell (important for matching values)
+        const cleanedRow = row.map(cell => (typeof cell === 'string' ? cell.trim() : cell));
+
+        // Check if the target value exists in the cleaned row
+        if (cleanedRow.includes(empID)) {
             // Return 1-based row number
             return i;
         }
