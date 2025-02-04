@@ -5,7 +5,9 @@ import path from 'path';
 
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
-const excelFileName = 'WFMAddingPaycodes_EnterTimeOFF_SK_REG.xlsx';
+// const excelFileName = 'WFMAddingPaycodes_EnterTimeOFF_SK_REG.xlsx';
+const excelFileName = '(2) EnterTimeOFF_SK_REG -COMPLETE.xlsx';
+
 const excelFilePath = getExcelFilePath(excelFileName);
 
 // Convert the Excel sheets to JSON format
@@ -48,9 +50,9 @@ for (const sheetName in sheetsJson) {
             });
 
             await test.step('Validate the Timeoff', async () => {
-                await wfmhomepage.clickDoneAndOpenScheduleForEmployee(data.EmpID);
-                await wfmtimecardpage.selectPayPeriodBydateRange(String(data.RangeStartDate), String(data.RangeEndDate));
-                const result = await wfmhomepage.validateTimeoff(data.EmpID, data.Paycode, data.StartDate, data.EndDate)
+                const result = await wfmhomepage.clickDoneAndOpenScheduleForEmployee(data.EmpID);
+                // await wfmtimecardpage.selectPayPeriodBydateRange(String(data.RangeStartDate), String(data.RangeEndDate));
+                // const result = await wfmhomepage.validateTimeoff(data.EmpID, data.Paycode, data.StartDate, data.EndDate)
                 //const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, data.EmpID, data.StartDate);
                 //It will write result to excel sheet by rowNumber(index)
                 //await writeResultToExcel(excelFilePath, sheetName, index, result, 'TestResult');

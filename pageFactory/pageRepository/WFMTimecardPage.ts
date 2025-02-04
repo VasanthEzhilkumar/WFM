@@ -94,7 +94,10 @@ export class WFMTimecardPage extends WebActions {
         const txtListView = this.page.getByLabel('List View');
         const btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
         await txtListView.click();
-        await btnLoadMore.click();
+        if (await btnLoadMore.count() > 0) {
+            await btnLoadMore.click();
+        }
+
     }
 
     async selectPayPeriodBydateRange(StartDate: string, EndDate: string) {
@@ -293,8 +296,8 @@ export class WFMTimecardPage extends WebActions {
     async puchExceptions(date: string, exceptions: string, expectedCondition: string): Promise<string> {
         let dateArray = date.split(" ");
         const weekday = dateArray[0].trim();
-        let month = dateArray[1].split("/")[0].trim();
-        let dateDigit = dateArray[1].split("/")[1].trim();
+        let month = dateArray[1].split("/")[1].trim();
+        let dateDigit = dateArray[1].split("/")[0].trim();
         let resultMsgError = "";
         let errorMsgafterSave = "";
         let flag = false;
@@ -315,15 +318,16 @@ export class WFMTimecardPage extends WebActions {
             }
 
             if (await selectListViewForPucnhInOut.count() > 0) {
+                await this.page.waitForTimeout(2000);
                 await selectListViewForPucnhInOut.click();
                 const actualExceptions = await this.getExceptions();
                 //await this.page.waitForTimeout(500);
                 const btncancel = await this.page.locator('(//div[@class="text-right"]//button[text()="Cancel"])[1]');
                 const btnYes = await this.page.locator('//button[@aria-label="Yes"]');
-                await this.page.waitForTimeout(500);
+                await this.page.waitForTimeout(1000);
                 if (await btncancel.isVisible()) {
                     await btncancel.click();
-                    await this.page.waitForTimeout(500);
+                    await this.page.waitForTimeout(800);
                     if (await btnYes.isVisible()) {
                         await btnYes.click();
                     }
@@ -510,8 +514,8 @@ export class WFMTimecardPage extends WebActions {
 
         let dateArray = date.split(" ");
         const weekday = dateArray[0].trim();
-        let month = dateArray[1].split("/")[0].trim();
-        let dateDigit = dateArray[1].split("/")[1].trim();
+        let month = dateArray[1].split("/")[1].trim();
+        let dateDigit = dateArray[1].split("/")[0].trim();
         let resultMsgError = "";
         let errorMsgafterSave = "";
         //----------------------------------------------------------------------------------------------------
@@ -540,7 +544,7 @@ export class WFMTimecardPage extends WebActions {
                         if (punchIn !== null && punchIn !== '' && punchIn !== undefined) {
                             await this.page.waitForTimeout(1500);
                             await this.btnAddPunch.click();
-                            await this.page.waitForTimeout(500);
+                            await this.page.waitForTimeout(1000);
                             resultMsgError = await this.editPunchFillandApply(punchIn, "In Punch");
                             if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
                                 new throws(error);
@@ -550,7 +554,7 @@ export class WFMTimecardPage extends WebActions {
                         } else if (punchOut !== '' && punchOut !== undefined && punchOut !== null) {
                             await this.page.waitForTimeout(1500);
                             await this.btnAddPunch.click();
-                            await this.page.waitForTimeout(500);
+                            await this.page.waitForTimeout(1000);
                             resultMsgError = await this.editPunchFillandApply(punchOut, "Out Punch");
                             if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
                                 new throws(error);
@@ -559,9 +563,9 @@ export class WFMTimecardPage extends WebActions {
                             await this.page.keyboard.press("Tab");
                         }
 
-                        await this.page.waitForTimeout(500);
+                        await this.page.waitForTimeout(1000);
                         await this.btnSave.click();
-                        await this.page.waitForTimeout(500);
+                        await this.page.waitForTimeout(1000);
                         const errorCheck = await this.page.locator('(//div[@class="multiple-lines-wrap"])[1]');
                         if (await errorCheck.isVisible()) {
                             errorMsgafterSave = "" + errorCheck.allInnerTexts();
@@ -576,7 +580,7 @@ export class WFMTimecardPage extends WebActions {
                         if (punchIn !== '' && punchIn !== undefined && punchIn !== null) {
                             await this.txtInPunch.fill(punchIn);
                             await this.page.keyboard.press("Tab");
-                            await this.page.waitForTimeout(500);
+                            await this.page.waitForTimeout(1000);
                         }
                         if (punchOut !== '' && punchOut !== undefined && punchOut !== null) {
                             if (punchIn !== null && punchIn !== '') {
@@ -591,13 +595,13 @@ export class WFMTimecardPage extends WebActions {
                                     await this.page.keyboard.press("Tab");
                                     //await this.page.waitForTimeout(500);
                                 } else {
-                                    await this.page.waitForTimeout(500);
+                                    await this.page.waitForTimeout(1000);
                                     await this.txtOutPunch.fill(punchOut);
                                     await this.page.keyboard.press("Tab");
                                     //await this.page.waitForTimeout(500);
                                 }
                             } else {
-                                await this.page.waitForTimeout(500);
+                                await this.page.waitForTimeout(1000);
                                 await this.txtOutPunch.fill(punchOut);
                                 await this.page.keyboard.press("Tab");
                                 //await this.page.waitForTimeout(500);

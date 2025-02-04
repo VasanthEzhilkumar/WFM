@@ -1,12 +1,12 @@
 
 import test from '@lib/BaseTest';
-import { getRowNumberByCellValue, writeResultToExcel } from '@lib/Excel';
+import { getRowNumberByCellValue, writeResultsToExcel, writeResultToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 
 // Define the relative directory path to your Excel file
-const excelFileName = 'TimecardPunch_Amy2.xlsx';
+const excelFileName = '(1) TimecardPunch_SK_REG_Paycodes_COMPLETE.xlsx';//(1)TimecardPunch_SK_REG_Paycodes_COMPLETE
 const excelFilePath = getExcelFilePath(excelFileName);
-
+//TimecardPunch_Amy2
 // Convert the Excel sheets to JSON format
 const sheetsJson = excelToJson(excelFilePath);
 
@@ -27,12 +27,13 @@ const groupedData = sheetsJson[sheetName].reduce((acc, row) => {
     acc[row.EmpNum].push(row);
     return acc;
 }, {});
+
 let index = 0;
 // Iterate over each grouped dataset and run the test
 for (const empId in groupedData) {
     const dataSet = groupedData[empId];
 
-    test(`@WFM Time card punch for ${empId}`, async ({ loginPage, wfmhomepage, wfmtimecardpage, webActions }) => {
+    test(`@WFM Time card Punch In-Out for ${empId}`, async ({ loginPage, wfmhomepage, wfmtimecardpage, webActions }) => {
 
         await test.step('Navigate to Application', async () => {
             await loginPage.navigateToURL();
@@ -67,6 +68,7 @@ for (const empId in groupedData) {
                 //It will write result to excel sheet by rowNumber(index)
                 await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
             }
+            
             index = index + 1;
         });
 
