@@ -1,0 +1,23 @@
+{"level":"info","message":"Test Case Started : @WFM Report view for 10648785 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view for 10648785 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view for 10648785 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view for 10648785 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995 in sheet Sheet1 (Row 2) Status : passed"}
