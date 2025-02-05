@@ -39,6 +39,8 @@ for (const sheetName in sheetsJson) {
             });
             //Schedule Planer Front End
             await test.step('Serach for employee and Add Shift', async () => {
+                // await wfmtimecardpage.selectPayPeriodBydateRange(String(data.ScheduleStartDate), String(data.ScheduleEndDate));
+                // await wfmscheduleplannerpage.setCurrentPayPeriod(data.FromDate, data.ToDate)
                 await wfmhomepage.rightclickEmp(data.EMPID);
                 await wfmhomepage.clickAddShift();
                 await wfmhomepage.enterstarttimeendtime(data.ScheduleStartTime, data.ScheduleEndTime, data.ScheduleStartDate, data.ScheduleEndDate);

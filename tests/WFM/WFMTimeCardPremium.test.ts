@@ -8,7 +8,6 @@ import path from 'path';
 const dataDirectory = path.resolve(__dirname, '../Data');
 const excelFileName = 'TimeCardPremiumN.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
-
 // Convert the Excel sheets to JSON format
 const sheetsJson = excelToJson(excelFilePath);
 

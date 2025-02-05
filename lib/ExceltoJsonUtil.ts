@@ -14,7 +14,6 @@ export function excelToJson(filePath: string): Record<string, any[]> {
     return sheetsJson;
 }
 
-
 //Helper function to get the absolute path to the Excel file from a specific directory
 export function getExcelFilePath(fileName: string): string {
     const directory = path.resolve(__dirname,'../Data');

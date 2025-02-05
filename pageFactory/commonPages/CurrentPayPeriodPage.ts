@@ -16,7 +16,7 @@ export class CurrentPayPeriodPage {
         this.CurrentPayPeriod = page.getByTitle('Select Timeframe');
         this.SelectRange = page.getByRole('button', { name: 'Select Range' });
         this.Apply = page.getByRole('button', { name: 'Apply' });
-        this.ButtonTimeframe=page.getByTitle('Select Time frame');
+        this.ButtonTimeframe=page.getByTitle('Select Timeframe');
         this.PreviousPayPeriod=page.getByRole('option', { name: 'Previous Pay Period' });
         this.SignOff=page.getByLabel('Sign-Off', { exact: true });
 
@@ -35,6 +35,20 @@ export class CurrentPayPeriodPage {
         await this.page.locator("(//input[@id='endDateTimeInput'])[1]").fill(EndDate);
         await this.page.keyboard.press('Tab');
         // await this.page.waitForTimeout(2000);
+    }
+
+
+    async setCurrentPayPeriod(StartDate: any , EndDate:any) {
+        await this.page.waitForTimeout(1000);
+        await this.CurrentPayPeriod.click();
+        await this.page.waitForTimeout(500);
+        await this.SelectRange.click();
+        await this.page.waitForTimeout(2000);
+        await this.page.locator("//input[@id='startDateTimeInput']").type(StartDate.toString());
+        //await this.page.getByLabel('Start Date').type(StartDate.toString());
+        await this.page.waitForTimeout(2000);
+        await this.page.locator("//input[@id='endDateTimeInput']").type(EndDate.toString());
+        await this.page.waitForTimeout(2000);
         await this.Apply.click();
         await this.page.waitForTimeout(500);
 
@@ -43,6 +57,7 @@ export class CurrentPayPeriodPage {
     async selectPreviousPayPeriod() {
         await this.page.waitForTimeout(500);
         await this.CurrentPayPeriod.click();
+        //await this.ButtonTimeframe.click();
         await this.page.waitForTimeout(500);
         await this.PreviousPayPeriod.click();
         await this.page.waitForTimeout(500);

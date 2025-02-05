@@ -14,7 +14,9 @@ export class WFMTimecardPage extends WebActions {
     readonly EMP_Selected: Locator;
     readonly EMP_NAME: Locator;
     readonly TIMECARD_SAVE: Locator;
-    readonly TIMECARD_TOTAL: Locator
+    readonly TIMECARD_TOTAL: Locator;
+    readonly TIMECARD_TOTAL_CLOSE: Locator
+    readonly APPLY_OVERTIME: Locator
     //Loctors for punch in -out
     readonly txtInPunch: Locator;
     readonly txtInPunch2: Locator;
@@ -27,6 +29,8 @@ export class WFMTimecardPage extends WebActions {
     readonly CurrentPayPeriod: Locator;
     readonly SelectRange: Locator;
     readonly Apply: Locator;
+    readonly ToOvertimeSpansOne: Locator;
+    readonly ToOvertimeSpansTwo: Locator;
 
     ariaLabel: string;
 
@@ -45,6 +49,7 @@ export class WFMTimecardPage extends WebActions {
         this.EMP_NAME = page.locator('[personnumber="80010054"]');
         this.TIMECARD_SAVE = page.getByTitle('Save').locator('div').nth(1);
         this.TIMECARD_TOTAL = page.getByRole('tab', { name: 'Totals' });
+        this.TIMECARD_TOTAL_CLOSE = page.getByLabel('Close Totals');
         //locators for punch in-out
         this.txtInPunch = this.page.locator('#segment0inPunch');
         this.txtInPunch2 = this.page.locator('#segment1inPunch');
@@ -60,6 +65,12 @@ export class WFMTimecardPage extends WebActions {
         //this.CurrentPayPeriod = page.getByTitle('Select Timeframe');
         this.SelectRange = page.getByRole('button', { name: 'Select Range' });
         this.Apply = page.getByRole('button', { name: 'Apply' });
+        //Updated CurrentPayPeriod to below locator so that it will work with both UK English and American English by Ramchandra
+        // this.CurrentPayPeriod = page.locator('//button[contains(@class,"select-timeframe-button")]');
+        // this.SelectRange = page.getByRole('button', { name: 'Select Range' });
+        // this.Apply = page.getByRole('button', { name: 'Apply' });
+        this.ToOvertimeSpansOne = page.getByLabel('To', { exact: true });
+        this.ToOvertimeSpansTwo = page.getByLabel('To', { exact: true }).nth(1);
     }
 
     async SearchEMP_Timecard(EmpName: string): Promise<void> {
@@ -91,13 +102,15 @@ export class WFMTimecardPage extends WebActions {
         await this.page.waitForTimeout(500);
         await this.CurrentPayPeriod.click();
         await this.SelectRange.click();
+        await this.page.locator("(//input[@id='startDateTimeInput'])[1]").focus();
         await this.page.waitForTimeout(1000);
         await this.page.locator("(//input[@id='startDateTimeInput'])[1]").fill(StartDate);
-        await this.page.keyboard.press('Tab');
+        await this.page.waitForTimeout(200);
+        await this.page.locator("(//input[@id='endDateTimeInput'])[1]").focus();
         await this.page.waitForTimeout(1000);
         await this.page.locator("(//input[@id='endDateTimeInput'])[1]").fill(EndDate);
-        await this.page.keyboard.press('Tab');
-        // await this.page.waitForTimeout(2000);
+        await this.page.waitForTimeout(200);
+        await this.Apply.first().focus();
         await this.Apply.first().click();
         await this.page.waitForTimeout(500);
 
@@ -256,6 +269,125 @@ export class WFMTimecardPage extends WebActions {
                 } else {
                     return isConditionMet ? "Passed" : "Failed";
                 }
+            }
+        }
+        catch (error) {
+            console.log(error);
+            return "Failed";
+        }
+
+    }
+
+    async isRedOvertimeClock(date: string): Promise<string> {
+        let dateArray = date.split(" ");
+        const weekday = dateArray[0].trim();
+        await this.page.waitForTimeout(3000);
+        const redClock = await this.page.getByTitle('' + weekday + ' ' + dateArray[1].trim() + '; Overtime Pending');
+        // await redClock.scrollIntoViewIfNeeded();
+        const redClockCount = await redClock.count();
+        if ((redClockCount > 0))
+            return "True";
+        else
+            return "False";
+    }
+
+    async isOTPaycodePresent(): Promise<string> {
+        let flag, OTPayCode;
+        await this.TIMECARD_TOTAL.click();
+        // await this.page.waitForTimeout(500);
+        // this.page.locator('//ukg-button[@title="Expand Totals"]').click();
+        await this.page.waitForTimeout(1000);
+        OTPayCode = this.page.locator("//div[@class='ui-grid-canvas']//div[contains(@title,'OT Unapproved')]");
+        const OTPayCodeCount = await OTPayCode.count();
+        if (OTPayCodeCount > 0)
+            flag = "True";
+        else
+            flag = "False";
+
+        await this.page.waitForTimeout(2000);
+        await this.TIMECARD_TOTAL_CLOSE.click();
+        return flag;
+    }
+
+    async isGreenOvertimeClock(date: string): Promise<string> {
+        let dateArray = date.split(" ");
+        const weekday = dateArray[0].trim();
+        await this.page.waitForTimeout(3000);
+        const greenClock = await this.page.getByTitle('' + weekday + ' ' + dateArray[1].trim() + '; Overtime Reviewed');
+        // await greenClock.scrollIntoViewIfNeeded();
+        const greenClockCount = await greenClock.count();
+        if ((greenClockCount > 0))
+            return "True";
+        else
+            return "False";
+    }
+
+    /*
+   @Auther: Ramchandra Desai
+   @Description: This function works on both the process of approval of ALL worked overtime hours, and approval of PARTIAL overtime worked hours, in this order:
+1.	Validating that before overtime approval, the ‘SK-OT Unapproved’ paycode is displayed in timecard totals for the total time of overtime worked, and overtime ‘clock’ is red in colour.
+2.	After approval of ALL worked overtime, validating ‘clock’ changes to green in colour and that ‘SK-OT Unapproved’ paycode is removed from timecard totals.
+3.	Validating that before overtime approval, the ‘SK-OT Unapproved’ paycode is displayed in timecard totals for the total time of overtime worked, and overtime ‘clock’ is red in colour.
+4.	After approval of PARTIAL worked overtime, validating ‘clock’ changes to green in colour and that ‘SK-OT Unapproved’ paycode updates to the amount of overtime that was not approved. 
+
+   @Date: 02/01/2025
+ */
+    async approveOvertime(date: string, ALLorPARTIAL: string, OvertimeToApprove: string): Promise<string> {//, exceptions: string, expectedCondition: string): Promise<string> {
+        let dateArray = date.split(" ");
+        const weekday = dateArray[0].trim();
+        let dateDigit = dateArray[1].split("/")[1].trim();
+        //----------------------------------------------------------------------------------------------------
+        const selectListViewForPucnhInOut = this.page.locator("//div[@class='tk-calendar-box']//div[contains(text(),'" + weekday + "')]/following-sibling::div[contains(text(),'" + dateDigit + "')]");
+        //--------------------------------------------------------------------------------------------------------
+
+        try {
+            await this.page.waitForTimeout(1000);
+            const txtListView = this.page.getByLabel('List View');
+            const txtTableView = this.page.getByLabel('Table View');
+            await this.page.waitForTimeout(3500);
+            await txtListView.click();
+
+            await this.page.waitForTimeout(2000);
+
+            if (await selectListViewForPucnhInOut.count() > 0) {
+                console.log("List view for punch In-Out is present on screen");
+            } else {
+                if (await this.btnLoadMore.count() > 0) {
+                    await this.page.waitForTimeout(500);
+                    await this.btnLoadMore.scrollIntoViewIfNeeded();
+                    await this.btnLoadMore.click();
+                }
+            }
+
+            if (await selectListViewForPucnhInOut.count() > 0) {
+                await this.page.waitForTimeout(3500);
+                await selectListViewForPucnhInOut.click();
+                // const btnApproveOvertime = this.page.locator('(//div[@id="approveOvertimeAction.popup"]//button[@aria-label="Approve Overtime"])[2]');
+                const btnApproveOvertime = this.page.locator('//div[@transclude-id="slideout-content"]//form//button[@aria-label="Approve Overtime"]');
+                //---
+                await this.page.waitForTimeout(3000);
+                await btnApproveOvertime.click();
+
+                if (String(ALLorPARTIAL.toLocaleLowerCase()) == "all") {
+                    await this.page.waitForTimeout(2000);
+                } else if (String(ALLorPARTIAL.toLocaleLowerCase()) == "partial") {
+                    await this.page.waitForTimeout(2000);
+                    if (await this.ToOvertimeSpansTwo.count() > 0) {
+                        await this.ToOvertimeSpansTwo.focus();
+                        await this.ToOvertimeSpansTwo.fill(OvertimeToApprove);
+                        await this.page.waitForTimeout(2000);
+                    }
+                    else if (await this.ToOvertimeSpansOne.count() > 0) {
+                        await this.ToOvertimeSpansOne.focus();
+                        await this.ToOvertimeSpansOne.fill(OvertimeToApprove);
+                        await this.page.waitForTimeout(2000);
+                    }
+                }
+                this.Apply.click({ force: true });
+                await this.page.waitForTimeout(3000);
+                await this.page.locator('//button[@id="day-details-submit-btn"]').click({ force: true });
+                await this.page.waitForTimeout(3000);
+                await txtTableView.click();
             }
         }
         catch (error) {

@@ -3,7 +3,7 @@ import { getEmployeeNumbers, writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import * as path from 'path';
 
-const excelFileName = 'RuleTypeValidation_Amy2.xlsx';
+const excelFileName = 'TestRun.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 const results: { empNumber: string, ruleViolations: string[] }[] = [];
@@ -15,7 +15,7 @@ for (const sheetName in sheetsJson) {
         // Create a unique title by appending the sheet name and the index
         const testTitle = `@WFM Validate Rule type for ${data.EmpNum || `Employee ${index + 1}`} in sheet ${sheetName} (Row ${index + 1})`;
 
-        test(testTitle, async ({ loginPage, webActions, wfmhomepage, wfmscheduleplannerpage }) => {
+        test(testTitle, async ({ loginPage, webActions, wfmhomepage, wfmscheduleplannerpage, wfmtimecardpage }) => {
             await test.step(`Navigateto Application`, async () => {
                 await loginPage.navigateToURL();
             });
@@ -35,8 +35,9 @@ for (const sheetName in sheetsJson) {
             });
 
             await test.step(`Search for the Employee Rule Violation: ${data.EmpNum}`, async () => {
+                await wfmtimecardpage.selectPayPeriodBydateRange(String(data.FromDate), String(data.ToDate));
                 const empName = await wfmscheduleplannerpage.clickonRuleViolationTab(data.EmpNum);
-                const ruleViolations = await wfmscheduleplannerpage.SearchEmpRuleViolation(empName.toString(), data.ExpectedDescription, data.Date);
+                const ruleViolations = await wfmscheduleplannerpage.SearchEmpRuleViolation(empName.toString(), data.ExpectedDescription, data.Date, data.Expected, data.Severity);
 
                 // Ensure ruleViolations is an array
                 const violationArray = Array.isArray(ruleViolations) ? ruleViolations : [ruleViolations];
