@@ -198,6 +198,14 @@ export class WFMHomePage extends WebActions {
         }
     }
 
+    async isDataViewAndReportViewAvailable() {
+        try {
+            return await this.dataViewReports.isVisible(); // Return true if DataView is visible
+        } catch (error) {
+            return false; // Return false if an error occurs (e.g., element not found)
+        }
+    }
+
     async ClickonchangeMyAvailabilityRequest() {
         await this.page.waitForTimeout(500);
         await this.page.locator('#changeMyAvailabilityRequestButton').click();

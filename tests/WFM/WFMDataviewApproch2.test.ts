@@ -59,14 +59,14 @@ for (const empId in groupedData) {
                 if (isDataViewAvailable) {
                     if (i === 0) {
                         await wfmhomepage.openDataView();
-                        i = i + 1;
+                        i ++;
                     }
                     //await wfmDatapage.validateDataViewReports2(data.Expected, data.ReportName);
                     const result = await wfmDatapage.validateDataViewReports2(data.Expected, data.ReportName);
 
                     await writeResultsToExcel(excelFilePath, sheetName, row-1, data.EmpID, result);
 
-                    row = row + 1;
+                    row ++;
 
 
 
