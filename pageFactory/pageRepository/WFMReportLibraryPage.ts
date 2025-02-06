@@ -55,8 +55,48 @@ export class WFMReportLibraryPage {
 
 
     }
-
     async validateReports2(reportName: string, expected: string): Promise<string> {
+        try {
+            // Step 2: Get all list items inside the listbox
+            const listItems = await this.page.locator('#Accordion1 ul[role="listbox"] > li');
+            const count = await listItems.count();
+            console.log(`Found ${count} reports in the list.`);
+
+            // Step 3: Extract all report titles from the web page
+            const webReportTitles = await Promise.all(
+                Array.from({ length: count }, (_, i) =>
+                    listItems.nth(i).locator('button[role="option"]')
+                        .getAttribute('aria-label')
+                        .then(reportTitle => reportTitle?.trim())
+                )
+            );
+
+            webReportTitles.forEach((title, index) => {
+                if (title) {
+                    console.log(`Report ${index + 1}: ${title}`);
+                } else {
+                    console.error(`Button does not have a valid aria-label in item ${index + 1}`);
+                }
+            });
+
+            // Check if the report name exists in the list and validate against expected value
+            const isReportFound = webReportTitles.some(title => title?.toLowerCase() === reportName.toLowerCase());
+            const flag = (isReportFound && expected.toLowerCase() === 'yes') || (!isReportFound && expected.toLowerCase() === 'no');
+
+            if (flag) {
+                console.log(`Validation passed for ReportName: ${reportName}`);
+                return "Passed";
+            } else {
+                console.error(`Validation failed for ReportName: ${reportName}`);
+                return "Failed: Report not found";
+            }
+        } catch (error) {
+            console.error(`Validation failed for ReportName: ${reportName}`, error);
+            return "Failed: Report not found";
+        }
+    }
+
+    async validateReports3(reportName: string, expected: string): Promise<string> {
         try {
 
             // Step 1: Read the Excel file and get the list of report names
@@ -86,19 +126,12 @@ export class WFMReportLibraryPage {
 
             // Check if the report name from Excel exists in the list of web report titles
             const isReportFound = webReportTitles.some((title) => title.toLowerCase() === reportName.toLowerCase());
-            if (isReportFound) {
-                if (expected.toLocaleLowerCase() === 'yes') {
-                    flag = true;
-                } else {
-                    flag = false;
-                    return "Failed";
-                }
+            if (isReportFound && expected.toLocaleLowerCase() === 'yes') {
+                flag = true;
+            } else if (!isReportFound && expected.toLocaleLowerCase() === 'no') {
+                flag = true;
             } else {
-                if (expected.toLocaleLowerCase() === 'no') {
-                    flag = true;
-                } else {
-                    flag = false;
-                }
+                flag = false;
             }
 
             if (flag) {

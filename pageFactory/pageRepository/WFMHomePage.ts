@@ -55,7 +55,7 @@ export class WFMHomePage extends WebActions {
     readonly settingsMenuButton: Locator;
 
     readonly dataViewLibrary: Locator;
-    readonly empSearchlabel : Locator;
+    readonly empSearchlabel: Locator;
 
     constructor(page: Page, context: BrowserContext) {
         super(page, context);
@@ -111,9 +111,14 @@ export class WFMHomePage extends WebActions {
         await this.page.getByLabel('My Role ' + DutyManager + ' not').click();
     }
 
-    async clickSettingMenuButton() {
-        await this.page.waitForTimeout(500);
-        await this.settingsMenuButton.click();
+    async clickSettingMenuButton(): Promise<string> {
+        try {
+            await this.page.waitForTimeout(500);
+            await this.settingsMenuButton.click();
+        } catch (error) {
+            return "Failed :SwapToDutyManager/settings Menu Button options not available for this line manager"
+        }
+
     }
 
     async clickonTimeCard(): Promise<void> {
@@ -133,22 +138,22 @@ export class WFMHomePage extends WebActions {
         try {
             // Click the button to trigger the iframe load
             await this.empSearchlabel.click();
-    
+
             // Wait for the iframe to load
             await this.page.waitForSelector('iframe[name^="portal-frame-"]', { timeout: 10000 });
             const frame = this.page.frameLocator('iframe[name^="portal-frame-"]');
-    
+
             // Fill the employee ID and click Search
             await frame.getByLabel('Search by Employee Name or ID').fill(empId);
             await frame.getByRole('button', { name: 'Search', exact: true }).click();
-    
+
             // Wait for the results to load and select the item
             await frame.getByLabel('Select Item').click();
             await frame.getByLabel('Go To').click();
-    
+
             // Select the option from the dropdown
             await frame.getByRole('option', { name: option }).click();
-    
+
             console.log(`Employee search completed for ID: ${empId} with option: ${option}`);
         } catch (error) {
             console.error(`Error during employee search: ${error.message}`);
@@ -162,7 +167,7 @@ export class WFMHomePage extends WebActions {
     //   await this.page.frameLocator('iframe[name="portal-frame-264743002521"]').getByLabel('Select Item').check();
     //   await this.page.frameLocator('iframe[name="portal-frame-264743002521"]').getByLabel('Go To').click();
     //   await this.page.frameLocator('iframe[name="portal-frame-264743002521"]').getByRole('option', { name: 'Timecard' }).click();
-    
+
 
 
     async ClickonMainMenu(): Promise<void> {
@@ -213,7 +218,13 @@ export class WFMHomePage extends WebActions {
     }
 
     async openReportView(): Promise<void> {
+        await this.page.waitForTimeout(500);
         await this.dataViewReports.click();
+        await this.reportLibrary.click();
+
+    }
+    async clickReportLibrary(): Promise<void> {
+        await this.page.waitForTimeout(500);
         await this.reportLibrary.click();
     }
 
@@ -233,6 +244,9 @@ export class WFMHomePage extends WebActions {
     }
     async clickOnAddPayCode(): Promise<void> {
         await this.AddPayCode.click()
+    }
+    async clickOnCancelbtn(): Promise<void> {
+        await this.page.getByRole('button', { name: 'Cancel' }).first().click()
     }
 
     async clickAdministrationAndOpenDataImportLink() {
