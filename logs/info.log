@@ -16625,3 +16625,65 @@
 {"level":"info","message":"Executing Step : Open Maintenance Menu page"}
 {"level":"info","message":"Executing Step : Validate the Reports "}
 {"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10648995 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10648785 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Executing Step : select the drop down menu"}
+{"level":"info","message":"Executing Step : Persona changed to Line manager to Duty Manager"}
+{"level":"info","message":"Executing Step : Validate the Swap To Duty Manager Persona"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10648785 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10648949 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10648949 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10648995 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10648995 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for SK01 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for SK01 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for HO1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for HO1 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for SK03 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for SK03 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for SK04 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for SK04 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for SK05 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for SK05 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for SK06 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for SK06 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for AUTOMATION01 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for AUTOMATION01 in sheet Sheet1 (Row 1) Status : passed"}
