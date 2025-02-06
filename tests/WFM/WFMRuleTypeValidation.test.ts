@@ -3,7 +3,6 @@ import { getEmployeeNumbers, writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import * as path from 'path';
 
-// const excelFileName = 'Part Time 24-4 Sch rule Automation File.xlsx';
 const excelFileName = 'RuleTypeValidation_SK_REG - COMPLETEMK.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);

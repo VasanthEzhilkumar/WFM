@@ -56,7 +56,8 @@ export class CurrentPayPeriodPage {
 
     async selectPreviousPayPeriod() {
         await this.page.waitForTimeout(500);
-        await this.ButtonTimeframe.click();
+        await this.CurrentPayPeriod.click();
+        //await this.ButtonTimeframe.click();
         await this.page.waitForTimeout(500);
         await this.PreviousPayPeriod.click();
         await this.page.waitForTimeout(500);
