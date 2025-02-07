@@ -18,6 +18,7 @@ for (const sheetName in sheetsJson) {
         test(testTitle, async ({ loginPage, webActions, wfmhomepage, wfmscheduleplannerpage, wfmtimecardpage }) => {
             await test.step(`Navigateto Application`, async () => {
                 await loginPage.navigateToURL();
+                
             });
 
             await test.step('Login into WFM Application', async () => {

@@ -73,9 +73,18 @@ export class LoginPage {
     }
 
     async changelanguage(): Promise<void> {
+<<<<<<< HEAD
         // await this.page.getByRole('link', { name: '' }).click();
          await this.page.getByRole('link', { name: 'American English' }).click();
         //await this.page.getByRole('link', { name: 'UK English' }).click();
+=======
+        // await this.page.waitForTimeout(10000);
+        await this.page.getByRole('link', { name: '' }).click();
+        // await this.page.getByRole('link', { name: 'American English' }).click();
+        // await this.page.waitForTimeout(3000);
+        await this.page.locator('//div[@class="modal-dialog"]//a[text()="UK English"]').click();
+        // await this.page.getByRole('link', { name: 'UK English' }).click();
+>>>>>>> Ramchandra
 
     }
     async logininASWFMApplication(): Promise<void> {

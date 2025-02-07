@@ -7,7 +7,7 @@ interface RuleViolation {
     severity: string;
     employeeOrg: string;
     ruleType: string;
-    description: string;
+    description: string;    
 }
 
 export class WFMSchedulePlannerPage {
