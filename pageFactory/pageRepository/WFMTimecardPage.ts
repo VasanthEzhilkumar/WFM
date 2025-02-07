@@ -103,13 +103,13 @@ export class WFMTimecardPage extends WebActions {
         await this.CurrentPayPeriod.click();
         await this.SelectRange.click();
         await this.page.locator("(//input[@id='startDateTimeInput'])[1]").focus();
-        await this.page.waitForTimeout(1000);
+        await this.page.waitForTimeout(500);
         await this.page.locator("(//input[@id='startDateTimeInput'])[1]").fill(StartDate);
-        await this.page.waitForTimeout(200);
+        // await this.page.waitForTimeout(200);
         await this.page.locator("(//input[@id='endDateTimeInput'])[1]").focus();
-        await this.page.waitForTimeout(1000);
+        await this.page.waitForTimeout(500);
         await this.page.locator("(//input[@id='endDateTimeInput'])[1]").fill(EndDate);
-        await this.page.waitForTimeout(200);
+        // await this.page.waitForTimeout(200);
         await this.Apply.first().focus();
         await this.Apply.first().click();
         await this.page.waitForTimeout(500);
@@ -296,7 +296,7 @@ export class WFMTimecardPage extends WebActions {
         await this.TIMECARD_TOTAL.click();
         // await this.page.waitForTimeout(500);
         // this.page.locator('//ukg-button[@title="Expand Totals"]').click();
-        await this.page.waitForTimeout(1000);
+        await this.page.waitForTimeout(3000);
         OTPayCode = this.page.locator("//div[@class='ui-grid-canvas']//div[contains(@title,'OT Unapproved')]");
         const OTPayCodeCount = await OTPayCode.count();
         if (OTPayCodeCount > 0)
@@ -304,7 +304,7 @@ export class WFMTimecardPage extends WebActions {
         else
             flag = "False";
 
-        await this.page.waitForTimeout(2000);
+        await this.page.waitForTimeout(3000);
         await this.TIMECARD_TOTAL_CLOSE.click();
         return flag;
     }
@@ -335,33 +335,35 @@ export class WFMTimecardPage extends WebActions {
     async approveOvertime(date: string, ALLorPARTIAL: string, OvertimeToApprove: string): Promise<string> {//, exceptions: string, expectedCondition: string): Promise<string> {
         let dateArray = date.split(" ");
         const weekday = dateArray[0].trim();
-        let dateDigit = dateArray[1].split("/")[1].trim();
+        let dateDigit = dateArray[1].split("/")[0].trim();
         //----------------------------------------------------------------------------------------------------
-        const selectListViewForPucnhInOut = this.page.locator("//div[@class='tk-calendar-box']//div[contains(text(),'" + weekday + "')]/following-sibling::div[contains(text(),'" + dateDigit + "')]");
+        const selectListViewForOvertime = this.page.locator("//div[@class='tk-calendar-box']//div[contains(text(),'" + weekday + "')]/following-sibling::div[contains(text(),'" + dateDigit + "')]");
         //--------------------------------------------------------------------------------------------------------
 
         try {
-            await this.page.waitForTimeout(1000);
+            await this.page.waitForTimeout(2000);
             const txtListView = this.page.getByLabel('List View');
             const txtTableView = this.page.getByLabel('Table View');
-            await this.page.waitForTimeout(3500);
+            await this.page.waitForTimeout(2000);
             await txtListView.click();
 
             await this.page.waitForTimeout(2000);
 
-            if (await selectListViewForPucnhInOut.count() > 0) {
-                console.log("List view for punch In-Out is present on screen");
+            let ListViewCounter = await selectListViewForOvertime.count();
+            let LoadMoreCounter = await this.btnLoadMore.count();
+            if (ListViewCounter > 0) {
+                console.log("List view for Overtime is present on screen");
             } else {
-                if (await this.btnLoadMore.count() > 0) {
+                if (LoadMoreCounter > 0) {
                     await this.page.waitForTimeout(500);
                     await this.btnLoadMore.scrollIntoViewIfNeeded();
                     await this.btnLoadMore.click();
                 }
             }
 
-            if (await selectListViewForPucnhInOut.count() > 0) {
+            if (ListViewCounter > 0) {
                 await this.page.waitForTimeout(3500);
-                await selectListViewForPucnhInOut.click();
+                await selectListViewForOvertime.click();
                 // const btnApproveOvertime = this.page.locator('(//div[@id="approveOvertimeAction.popup"]//button[@aria-label="Approve Overtime"])[2]');
                 const btnApproveOvertime = this.page.locator('//div[@transclude-id="slideout-content"]//form//button[@aria-label="Approve Overtime"]');
                 //---

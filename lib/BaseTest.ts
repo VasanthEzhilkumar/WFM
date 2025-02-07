@@ -9,6 +9,7 @@ import { WFMNotificationPage } from '@pages/WFMNotificationPage';
 import { WFMIntegrationPage } from '@pages/WFMIntegrationPage';
 import { CurrentPayPeriodPage } from 'pageFactory/commonPages/CurrentPayPeriodPage';
 import { WFMDataLibraryPage } from '@pages/WFMDataLibraryPage';
+import { WFMShiftSwapPage } from '@pages/WFMShiftSwapPage'; 
 
 const test = baseTest.extend<{
     webActions: WebActions;
@@ -21,6 +22,7 @@ const test = baseTest.extend<{
     wfmintegrationpage: WFMIntegrationPage;
     currentPayPeriodPage: CurrentPayPeriodPage;
     wfmDatapage: WFMDataLibraryPage;
+    wfmshiftswappage: WFMShiftSwapPage;
    
 }>({
     webActions: async ({ page, context }, use) => {
@@ -49,6 +51,9 @@ const test = baseTest.extend<{
     },
     wfmDatapage: async({page,context}, use) =>{
         await use(new WFMDataLibraryPage(page,context));
+    },
+    wfmshiftswappage: async({page,context}, use) =>{
+        await use(new WFMShiftSwapPage(page,context));
     },
 
 

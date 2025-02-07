@@ -10,8 +10,8 @@ export const testConfig = {
     WFMPassword:'U2FsdGVkX18V5h3fyN7305Rg+oaJ6z76An0VSo6P62HeiqwLsRXOxlRANt5fWQ3g',
     WFMEmpUSername: `10649086`,
     WFMEmpPassword:'WFMManagerPassword@05!',
-   WFMMgrUSername: `10648831`,//10648831,10648949
-    WFMMgrPassword: 'WFMManagerPassword@06',
+   WFMMgrUSername: `10648831`,//10648831,10648949//10652510
+    WFMMgrPassword: 'WFMManagerPassword@06', //WFMManagerPassword@06//PswdTest21!
    //WFMMgrUSername: `10648949`,
     //WFMMgrPassword: 'WFMManagerPassword@09',
     WFMUsrUsername: 'vezhil@primark.ie',

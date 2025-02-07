@@ -3,7 +3,7 @@ import { getEmployeeNumbers, writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import * as path from 'path';
 
-const excelFileName = 'TestRun.xlsx';
+const excelFileName = 'RuleTypeValidation_SK_REG - COMPLETE.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 const results: { empNumber: string, ruleViolations: string[] }[] = [];
@@ -18,6 +18,7 @@ for (const sheetName in sheetsJson) {
         test(testTitle, async ({ loginPage, webActions, wfmhomepage, wfmscheduleplannerpage, wfmtimecardpage }) => {
             await test.step(`Navigateto Application`, async () => {
                 await loginPage.navigateToURL();
+                
             });
 
             await test.step('Login into WFM Application', async () => {
