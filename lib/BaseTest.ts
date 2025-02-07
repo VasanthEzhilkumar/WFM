@@ -1,7 +1,7 @@
 import { TestInfo, test as baseTest } from '@playwright/test';
 import { LoginPage } from '@pages/LoginPage';
 import { WebActions } from '@lib/WebActions';
-import AxeBuilder from '@axe-core/playwright';
+import {AxeBuilder } from '@axe-core/playwright';
 import { WFMHomePage } from '@pages/WFMHomePage';
 import { WFMSchedulePlannerPage } from '@pages/WFMScheduleplannerPage';
 import { WFMTimecardPage } from '@pages/WFMTimecardPage';
