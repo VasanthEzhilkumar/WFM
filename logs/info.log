@@ -16609,3 +16609,118 @@
 {"level":"info","message":"Executing Step : Login into WFM Application"}
 {"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for AUTOMATION01 Status : failed"}
 >>>>>>> origin/Gayatri
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for undefined"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for undefined Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10181602"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10181602 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10181602"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10181602 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10222022"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10222022 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10181602"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10181602 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10222022"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10222022 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10254410"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10254410 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10279237"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10279237 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10525713"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10525713 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10645094"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10645094 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for \n10256318"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for \n10256318 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10256318"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10256318 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10256318"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10256318 Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10551546"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10551546 Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10551546"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10551546"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10551546 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10551547"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10551547 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10562861"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10562861 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Dataview Approch2 for 10590315"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Dataview Approch2 for 10590315 Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view for 10551546 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view for 10551546 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view for 10551547 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view for 10551547 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view for 10562861 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view for 10562861 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view for 10590315 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view for 10590315 in sheet Sheet1 (Row 1) Status : passed"}

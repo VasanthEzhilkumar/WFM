@@ -5,7 +5,7 @@ import wfmDatapage from '@lib/BaseTest';
 import path from 'path';
 
 // Define the relative directory path to your Excel file
-const excelFileName = 'DataView_SK_REG_COMPLETE_updated1 - Copy.xlsx';
+const excelFileName = 'DataView_Romania.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 // Convert the Excel sheets to JSON format
@@ -74,6 +74,7 @@ for (const empId in groupedData) {
                     console.log("DataView is not available, marking test as failed.");
                     try {
                         await writeResultsToExcel(excelFilePath, sheetName, index, dataSet[index].EmpID, 'Passed: Manager ID Not Having Dataview');
+                        //row = row + 1;
                     } catch (error) {
                         console.error('Error writing results to Excel:', error);
                     }
