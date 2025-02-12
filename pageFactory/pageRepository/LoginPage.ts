@@ -76,7 +76,6 @@ export class LoginPage {
         // await this.page.getByRole('link', { name: '' }).click();
         // await this.page.getByRole('link', { name: 'American English' }).click();
         await this.page.getByRole('link', { name: 'UK English' }).click();
-
     }
     async logininASWFMApplication(): Promise<void> {
 

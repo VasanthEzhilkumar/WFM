@@ -1,7 +1,7 @@
 import { TestInfo, test as baseTest } from '@playwright/test';
 import { LoginPage } from '@pages/LoginPage';
 import { WebActions } from '@lib/WebActions';
-import AxeBuilder from '@axe-core/playwright';
+import {AxeBuilder } from '@axe-core/playwright';
 import { WFMHomePage } from '@pages/WFMHomePage';
 import { WFMSchedulePlannerPage } from '@pages/WFMScheduleplannerPage';
 import { WFMTimecardPage } from '@pages/WFMTimecardPage';
@@ -12,6 +12,8 @@ import { WFMDataLibraryPage } from '@pages/WFMDataLibraryPage';
 import { WFMAvailabilityChangePage } from 'pageFactory/pageRepository/WFMAvailabilityChangePage';
 import { WFMControlCentrePage } from 'pageFactory/pageRepository/WFMControlCentrePage';
 import { WFMReportLibraryPage } from '@pages/WFMReportLibraryPage';
+import { WFMShiftSwapPage } from '@pages/WFMShiftSwapPage'; 
+
 const test = baseTest.extend<{
     webActions: WebActions;
     loginPage: LoginPage;
@@ -27,6 +29,8 @@ const test = baseTest.extend<{
     wfmControlCentrePage: WFMControlCentrePage;
     wfmreportpage: WFMReportLibraryPage;
 
+    wfmshiftswappage: WFMShiftSwapPage;
+   
 }>({
     webActions: async ({ page, context }, use) => {
         await use(new WebActions(page, context));
@@ -63,6 +67,9 @@ const test = baseTest.extend<{
     },
     wfmreportpage: async ({ page, context }, use) => {
         await use(new WFMReportLibraryPage(page, context));
+    },
+    wfmshiftswappage: async({page,context}, use) =>{
+        await use(new WFMShiftSwapPage(page,context));
     },
 
 
