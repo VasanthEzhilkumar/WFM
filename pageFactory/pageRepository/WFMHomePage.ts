@@ -183,16 +183,31 @@ export class WFMHomePage extends WebActions {
         await this.page.waitForTimeout(5000);
     }
 
+
+    async clickDataView(): Promise<void> {
+        await this.page.waitForTimeout(500);
+        await this.dataViewLibrary.click();
+        await this.page.waitForTimeout(5000);
+    }
+
     async openDataView(): Promise<void> {
         await this.dataViewReports.click();
         await this.page.waitForTimeout(500);
         await this.dataViewLibrary.click();
-        await this.page.waitForTimeout(500);
+        await this.page.waitForTimeout(6000);
     }
     async isDataViewAvailable() {
         try {
             const dataViewElement = await this.page.locator("//div[@id='585_category'][@class='expander']"); // Replace with actual selector
             return await dataViewElement.isVisible(); // Return true if DataView is visible
+        } catch (error) {
+            return false; // Return false if an error occurs (e.g., element not found)
+        }
+    }
+
+    async isDataViewAndReportViewAvailable() {
+        try {
+            return await this.dataViewReports.isVisible(); // Return true if DataView is visible
         } catch (error) {
             return false; // Return false if an error occurs (e.g., element not found)
         }

@@ -53,16 +53,36 @@ for (const empId in groupedData) {
 
         await test.step('Open Maintenance Menu page', async () => {
             await wfmhomepage.ClickonMainMenu();
-            await wfmhomepage.openReportView();
         });
 
+        const isDataViewAndReportViewAvailable = await wfmhomepage.isDataViewAndReportViewAvailable();
         await test.step('Validate the Reports ', async () => {
-            await wfmreportpage.runReportLibrary();
+
             //it will return row number 
             let rowNumber = await getRowNumberByEmployeeID(excelFilePath, sheetName, dataSet[index].EMPID);
-            let j = 0;
+            let j = 0, k = 0, p = 0;
             let errorMsg = "";
             for (const data of dataSet) {
+                if (isDataViewAndReportViewAvailable) {
+                    if (k === 0) {
+                        await wfmhomepage.openReportView();
+                        await wfmreportpage.runReportLibrary();
+                        k++;
+                    }
+
+                } else {
+                    let resultAsNoption = "";
+                    if (data.Expected === 'No') {
+                        resultAsNoption = 'Passed';
+                    } else {
+                        resultAsNoption = 'Failed';
+                    }
+                    console.log("Report view is not available, marking test as failed/Passed as expected.");
+                    await writeResultsToExcel(excelFilePath, 'Sheet1', rowNumber - 1, data.EMPID, resultAsNoption);
+                    rowNumber++;
+                    // continue;
+                }
+
                 //String(dataSet[index].Manager).toLocaleLowerCase() !== 'line manager' &&
                 if (String(data.SwapToDutyMgr).toLocaleLowerCase() !== 'yes') {
                     const result = await wfmreportpage.validateReports2(data.ReportName, data.Expected)
@@ -88,8 +108,23 @@ for (const empId in groupedData) {
                             await test.step('Validate the Swap To Duty Manager Persona', async () => {
                                 await wfmhomepage.validateSwapToDutyManagerPersona("Duty manager")
                                 await wfmhomepage.ClickonMainMenu();
-                                await wfmhomepage.clickReportLibrary();
-                                await wfmreportpage.runReportLibrary();
+                                const isDataViewAndReportViewAvailable = await wfmhomepage.isDataViewAndReportViewAvailable();
+                                if (isDataViewAndReportViewAvailable) {
+                                    if (p === 0) {
+                                        await wfmhomepage.clickReportLibrary();
+                                        await wfmreportpage.runReportLibrary();
+                                        p++;
+                                    }
+                                } else {
+                                    let resultAsNoption = "";
+                                    if (data.Expected === 'No') {
+                                        resultAsNoption = 'Passed';
+                                    } else {
+                                        resultAsNoption = 'Failed';
+                                    }
+                                    await writeResultsToExcel(excelFilePath, 'Sheet1', rowNumber - 1, data.EMPID, resultAsNoption);
+                                    rowNumber++;
+                                }
                             });
                             j++;
                         }

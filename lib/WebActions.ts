@@ -10,6 +10,7 @@ import { exec } from 'child_process';
 import { Locator } from 'playwright';
 
 export class WebActions {
+
     readonly page: Page;
     readonly context: BrowserContext;
 

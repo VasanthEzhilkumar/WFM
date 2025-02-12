@@ -57,11 +57,55 @@ export class WFMDataLibraryPage {
 
     }
 
+    async getDataViewsTitiles(): Promise<string[]> {
+
+        // Step 2: Get all list items inside the listbox
+        await this.page.waitForTimeout(6000);
+        const listItems = await this.page.locator('//li[@role="listitem"]//span[@class="card__info boldRow mainTabularData"]');
+        const count = await listItems.count();
+        console.log(`Found ${count} reports in the list.`);
+        let dataviewtitle: string[] = [];
+        // Step 3: Extract all report titles from the web page
+        let flag = false;
+        for (let i = 1; i <= count; i++) {
+            const button = await this.page.locator('(//li[@role="listitem"]//span[@class="card__info boldRow mainTabularData"])[' + i + ']');
+            let title = await button.textContent();
+            dataviewtitle.push(title.toString().trim());
+        }
+        return dataviewtitle;
+    }
+
+    async validateDataView(exp: string, reportName: string, dataviewtitle: string[]): Promise<string> {
+
+        let flag = false;
+        for (let i = 0; i < dataviewtitle.length; i++) {
+            if (dataviewtitle[i].toLowerCase() === reportName.toLowerCase()) {
+                console.log(dataviewtitle, reportName)
+                flag = true;
+                break;
+            }
+        }
+
+        if (flag) {
+            if (exp.toLowerCase() === 'yes') {
+                console.log(`Validation passed for ReportName: ${reportName}`);
+                return 'Passed';
+            } else {
+                return 'Failed';
+            }
+        } else {
+            if (exp.toLowerCase() === 'yes') {
+                return 'Failed:ReportNotFound';
+            } else {
+                return 'Passed';
+            }
+        }
+    }
 
     async validateDataViewReports2(exp: string, reportName: string): Promise<string> {
 
         // Step 2: Get all list items inside the listbox
-        await this.page.waitForTimeout(6000);
+        // await this.page.waitForTimeout(6000);
         const listItems = await this.page.locator('//li[@role="listitem"]//span[@class="card__info boldRow mainTabularData"]');
         const count = await listItems.count();
         console.log(`Found ${count} reports in the list.`);
@@ -79,33 +123,45 @@ export class WFMDataLibraryPage {
             }
         }
 
-        if (flag && exp.toLowerCase() === 'yes') {
-            console.log(`Validation passed for ReportName: ${reportName}`);
-            await this.page.waitForTimeout(1000);
-            return 'Passed'
-            //await writeResultsToExcel(excelFilePath, 'Sheet1', index, `Validation passed for ReportName: ${reportName}`, 'Passed');
+        if (flag) {
+            if (exp.toLowerCase() === 'yes') {
+                console.log(`Validation passed for ReportName: ${reportName}`);
+                return 'Passed';
+            } else {
+                return 'Failed';
+            }
+        } else {
+            if (exp.toLowerCase() === 'yes') {
+                return 'Failed:ReportNotFound';
+            } else {
+                return 'Passed';
+            }
         }
-        else if (flag && exp.toLowerCase() === 'no') {
-            return 'Failed'
-            //await writeResultsToExcel(excelFilePath, 'Sheet1', index, `Validation Passed for ReportName: ${reportName}`, 'Failed');
-        }
-        else if (!flag && exp.toLowerCase() === 'yes') {
-            await this.page.waitForTimeout(1000);
-            return 'Failed:ReportNotFound';
-            //await writeResultsToExcel(excelFilePath, 'Sheet1', index, `Validation failed for ReportName: ${reportName}`, 'Failed:ReportNotFound');
-        }
-        else if (!flag && exp.toLowerCase() === 'no') {
-            await this.page.waitForTimeout(1000);
-            return 'Passed';
-            //await writeResultsToExcel(excelFilePath, 'Sheet1', index, `Validation failed for ReportName: ${reportName}`, 'Passed');
-        }
+
+        // if (flag && exp.toLowerCase() === 'yes') {
+        //     console.log(`Validation passed for ReportName: ${reportName}`);
+        //     //await this.page.waitForTimeout(1000);
+        //     return 'Passed'
+        //     //await writeResultsToExcel(excelFilePath, 'Sheet1', index, `Validation passed for ReportName: ${reportName}`, 'Passed');
+        // }
+        // else if (flag && exp.toLowerCase() === 'no') {
+        //     return 'Failed'
+        //     //await writeResultsToExcel(excelFilePath, 'Sheet1', index, `Validation Passed for ReportName: ${reportName}`, 'Failed');
+        // }
+        // else if (!flag && exp.toLowerCase() === 'yes') {
+        //     // await this.page.waitForTimeout(1000);
+        //     return 'Failed:ReportNotFound';
+        //     //await writeResultsToExcel(excelFilePath, 'Sheet1', index, `Validation failed for ReportName: ${reportName}`, 'Failed:ReportNotFound');
+        // }
+        // else if (!flag && exp.toLowerCase() === 'no') {
+        //     //await this.page.waitForTimeout(1000);
+        //     return 'Passed';
+        //     //await writeResultsToExcel(excelFilePath, 'Sheet1', index, `Validation failed for ReportName: ${reportName}`, 'Passed');
+        // }
 
 
     }
 
 
 
-
-
 }
-
