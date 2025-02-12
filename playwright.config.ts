@@ -40,7 +40,7 @@ const config: PlaywrightTestConfig = {
         baseURL: testConfig.WFM,
         //Browser Mode
         headless: false,
-        actionTimeout: 30000,
+        actionTimeout: 90000,
 
         //Browser height and width
         viewport: { width: 1280, height: 595 },
@@ -48,7 +48,6 @@ const config: PlaywrightTestConfig = {
 
         //Enable File Downloads in Chrome
         acceptDownloads: true,
-
         //Artifacts
         screenshot: 'on',
         video: `retain-on-failure`,

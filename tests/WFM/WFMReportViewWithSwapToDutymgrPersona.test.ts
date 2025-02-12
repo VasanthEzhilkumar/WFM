@@ -77,10 +77,12 @@ for (const empId in groupedData) {
                     } else {
                         resultAsNoption = 'Failed';
                     }
+                    console.log("Report view is not available, marking test as failed/Passed as expected.");
                     await writeResultsToExcel(excelFilePath, 'Sheet1', rowNumber - 1, data.EMPID, resultAsNoption);
                     rowNumber++;
-                    continue;
+                    // continue;
                 }
+
                 //String(dataSet[index].Manager).toLocaleLowerCase() !== 'line manager' &&
                 if (String(data.SwapToDutyMgr).toLocaleLowerCase() !== 'yes') {
                     const result = await wfmreportpage.validateReports2(data.ReportName, data.Expected)
@@ -122,9 +124,7 @@ for (const empId in groupedData) {
                                     }
                                     await writeResultsToExcel(excelFilePath, 'Sheet1', rowNumber - 1, data.EMPID, resultAsNoption);
                                     rowNumber++;
-
                                 }
-
                             });
                             j++;
                         }

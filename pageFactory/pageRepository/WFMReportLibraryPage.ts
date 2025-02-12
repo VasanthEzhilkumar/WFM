@@ -1,5 +1,6 @@
 import { writeResultsToExcel } from '@lib/Excel';
 import { readExcel } from '@lib/ExceltoJsonUtil'
+import { WebActions } from '@lib/WebActions';
 import { Page, BrowserContext, Locator, expect } from '@playwright/test';
 
 
@@ -52,9 +53,8 @@ export class WFMReportLibraryPage {
         await this.runReport.click();
         await this.page.waitForTimeout(500);
         await this.reportAll.click()
-
-
     }
+
     async validateReports2(reportName: string, expected: string): Promise<string> {
         try {
             // Step 2: Get all list items inside the listbox
@@ -81,15 +81,35 @@ export class WFMReportLibraryPage {
 
             // Check if the report name exists in the list and validate against expected value
             const isReportFound = webReportTitles.some(title => title?.toLowerCase() === reportName.toLowerCase());
-            const flag = (isReportFound && expected.toLowerCase() === 'yes') || (!isReportFound && expected.toLowerCase() === 'no');
+            // const flag = (isReportFound && expected.toLowerCase() === 'yes') || (!isReportFound && expected.toLowerCase() === 'no');
 
-            if (flag) {
-                console.log(`Validation passed for ReportName: ${reportName}`);
-                return "Passed";
+            if (isReportFound) {
+                if (expected.toLowerCase() === 'yes') {
+                    console.log(`Validation passed for ReportName: ${reportName}`);
+                    return 'Passed';
+                } else {
+                    console.log(`Validation failed for ReportName: ${reportName}`);
+                    return 'Failed';
+                }
             } else {
-                console.error(`Validation failed for ReportName: ${reportName}`);
-                return "Failed: Report not found";
+                if (expected.toLowerCase() === 'yes') {
+                    console.log(`Validation failed for ReportName: ${reportName}`);
+                    return 'Failed:ReportNotFound';
+                } else {
+                    console.log(`Validation passed for ReportName: ${reportName}`);
+                    return 'Passed';
+                }
             }
+
+
+
+            // if (flag) {
+            //     console.log(`Validation passed for ReportName: ${reportName}`);
+            //     return "Passed";
+            // } else {
+            //     console.error(`Validation failed for ReportName: ${reportName}`);
+            //     return "Failed: Report not found";
+            // }
         } catch (error) {
             console.error(`Validation failed for ReportName: ${reportName}`, error);
             return "Failed: Report not found";
