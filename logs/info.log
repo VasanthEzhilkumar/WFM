@@ -19441,3 +19441,518 @@
 {"level":"info","message":"Test Case Completed : @WFM Overtime Approval for 10649120 on date Thu 22/05 in sheet Sheet1 (Row 2) Status : passed"}
 >>>>>>> Ramchandra
 >>>>>>> 3fee87a787b84bc719f0501bf32d3eaae0e8f3c3
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 4 in sheet Tabelle1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 4 in sheet Tabelle1 (Row 4) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 5 in sheet Tabelle1 (Row 5)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 5 in sheet Tabelle1 (Row 5) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 6 in sheet Tabelle1 (Row 6)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 6 in sheet Tabelle1 (Row 6) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 7 in sheet Tabelle1 (Row 7)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 7 in sheet Tabelle1 (Row 7) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 8 in sheet Tabelle1 (Row 8)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 8 in sheet Tabelle1 (Row 8) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 9 in sheet Tabelle1 (Row 9)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 9 in sheet Tabelle1 (Row 9) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 10 in sheet Tabelle1 (Row 10)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 10 in sheet Tabelle1 (Row 10) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 11 in sheet Tabelle1 (Row 11)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 11 in sheet Tabelle1 (Row 11) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 12 in sheet Tabelle1 (Row 12)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 12 in sheet Tabelle1 (Row 12) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 13 in sheet Tabelle1 (Row 13)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 13 in sheet Tabelle1 (Row 13) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 15 in sheet Tabelle1 (Row 15)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 15 in sheet Tabelle1 (Row 15) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 16 in sheet Tabelle1 (Row 16)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 16 in sheet Tabelle1 (Row 16) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 17 in sheet Tabelle1 (Row 17)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 17 in sheet Tabelle1 (Row 17) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 4 in sheet Tabelle1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 4 in sheet Tabelle1 (Row 4) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 5 in sheet Tabelle1 (Row 5)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 5 in sheet Tabelle1 (Row 5) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 6 in sheet Tabelle1 (Row 6)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 6 in sheet Tabelle1 (Row 6) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 7 in sheet Tabelle1 (Row 7)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 7 in sheet Tabelle1 (Row 7) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 8 in sheet Tabelle1 (Row 8)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 8 in sheet Tabelle1 (Row 8) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 9 in sheet Tabelle1 (Row 9)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 9 in sheet Tabelle1 (Row 9) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 10 in sheet Tabelle1 (Row 10)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 10 in sheet Tabelle1 (Row 10) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 11 in sheet Tabelle1 (Row 11)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 11 in sheet Tabelle1 (Row 11) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 12 in sheet Tabelle1 (Row 12)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 12 in sheet Tabelle1 (Row 12) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 13 in sheet Tabelle1 (Row 13)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 13 in sheet Tabelle1 (Row 13) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 15 in sheet Tabelle1 (Row 15)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 15 in sheet Tabelle1 (Row 15) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 16 in sheet Tabelle1 (Row 16)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 16 in sheet Tabelle1 (Row 16) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 17 in sheet Tabelle1 (Row 17)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 17 in sheet Tabelle1 (Row 17) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 16 in sheet Tabelle1 (Row 16)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 16 in sheet Tabelle1 (Row 16) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 6 in sheet Tabelle1 (Row 6)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 6 in sheet Tabelle1 (Row 6) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 6 in sheet Tabelle1 (Row 6)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 6 in sheet Tabelle1 (Row 6) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 14 in sheet Tabelle1 (Row 14) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2) Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2) Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 2 in sheet Tabelle1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 3 in sheet Tabelle1 (Row 3) Status : failed"}

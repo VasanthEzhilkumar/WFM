@@ -193,6 +193,7 @@ export class WebActions {
 
     async getEmployeeName(empNumber: string): Promise<string | null> {
         const EMP_NAME = this.page.locator(`[personnumber="${empNumber}"]`);
+        //await EMP_NAME.scrollIntoViewIfNeeded();
         const ariaLabel = await EMP_NAME.getAttribute('aria-label');
         if (!ariaLabel) {
             console.error(`No element found with personnumber: ${empNumber}`);

@@ -6,7 +6,7 @@ import path from 'path';
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
 // const excelFileName = 'WFMAddingPaycodes_EnterTimeOFF_SK_REG.xlsx';
-const excelFileName = '(2) EnterTimeOFF_SK_REG -COMPLETE.xlsx';
+const excelFileName = '(2) EnterTimeOFF_SK_REG -COMPLETE_Failed.xlsx';
 
 const excelFilePath = getExcelFilePath(excelFileName);
 

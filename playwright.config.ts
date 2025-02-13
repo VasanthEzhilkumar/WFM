@@ -40,7 +40,7 @@ const config: PlaywrightTestConfig = {
         baseURL: testConfig.WFM,
         //Browser Mode
         headless: false,
-        actionTimeout: 90000,
+        actionTimeout: 30000,
 
         //Browser height and width
         viewport: { width: 1280, height: 595 },

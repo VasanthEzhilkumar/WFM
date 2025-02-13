@@ -249,9 +249,8 @@ export class WFMHomePage extends WebActions {
     }
 
     async rightclickEmp(empNumber: string): Promise<void> {
+        await this.page.waitForTimeout(800);
         await this.page.locator(`[personnumber="${empNumber}"]`).click({ button: 'right' });
-
-
     }
 
     async clicktimeoff(): Promise<void> {
@@ -335,23 +334,31 @@ export class WFMHomePage extends WebActions {
                 await new throws(error);
             }
         } catch (error) {
-            console.error();
+            console.error("Data not imported" + error + errorMessage);
             return error + errorMessage;
         }
 
     }
 
     async enterTimeoffDetails2(payCode: string): Promise<void> {
+        try {
+            const TimeOffRequest = await this.page.locator('//div/label[@class="radio-btn ng-binding" and contains(text(),"-Time Off Request")]');
+            await this.page.waitForTimeout(3000);
+            if (await TimeOffRequest.isVisible()) {
+                await this.page.waitForTimeout(1000);
+                await TimeOffRequest.click();
+                await this.apply.click();
+            }
+            await this.page.waitForTimeout(3000);
+            const paycodeTImeOff = await this.page.locator('(//div[@role="menu"]//div[@class="radio-btn accruals-container"]/label[text()="' + payCode.trim() + '"])[1]');
 
-        const TimeOffRequest = await this.page.locator('//div/label[@class="radio-btn ng-binding" and contains(text(),"-Time Off Request")]');
-        await this.page.waitForTimeout(3000);
-        if (await TimeOffRequest.isVisible()) {
-            await this.page.waitForTimeout(1000);
-            await TimeOffRequest.click();
-            await this.apply.click();
+            await paycodeTImeOff.click();
+
+            //await this.page.getByText(`${payCode}`).first().click();//('SK-Annual Leave');
+        } catch (error) {
+            console.error("Failed: Exact paycode not found.");
+            throw new Error("Failed: Exact paycode not found." + error);
         }
-        await this.page.waitForTimeout(3000);
-        await this.page.getByText(`${payCode}`).first().click();//('SK-Annual Leave')
     }
 
     async enterTimeOffByaddPayCode(payCode: string, duration: string, dates: string): Promise<void> {
@@ -549,8 +556,9 @@ export class WFMHomePage extends WebActions {
 
         while (startDate <= endDate) {
             // Get the formatted date and the day of the week
-            const toDate = startDate.format('YYYY-MM-DD');
-            const dayName = startDate.format('dddd'); // Get the full name of the day
+            const toDate = startDate.format('YYYY-DD-MM');
+            const startDatefroDay = moment(toDate);
+            const dayName = startDatefroDay.format('dddd'); // Get the full name of the day
             await this.page.waitForTimeout(500);
             // Construct the aria-label based on the date and day name
             const ariaLabel = `${toDate} ${dayName} unselected`;
