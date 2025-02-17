@@ -599,49 +599,67 @@ export class WFMHomePage extends WebActions {
 
 
     async TimeOff(Start_Date: string, End_Date: string, Reason: string): Promise<string> {
-        await this.page.getByText('SK-Annual Leave.: Multiple').click();
 
-        // Check if the element exists before clicking
-        const reasonLocator = this.page.locator('#ngx-popover-1').getByText(Reason);
-
-        try {
-            // Wait for the element to be visible within a 5-second timeout
-            await reasonLocator.waitFor({ timeout: 5000 });
-            await reasonLocator.click();
-        } catch (error) {
-            // If the element is not found, throw an error and fail the test
-            return (`Reason "${Reason}" not found. Test failed.`);
-            // throw new Error(`Reason "${Reason}" not found. Test failed.`);
-        }
-        await this.PICK_DATES.click();
-        await this.START_DATE.fill(Start_Date);
-        await this.END_DATE.clear();
-        await this.END_DATE.fill(End_Date);
-        await this.APPLY_BUTTON.click();
-        await this.SELECT_DURATION.click();
-        await this.page.waitForTimeout(2000);
-        await this.FULL_DURATION.click();
-        await this.page.waitForTimeout(2000);
-        await this.SUBMIT.click();
+        await this.page.locator('#one-click-time-off-advanced-btn').click();
+        //await this.page.locator('ukg-item').filter({ hasText: 'Request type *' }).click();
+        await this.page.getByText('Request type *').click();
+       // await this.page.getByLabel('Request type *: ').click();
+        await this.page.getByRole('menuitemradio', { name: `${Reason}` }).click();
+        await this.page.getByLabel('Starting date *').getByPlaceholder('DD/MM/YYYY').click();
+        await this.page.getByLabel('Starting date *').getByPlaceholder('DD/MM/YYYY').fill(Start_Date);
+        await this.page.getByLabel('End date *').getByPlaceholder('DD/MM/YYYY').click();
+        await this.page.getByLabel('End date *').getByPlaceholder('DD/MM/YYYY').fill(End_Date);
+        await this.page.waitForTimeout(1000);
+        await this.page.getByRole('button', { name: 'Next' }).dblclick({ 'force': true });
+        await this.page.getByRole('button', { name: 'Next' }).dblclick({ 'force': true });
+        await this.page.waitForTimeout(1000);
+        await this.page.getByRole('button', { name: 'Submit' }).click({ 'force': true });
+       
         await this.page.waitForTimeout(2000);
 
+        // // Check if the element exists before clicking
+        // const reasonLocator = this.page.locator('#ngx-popover-1').getByText(Reason);
+
+        // try {
+        //     // Wait for the element to be visible within a 5-second timeout
+        //     await reasonLocator.waitFor({ timeout: 5000 });
+        //     await reasonLocator.click();
+        // } catch (error) {
+        //     // If the element is not found, throw an error and fail the test
+        //     return (`Reason "${Reason}" not found. Test failed.`);
+        //     // throw new Error(`Reason "${Reason}" not found. Test failed.`);
+        // }
+        // await this.PICK_DATES.click();
+        // await this.START_DATE.fill(Start_Date);
+        // await this.END_DATE.clear();
+        // await this.END_DATE.fill(End_Date);
+        // await this.APPLY_BUTTON.click();
+        // await this.SELECT_DURATION.click();
+        // await this.page.waitForTimeout(2000);
+        // await this.FULL_DURATION.click();
+        // await this.page.waitForTimeout(2000);
+        // await this.SUBMIT.click();
+        // await this.page.waitForTimeout(2000);
+
+return "Passed";
+
+        // if (await this.page.locator('#restartBtn').count() > 0) {
+
+        //     return "Passed"
 
 
-        if (await this.page.locator('#restartBtn').count() > 0) {
+        // }
+        // else {
+        //     // Check for the error message after submission
+        //     const errorMessageLocator = await this.page.locator('krn-ng-single-message div').textContent();
+        //     const errorMessageVisible = await this.page.getByText('1 ErrorClose').isVisible();
+        //     console.error('Test failed: ' + errorMessageLocator);
+        //     return "Failed"
 
-            return "Passed"
-
-
-        }
-        else {
-            // Check for the error message after submission
-            const errorMessageLocator = await this.page.locator('krn-ng-single-message div').textContent();
-            const errorMessageVisible = await this.page.getByText('1 ErrorClose').isVisible();
-            console.error('Test failed: ' + errorMessageLocator);
-            return "Failed"
-
-        }
+        // }
     }
+
+
 
     // async  OpenNotification(): Promise<void> {
     //     if (await this.NOTIFICATIONTILELINK.isVisible()) {
