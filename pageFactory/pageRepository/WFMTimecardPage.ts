@@ -512,12 +512,9 @@ export class WFMTimecardPage extends WebActions {
     @Date: 27/11/2024
   */
     async pucnInPunchOutByDate(date: string, punchIn: string, punchOut: string, punchIn2: string, punchOut2: string): Promise<string> {
+        const [weekday, dateArray] = date.split(" ");
+        const [dateDigit, month] = dateArray.split("/");
 
-
-        let dateArray = date.split(" ");
-        const weekday = dateArray[0].trim();
-        let month = dateArray[1].split("/")[1].trim();
-        let dateDigit = dateArray[1].split("/")[0].trim();
         let resultMsgError = "";
         let errorMsgafterSave = "";
         //----------------------------------------------------------------------------------------------------
@@ -538,35 +535,11 @@ export class WFMTimecardPage extends WebActions {
                         await this.btnLoadMore.click();
                     }
                 }
-
                 if (await selectListViewForPucnhInOut.count() > 0) {
                     await selectListViewForPucnhInOut.click();
 
                     if (weekday.includes('Sat') || weekday.includes('Sun')) {
-                        if (punchIn !== null && punchIn !== '' && punchIn !== undefined) {
-                            await this.page.waitForTimeout(1500);
-                            await this.btnAddPunch.click();
-                            await this.page.waitForTimeout(1000);
-                            resultMsgError = await this.editPunchFillandApply(punchIn, "In Punch");
-                            if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
-                                new throws(error);
-                            }
-                            await this.txtOutPunch.fill(punchOut);
-                            await this.page.keyboard.press("Tab");
-                        } else if (punchOut !== '' && punchOut !== undefined && punchOut !== null) {
-                            await this.page.waitForTimeout(1500);
-                            await this.btnAddPunch.click();
-                            await this.page.waitForTimeout(1000);
-                            resultMsgError = await this.editPunchFillandApply(punchOut, "Out Punch");
-                            if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
-                                new throws(error);
-                            }
-                            await this.txtInPunch.fill(punchIn);
-                            await this.page.keyboard.press("Tab");
-                        }
-
-                        await this.page.waitForTimeout(1000);
-                        await this.btnSave.click();
+                        resultMsgError = await this.handleWeekendPunchInOut(punchIn, punchOut);
                         await this.page.waitForTimeout(1000);
                         const errorCheck = await this.page.locator('(//div[@class="multiple-lines-wrap"])[1]');
                         if (await errorCheck.isVisible()) {
@@ -580,9 +553,14 @@ export class WFMTimecardPage extends WebActions {
                         }
                     } else {
                         if (punchIn !== '' && punchIn !== undefined && punchIn !== null) {
-                            await this.txtInPunch.fill(punchIn);
-                            await this.page.keyboard.press("Tab");
-                            await this.page.waitForTimeout(1000);
+                            if (await this.txtInPunch.isVisible()) {
+                                await this.txtInPunch.fill(punchIn);
+                                await this.page.keyboard.press("Tab");
+                                await this.page.waitForTimeout(1000);
+                            } else {
+                                resultMsgError = await this.handleWeekendPunchInOut(punchIn, punchOut);
+                            }
+
                         }
                         if (punchOut !== '' && punchOut !== undefined && punchOut !== null) {
                             if (punchIn !== null && punchIn !== '') {
@@ -747,6 +725,78 @@ export class WFMTimecardPage extends WebActions {
         }
     }
 
+    async handleWeekendPunchInOut(punchIn: string, punchOut: string): Promise<string> {
+        let resultMsgError;
+        if (punchIn !== null && punchIn !== '' && punchIn !== undefined) {
+            await this.page.waitForTimeout(1500);
+            await this.btnAddPunch.click();
+            await this.page.waitForTimeout(1000);
+            resultMsgError = await this.editPunchFillandApply(punchIn, "In Punch");
+            if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                new throws(error);
+            }
+            await this.txtOutPunch.fill(punchOut);
+            await this.page.keyboard.press("Tab");
+        } else if (punchOut !== '' && punchOut !== undefined && punchOut !== null) {
+            await this.page.waitForTimeout(1500);
+            await this.btnAddPunch.click();
+            await this.page.waitForTimeout(1000);
+            resultMsgError = await this.editPunchFillandApply(punchOut, "Out Punch");
+            if (resultMsgError !== null && resultMsgError !== '' && resultMsgError !== undefined) {
+                new throws(error);
+            }
+            await this.txtInPunch.fill(punchIn);
+            await this.page.keyboard.press("Tab");
+        }
+        return resultMsgError;
+    }
+
+    async handleWeekdayPunchInOut(punchIn: string, punchOut: string) {
+        if (punchIn) {
+            await this.page.waitForTimeout(1000);
+            if (await this.txtInPunch.isVisible()) {
+                await this.txtInPunch.fill(punchIn);
+                await this.page.keyboard.press("Tab");
+                await this.page.waitForTimeout(1000);
+            } else {
+                await this.handleWeekendPunchInOut(punchIn, punchOut)
+            }
+
+        }
+        if (punchOut) {
+            if (punchIn) {
+                const [hours, minutes] = punchIn.split(":").map(Number);
+                const punchInNumber = hours + minutes / 60;
+                if (punchInNumber > 9) {
+                    await this.txtOutPunch2.fill(punchOut);
+                    await this.page.keyboard.press("Tab");
+                } else {
+                    await this.txtOutPunch.fill(punchOut);
+                    await this.page.keyboard.press("Tab");
+                }
+            } else {
+                await this.txtOutPunch.fill(punchOut);
+                await this.page.keyboard.press("Tab");
+            }
+        }
+    }
+
+    async handleAdditionalPunches(punchIn2: string, punchOut2: string) {
+        if (punchIn2) {
+            await this.page.waitForTimeout(1500);
+            await this.btnAddPunch.click();
+            await this.page.waitForTimeout(500);
+            let resultMsgError = await this.editPunchFillandApply(punchIn2, "In Punch");
+            if (resultMsgError) throw new Error(resultMsgError);
+        }
+        if (punchOut2) {
+            await this.page.waitForTimeout(1000);
+            await this.btnAddPunch.click();
+            await this.page.waitForTimeout(500);
+            let resultMsgError = await this.editPunchFillandApply(punchOut2, "Out Punch");
+            if (resultMsgError) throw new Error(resultMsgError);
+        }
+    }
 
     async punchInOutMultipleDays(date: string, punchIn: any, punchOut: any, punchIn2: any, punchOut2: any): Promise<string> {
 
