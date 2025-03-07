@@ -343,17 +343,20 @@ export class WFMHomePage extends WebActions {
     async enterTimeoffDetails2(payCode: string): Promise<void> {
         try {
             const TimeOffRequest = await this.page.locator('//div/label[@class="radio-btn ng-binding" and contains(text(),"-Time Off Request")]');
+            const originalTimeOFF = await this.page.locator('(//div[@role="menu"]//label[text()="' + payCode.trim() + '"])[1]');
             await this.page.waitForTimeout(3000);
-            if (await TimeOffRequest.isVisible()) {
+            if (await originalTimeOFF.count() > 0) {
+                await this.page.waitForTimeout(1000);
+                await originalTimeOFF.click();
+                await this.apply.click();
+            } else if (await TimeOffRequest.isVisible() && await TimeOffRequest.count() > 0) {
                 await this.page.waitForTimeout(1000);
                 await TimeOffRequest.click();
                 await this.apply.click();
+                await this.page.waitForTimeout(3000);
+                const paycodeTImeOff = await this.page.locator('(//div[@role="menu"]//div[@class="radio-btn accruals-container"]/label[text()="' + payCode.trim() + '"])[1]');
+                await paycodeTImeOff.click();
             }
-            await this.page.waitForTimeout(3000);
-            const paycodeTImeOff = await this.page.locator('(//div[@role="menu"]//div[@class="radio-btn accruals-container"]/label[text()="' + payCode.trim() + '"])[1]');
-
-            await paycodeTImeOff.click();
-
             //await this.page.getByText(`${payCode}`).first().click();//('SK-Annual Leave');
         } catch (error) {
             console.error("Failed: Exact paycode not found.");

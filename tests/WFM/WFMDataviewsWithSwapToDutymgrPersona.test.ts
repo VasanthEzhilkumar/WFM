@@ -1,3 +1,4 @@
+import { AutoSendReport } from '@lib/AutoSendReport';
 import test from '@lib/BaseTest';
 import { getRowNumberByEmployeeID, writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
@@ -7,7 +8,7 @@ import path from 'path';
 
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
-const excelFileName = 'DataView_US_REG_COMPLETE.xlsx';
+const excelFileName = 'DataView_Romania.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 // Convert the Excel sheets to JSON format
@@ -34,8 +35,8 @@ for (const empId in groupedData) {
     const dataSet = groupedData[empId];
 
 
-    //     dataSet.forEach((data, index) => {
-    // Create a unique title by appending the sheet name and the index
+    //dataSet.forEach((data, index) => {
+    //Create a unique title by appending the sheet name and the index
     const testTitle = `@WFM Data view With Swap Duty manager persona for ${dataSet[index].EMPID || `Employee ${dataSet[index] + 1}`} in sheet ${sheetName} (Row ${index + 1})`;
     test(testTitle, async ({ loginPage, wfmhomepage, wfmDatapage }) => {
         await test.step('Navigate to Application', async () => {
@@ -132,9 +133,9 @@ for (const empId in groupedData) {
                 } else {
                     let resultAsNoption = "";
                     if (data.Expected === 'No') {
-                        resultAsNoption = 'Passed: Manager ID is Not Having Dataview optins';
+                        resultAsNoption = 'Passed: DataView is not available for this Manager ID';
                     } else {
-                        resultAsNoption = 'Failed: Manager ID is Not Having Dataview options';
+                        resultAsNoption = 'Failed: DataView is not available for this Manager ID';
                     }
                     console.log("DataView is not available, marking test as failed /Passed as expected.");
                     await writeResultsToExcel(excelFilePath, sheetName, rowNumber - 1, data.EMPID, resultAsNoption);
@@ -143,8 +144,17 @@ for (const empId in groupedData) {
                 }
             }
         });
+
     });
+
+
 }
 
-
-
+/* 
+ * @author: Madhukar Kirkan 
+ * @description: test.afterAll-this hook used to execute zipReport method and this will what does  -The HTML report will be compressed into a ZIP file.
+ */
+test.afterAll('Zip the Html Report and Send Report to CLient ', async () => {
+    const zipPath: any = await new AutoSendReport().zipReport(excelFileName);
+    //await new AutoSendReport().sendEmail(String(zipPath));
+});

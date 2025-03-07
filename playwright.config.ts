@@ -18,7 +18,7 @@ const config: PlaywrightTestConfig = {
 
   //number of retries if test case fails
   retries: 0,
-  workers: 4,
+  workers: 2,
   fullyParallel: false,
 
   //Reporters

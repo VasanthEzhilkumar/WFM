@@ -4,7 +4,7 @@ import { getRowNumberByCellValue, writeResultsToExcel, writeResultToExcel } from
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 
 // Define the relative directory path to your Excel file
-const excelFileName = '(1) TimecardPunch_SK_REG_Paycodes_COMPLETE.xlsx';//(1)TimecardPunch_SK_REG_Paycodes_COMPLETE
+const excelFileName = '(1) TimecardPunch_SK_REG_T&A_COMPLETE.xlsx';//(1)TimecardPunch_SK_REG_Paycodes_COMPLETE
 const excelFilePath = getExcelFilePath(excelFileName);
 //TimecardPunch_Amy2
 // Convert the Excel sheets to JSON format
@@ -66,9 +66,9 @@ for (const empId in groupedData) {
                 const result = await wfmtimecardpage.pucnInPunchOutByDate(data.Date, String(data.PunchIn), String(data.PunchOut), String(data.PunchIn2), String(data.PunchOut2));
                 const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, data.EmpNum, data.Date);
                 //It will write result to excel sheet by rowNumber(index)
-                await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
+                await writeResultsToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
             }
-            
+
             index = index + 1;
         });
 
