@@ -3,6 +3,8 @@ import { WebActions } from "@lib/WebActions";
 import { testConfig } from '../../testConfig';
 import { PrimaryExpression } from 'typescript';
 import moment from 'moment';
+import { throws } from 'node:assert';
+import { promises } from 'node:dns';
 
 
 let webActions: WebActions;
@@ -91,10 +93,25 @@ export class LoginPage {
         await this.USERNAMEWFM_EDITBOX.fill(usernameStr);
         await this.PASSWORDWFM_EDITBOX.fill(pwd);
         await this.WFMLOGIN_BUTTON.click()
-
         //await this.page.pause();
 
     }
+    async checkLoginErroIfAny(): Promise<string> {
+        let errmsg: string;
+        const error1 = await this.page.locator("//*[@role='alert'] //*[text()='Authentication Failed']");
+        await this.page.waitForTimeout(500);
+        if (await error1.isVisible()) {
+            errmsg = await error1.innerText();
+            return errmsg.toString();
+        } else {
+            console.log("Authentication Passed");
+            return "";
+        }
+
+    }
+
+
+
     async logininfromExcelMgr(usrname: any, password: string): Promise<void> {
         const usernameStr: string = String(usrname);
         await this.USERNAMEWFM_EDITBOX.fill(usernameStr);
