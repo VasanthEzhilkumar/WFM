@@ -59,6 +59,7 @@ export class WebActions {
                 throw error;
         });
     }
+    
 
     async getPdfPageText(pdf: any, pageNo: number) {
         const page = await pdf.getPage(pageNo);
