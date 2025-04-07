@@ -21054,3 +21054,215 @@
 {"level":"info","message":"Executing Step : Open Maintenance Menu page"}
 {"level":"info","message":"Executing Step : Validate the Reports "}
 {"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Validate the Reports "}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10191193 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Report view WithSwap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10052794 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10052794 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10052794 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10052794 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10191193 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10191193 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10052794 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10052794 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10103721 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10103721 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10191193 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10191193 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10270575 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : passed"}
