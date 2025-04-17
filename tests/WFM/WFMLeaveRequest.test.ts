@@ -52,7 +52,7 @@ for (const sheetName in sheetsJson) {
 
                 await test.step('Open Notification and check the TimeOff request', async () => {
                     await wfmhomepage.OpenNotification();
-                    result = await wfmnotificationpage.SelectEmpRequests(data.Start_Date, data.End_Date);
+                    result = await wfmnotificationpage.SelectEmpRequests(data.Start_Date, data.End_Date,data.Reason);
                     writeResultsToExcel(excelFilePath, sheetName, index, "", result);
                 });
             } else {

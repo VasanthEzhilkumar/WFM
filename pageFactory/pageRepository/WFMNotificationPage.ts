@@ -25,13 +25,13 @@ export class WFMNotificationPage {
 
 
 
-    async SelectEmpRequests(start_Date: string, end_date: string): Promise<string> {
+    async SelectEmpRequests(start_Date: string, end_date: string , reason: string): Promise<string> {
 
         await this.EMP_REQUESTS.click();
         // Wait for the elements to be available
         await this.page.waitForSelector(`#cc-slats-0-slat-area-1`);
 
-        const elements = await this.page.getByRole('button', { name: 'Request SK-Annual Leave Employee' }).all();
+        const elements = await this.page.getByRole('button', { name: `Request ${reason} Employee` }).all();
         if (elements.length > 0) {
             for (let index = 0; index < elements.length; index++) {
                 const ele = elements[index];
