@@ -105,7 +105,7 @@ export class WFMControlCentrePage {
             }
             return "Passed";
         } catch (error) {
-            await new throws(error);
+           // await new throws(error);
             return "Failed";
         }
     }

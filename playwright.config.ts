@@ -43,7 +43,7 @@ const config: PlaywrightTestConfig = {
         actionTimeout: 30000,
 
         //Browser height and width
-        viewport: { width: 1280, height: 595 },
+        viewport: { width: 1280, height: 596 },
         ignoreHTTPSErrors: true,
 
         //Enable File Downloads in Chrome
