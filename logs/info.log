@@ -21266,3 +21266,304 @@
 {"level":"info","message":"Executing Step : Open Maintenance Menu page"}
 {"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
 {"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10270575 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for null-null in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for null-null in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for null-null in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for null-null in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for null-null in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for null-null in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-16/10/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for null-null in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for null-null in sheet Sheet1 (Row 1) Status : failed"}

@@ -176,6 +176,11 @@ export class WFMHomePage extends WebActions {
 
     }
 
+    async ClickonCloseMenu(): Promise<void> {
+        await this.page.waitForTimeout(500);
+        await this.page.getByRole('button', { name: 'Close Menu' }).click();
+    }
+
     async ClickOnHomeLink(): Promise<void> {
         await this.page.waitForTimeout(500);
         //await this.page.getByLabel('Home link').click();

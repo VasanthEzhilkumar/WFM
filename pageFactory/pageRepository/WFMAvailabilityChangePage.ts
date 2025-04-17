@@ -79,6 +79,15 @@ export class WFMAvailabilityChangePage extends WebActions {
         }
     }
 
+    async clickOnGLAvailabilityChangesGeneric(GLAvailabilityChanges: string): Promise<void> {
+        await this.page.waitForTimeout(6000);
+        const lnkGLAvailabilityPattern1 = this.page.frameLocator('//iframe[@title="Embedded content"]').getByText("" + GLAvailabilityChanges + "");
+        if (await lnkGLAvailabilityPattern1.isVisible()) {
+            await lnkGLAvailabilityPattern1.click();
+            await this.clickOnApply();
+        }
+    }
+
     async clickOnGLAvailabilityOverride(): Promise<void> {
         await this.page.waitForTimeout(4000);
         if (await this.lnkGLAvailabilityOverride.isVisible()) {

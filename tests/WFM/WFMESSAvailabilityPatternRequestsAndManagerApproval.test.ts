@@ -1,11 +1,11 @@
 import test from '@lib/BaseTest';
-import { writeResultsToExcel } from '@lib/Excel';
+import { getRowNumberByCellValue, writeResultsToExcel, writeResultToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import path from 'path';
 
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
-const excelFileName = 'ESS Availability Pattern Requests and Manager Approval_SK_REG_U.xlsx';
+const excelFileName = 'ESS Availability Pattern Requests and Manager Approval_CZ_REG.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 ///// Convert the Excel sheets to JSON format
@@ -24,19 +24,20 @@ if (!sheetsJson[sheetName]) {
     throw new Error(`Sheet '${sheetName}' not found in the Excel file.`);
 }
 
-// Group the data by EmpID
+// Group the data by EmployeeID and StartDate
 const groupedData = sheetsJson[sheetName].reduce((acc, row) => {
-    if (!acc[row.EmployeeID]) {
-        acc[row.EmployeeID] = [];
+    const key = `${row.EmployeeID}-${row.StartDate}`; // Create a unique composite key
+    if (!acc[key]) {
+        acc[key] = [];
     }
-    acc[row.EmployeeID].push(row);
+    acc[key].push(row);
     return acc;
 }, {});
 
-let index = 1;
+let index = 0;
 // Iterate over each grouped dataset and run the test
-for (const empId in groupedData) {
-    const dataSet = groupedData[empId];
+for (const key in groupedData) {
+    const dataSet = groupedData[key];
 
     // Iterate over each dataset and run the test
     // for (const sheetName in sheetsJson) {
@@ -44,12 +45,12 @@ for (const empId in groupedData) {
 
     // dataSet.forEach((dataSet, index) => {
     // Create a unique title by appending the sheet name and the index
-    const testTitle = `@WFM ESS Availabilty Pattern Request for ${empId || `Employee ${index}`} in sheet ${sheetName} (Row ${index + 1})`;
-    test(testTitle, async ({ loginPage, wfmhomepage, wfmtimecardpage, webActions, wfmControlCentrePage, wfmnotificationpage, wfmavailibilityChangePage }) => {
+    const testTitle = `@WFM ESS Availabilty Pattern Request for ${key || `Employee ${index}`} in sheet ${sheetName} (Row ${index + 1})`;
+    test(testTitle, async ({ loginPage, wfmhomepage, webActions, wfmControlCentrePage, wfmnotificationpage, wfmavailibilityChangePage }) => {
         await test.step('Navigate to Application', async () => {
             await loginPage.navigateToURL();
         });
-        try {
+        // try {
 
             await test.step('Login into WFM Application', async () => {
                 await loginPage.changelanguage();
@@ -62,13 +63,14 @@ for (const empId in groupedData) {
             await test.step('Open ESS AVailability Pattern Request ', async () => {
                 //await wfmavailibilityChangePage.verifyCangeMyAvailabilityRequestPage();
                 await wfmhomepage.ClickonchangeMyAvailabilityRequest();
-                await wfmavailibilityChangePage.clickOnGLAvailabilityPattern();
+                await wfmavailibilityChangePage.clickOnGLAvailabilityChangesGeneric(dataSet[index].GLAvailabilityChanges);
             });
 
             await test.step('Set Start and Specify Date for ESS AVailability Pattern Request ', async () => {
 
                 await wfmavailibilityChangePage.setSelectAdateAndSpecifyDate(dataSet[index].StartDate, dataSet[index].EndDate);
             });
+
             await test.step('Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request ', async () => {
 
                 await wfmavailibilityChangePage.setRepeatEveryAndDaysANDWeeks(dataSet[index].DaysORWeeks, dataSet[index].RepeatEvery);
@@ -89,30 +91,34 @@ for (const empId in groupedData) {
             });
 
             await test.step('Login As Manager for ESS AVailability Pattern Approval ', async () => {
+                await wfmhomepage.ClickonMainMenu();
+                EmpName = await webActions.getEmployeeNamefromHomePage();
+                await wfmhomepage.ClickonCloseMenu();
+
                 await loginPage.logOut();
                 await loginPage.changelanguage();
                 await loginPage.logininfromExcel(dataSet[index].ManagerID, dataSet[index].ManagerPassword);
             });
             await test.step('Open Availability Pattern Requests for Approval ', async () => {
-                EmpName = await webActions.getEmployeeNameForEmployeeIDfromHomePage(dataSet[index].EmployeeID);
-                await wfmhomepage.ClickOnHomeLink();
+
                 await wfmnotificationpage.selectAvailabilityPatternRequests();
                 await wfmControlCentrePage.selectAvailabilityPatternRequests();
             });
 
             await test.step('click Availablity PatternRequest For Approval after login as manager And Approve or Refuse', async () => {
                 const result = await wfmControlCentrePage.clickAvailablityPatternRequestForApprovalAndApprove_Refuse(String(EmpName), dataSet[index].Approve);
-                //const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, data.EmpID, data.StartDate);
+                const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, dataSet[index].EmployeeID, dataSet[index].StartDate);
                 //It will write result to excel sheet by rowNumber(index)
-                //await writeResultToExcel(excelFilePath, sheetName, index, result, 'TestResult');
+                //await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
                 for (let i = 1; i < Number(repeat); i++) {
-                    await writeResultsToExcel(excelFilePath, sheetName, i, "", result);
+                    //await writeResultsToExcel(excelFilePath, sheetName, rowNumber, "", result);
+                    await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
                 }
 
             });
-        } catch (error) {
-            await writeResultsToExcel(excelFilePath, sheetName, index, "", "Failed");
-        }
+        // } catch (error) {
+        //     await writeResultsToExcel(excelFilePath, sheetName, index, "", "Failed");
+        // }
     });
     // });
 }

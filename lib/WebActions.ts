@@ -59,13 +59,23 @@ export class WebActions {
                 throw error;
         });
     }
-    
+
 
     async getPdfPageText(pdf: any, pageNo: number) {
         const page = await pdf.getPage(pageNo);
         const tokenizedText = await page.getTextContent();
         const pageText = tokenizedText.items.map((token: any) => token.str).join('');
         return pageText;
+    }
+
+    /*
+  @Auther: Madhukar Kirkan
+  @Description : This method is used to get employee name
+  @Date : 27/11/2024
+  */
+    async getEmployeeNamefromHomePage() {
+        const employeeName = await this.page.locator('[class="employeeUserName"]').first().allInnerTexts();
+        return employeeName.toString().trim();
     }
 
     /*
