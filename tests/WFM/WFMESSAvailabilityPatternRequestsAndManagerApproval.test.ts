@@ -1,3 +1,4 @@
+import { AutoSendReport } from '@lib/AutoSendReport';
 import test from '@lib/BaseTest';
 import { getRowNumberByCellValue, writeResultsToExcel, writeResultToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
@@ -5,7 +6,7 @@ import path from 'path';
 
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
-const excelFileName = 'ESS Availability Pattern Requests and Manager Approval_CZ_REG.xlsx';
+const excelFileName = 'ESS Availability Pattern Requests and Manager Approval_CZ_REG_UPDATED.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 ///// Convert the Excel sheets to JSON format
@@ -122,3 +123,12 @@ for (const key in groupedData) {
     });
     // });
 }
+
+/* 
+ * @author: Madhukar Kirkan 
+ * @description: test.afterAll — This hook is used to execute the zipReport method, which compresses the HTML report into a ZIP file.
+ */
+test.afterAll('Zip the Html Report and Send Report to CLient ', async () => {
+    const zipPath: any = await new AutoSendReport().zipReport(excelFileName);
+    //await new AutoSendReport().sendEmail(String(zipPath));
+});

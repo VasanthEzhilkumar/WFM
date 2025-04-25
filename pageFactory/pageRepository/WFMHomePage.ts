@@ -3,7 +3,7 @@ import { BrowserContext, Locator, Page, expect } from '@playwright/test';
 import moment from 'moment';
 import { throws } from "node:assert";
 import { error } from "node:console";
-import { waitOnEventOrTimeout } from "pdfjs-dist-es5/types/web/event_utils";
+import { UnexpectedResponseException } from "pdfjs-dist-es5";
 
 export class WFMHomePage extends WebActions {
 
@@ -611,23 +611,37 @@ export class WFMHomePage extends WebActions {
         await this.page.locator('#one-click-time-off-advanced-btn').click();
         //await this.page.locator('ukg-item').filter({ hasText: 'Request type *' }).click();
         await this.page.getByText('Request type *').click();
-       // await this.page.getByLabel('Request type *: ').click();
+        // await this.page.getByLabel('Request type *: ').click();
         await this.page.getByRole('menuitemradio', { name: `${Reason}` }).click();
-        await this.page.getByLabel('Starting date *').getByPlaceholder('DD/MM/YYYY').click();
-        await this.page.getByLabel('Starting date *').getByPlaceholder('DD/MM/YYYY').fill(Start_Date);
-        await this.page.getByLabel('End date *').getByPlaceholder('DD/MM/YYYY').click();
-        await this.page.getByLabel('End date *').getByPlaceholder('DD/MM/YYYY').fill(End_Date);
+        // await this.page.getByLabel('Starting date *').getByPlaceholder('DD/MM/YYYY').click();
+        // await this.page.getByLabel('Starting date *').getByPlaceholder('DD/MM/YYYY').fill(Start_Date);
+        // await this.page.getByLabel('End date *').getByPlaceholder('DD/MM/YYYY').click();
+        // await this.page.getByLabel('End date *').getByPlaceholder('DD/MM/YYYY').fill(End_Date);
+
+        await this.page.getByRole('group', { name: 'Start Date' }).getByPlaceholder('DD/MM/YYYY').click();
+        await this.page.getByRole('group', { name: 'Start Date' }).getByPlaceholder('DD/MM/YYYY').fill(Start_Date);
+        await this.page.getByRole('group', { name: 'End Date' }).getByPlaceholder('DD/MM/YYYY').click();
+        await this.page.getByRole('group', { name: 'End Date' }).getByPlaceholder('DD/MM/YYYY').fill(End_Date);
         await this.page.waitForTimeout(1000);
         await this.page.getByRole('button', { name: 'Next' }).dblclick({ 'force': true });
         await this.page.getByRole('button', { name: 'Next' }).dblclick({ 'force': true });
-        await this.page.waitForTimeout(1000);
-        await this.page.getByRole('button', { name: 'Submit' }).click({ 'force': true });
-       
         await this.page.waitForTimeout(2000);
+        await this.page.getByRole('button', { name: 'Submit' }).click({ 'force': true });
+        await this.page.waitForTimeout(2000);
+        const error = await this.page.locator('//*[@data-tag-name="banner"]//span');
+        let errorMsg = await error.innerText();
+        // if (await error.isVisible()) {
+        //     await this.page.getByRole('textbox', { name: 'Start time' }).click();
+        //     await this.page.getByRole('textbox', { name: 'Start time' }).fill("9");
+        //     await this.page.getByRole('textbox', { name: 'End time' }).click();
+        //     await this.page.getByRole('textbox', { name: 'End time' }).fill("17");
+        //     await this.page.keyboard.press('Tab');
+        //     await this.page.getByRole('button', { name: 'Submit' }).click({ 'force': true });
+        //     errorMsg = undefined;
+        // }
 
         // // Check if the element exists before clicking
         // const reasonLocator = this.page.locator('#ngx-popover-1').getByText(Reason);
-
         // try {
         //     // Wait for the element to be visible within a 5-second timeout
         //     await reasonLocator.waitFor({ timeout: 5000 });
@@ -648,8 +662,11 @@ export class WFMHomePage extends WebActions {
         // await this.page.waitForTimeout(2000);
         // await this.SUBMIT.click();
         // await this.page.waitForTimeout(2000);
-
-return "Passed";
+        if (errorMsg === "" || errorMsg === undefined) {
+            return "Passed";
+        } else {
+            return "Failed - " + errorMsg;
+        }
 
         // if (await this.page.locator('#restartBtn').count() > 0) {
 

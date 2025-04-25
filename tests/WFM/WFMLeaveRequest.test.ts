@@ -1,11 +1,14 @@
+import { AutoSendReport } from '@lib/AutoSendReport';
 import test from '@lib/BaseTest';
 import { writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
-import path from 'path';
+import { throws } from 'assert';
+import { error } from 'console';
+import { expect } from 'playwright/test';
 
 // Define the relative directory path to your Excel file
 // const excelFileName = 'LeaveRequest_Amy2.xlsx';
-const excelFileName = 'LeaveRequest_ESS_SK_REG_U.xlsx';
+const excelFileName = 'LeaveRequest_ESS_CZ_REG - Copy.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 // Convert the Excel sheets to JSON format
@@ -27,13 +30,12 @@ for (const sheetName in sheetsJson) {
 
             await test.step('Login into WFM Application', async () => {
                 await loginPage.changelanguage();
-                await loginPage.logininfromExcel(data.EmpID,data.EmpPwd);
+                await loginPage.logininfromExcel(data.EmpID, data.EmpPwd);
             });
 
             await test.step('Open TimeCard page and perform TimeOff action', async () => {
                 result = await wfmhomepage.TimeOff(data.Start_Date, data.End_Date, data.Reason);
-                writeResultsToExcel(excelFilePath, sheetName, index, "EmpResult", result);
-                //writeResultsToExcel(excelFilePath, sheetName, index, "", "Not Run");
+                await writeResultsToExcel(excelFilePath, sheetName, index, "EmpResult", result);
             });
 
             // Determine which column to search based on empNum
@@ -52,8 +54,8 @@ for (const sheetName in sheetsJson) {
 
                 await test.step('Open Notification and check the TimeOff request', async () => {
                     await wfmhomepage.OpenNotification();
-                    result = await wfmnotificationpage.SelectEmpRequests(data.Start_Date, data.End_Date,data.Reason);
-                    writeResultsToExcel(excelFilePath, sheetName, index, "", result);
+                    result = await wfmnotificationpage.SelectEmpRequests(data.Start_Date, data.End_Date, data.Reason);
+                    await writeResultsToExcel(excelFilePath, sheetName, index, "", result);
                 });
             } else {
                 console.log("Test failed. Skipping further steps.");
@@ -63,3 +65,11 @@ for (const sheetName in sheetsJson) {
     });
 }
 
+/* 
+ * @author: Madhukar Kirkan 
+ * @description: test.afterAll — This hook is used to execute the zipReport method, which compresses the HTML report into a ZIP file.
+ */
+test.afterAll('Zip the Html Report and Send Report to CLient ', async () => {
+    const zipPath: any = await new AutoSendReport().zipReport(excelFileName);
+    //await new AutoSendReport().sendEmail(String(zipPath));
+});

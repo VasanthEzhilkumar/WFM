@@ -21567,3 +21567,136 @@
 {"level":"info","message":"Executing Step : Navigate to Application"}
 {"level":"info","message":"Executing Step : Login into WFM Application"}
 {"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for null-null in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-13/10/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10652573-15/10/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10652573-15/10/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application as Manager"}
+{"level":"info","message":"Executing Step : Open Notification and check the TimeOff request"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 1 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 2 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application as Manager"}
+{"level":"info","message":"Executing Step : Open Notification and check the TimeOff request"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 2 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 3 in sheet Sheet1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 3 in sheet Sheet1 (Row 3) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 3 in sheet Sheet1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 3 in sheet Sheet1 (Row 3) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 3 in sheet Sheet1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application as Manager"}
+{"level":"info","message":"Executing Step : Open Notification and check the TimeOff request"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 3 in sheet Sheet1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Executing Step : Logout from WFM Application"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Test Case Completed : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 4 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
+{"level":"info","message":"Test Case Started : @WFM Leave Request for Employee 1 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open TimeCard page and perform TimeOff action"}
