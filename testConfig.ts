@@ -12,8 +12,8 @@ export const testConfig = {
     WFMEmpPassword: 'WFMManagerPassword@05!',
     // WFMMgrUSername: `10652510`,//10648831,10648949
     // WFMMgrPassword: 'PswdTest21!',//'WFMManagerPassword@06',
-    WFMMgrUSername: '10551546',//`10649086`,//10191193
-    WFMMgrPassword: 'WFMUKGRomania&123',//'WFMManagerPassword@05!',//'WFMItalyPassword!!123',
+    WFMMgrUSername: '10280602',//'10551546',//`10649086`,//10191193
+    WFMMgrPassword: 'Password12!',//'WFMUKGRomania&123',//'WFMManagerPassword@05!',//'WFMItalyPassword!!123',
     //WFMMgrPassword: 'WFMManagerPassword@06',
     // WFMMgrUSername: `10232937`,
     // WFMMgrPassword: 'This15@Password',

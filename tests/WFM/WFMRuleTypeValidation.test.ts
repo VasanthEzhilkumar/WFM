@@ -4,7 +4,7 @@ import { getEmployeeNumbers, writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import * as path from 'path';
 
-const excelFileName = 'Italy_PT20H5D_RuleTypeValidation.xlsx';
+const excelFileName = 'Full Time 40-5 Sch Rule Automation FileR.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 const results: { empNumber: string, ruleViolations: string[] }[] = [];
