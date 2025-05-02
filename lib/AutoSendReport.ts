@@ -29,13 +29,20 @@ export class AutoSendReport {
             }
         });
     }
-
+    async deleteOldreport() {
+        const reportPath = "H:\\WFM\\html-report";
+        if (fs.existsSync(reportPath)) {
+            console.log("Cleaning up old report directory...");
+            await fs.promises.rm(reportPath, { recursive: true, force: true });
+        }
+    }
     // Function to zip the report
-    async zipReport(testName) {
+    async zipReport(testName: string) {
         //const reportPath = path.join(__dirname, 'html-report');
         const reportPath = "H:\\WFM\\html-report";
+        const filename = testName.split('.xlsx')[0];
         //const zipPath = path.join(__dirname, 'test-report.zip');
-        const zipPath = "H:\\WFM\\Zips_HTML_Reports\\TestExecution_HTMLReport_" + testName + ".zip";
+        const zipPath = "H:\\WFM\\Zips_HTML_Reports\\TestExecution_HTMLReport_" + filename + ".zip";
         const output = fs.createWriteStream(zipPath);
         const archive = archiver('zip', { zlib: { level: 9 } });
         archive.pipe(output);
