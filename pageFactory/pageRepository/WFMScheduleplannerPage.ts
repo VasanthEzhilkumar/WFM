@@ -7,7 +7,7 @@ interface RuleViolation {
     severity: string;
     employeeOrg: string;
     ruleType: string;
-    description: string;    
+    description: string;
 }
 
 export class WFMSchedulePlannerPage {
@@ -74,6 +74,7 @@ export class WFMSchedulePlannerPage {
         return ariaLabel.toString();
     }
 
+    //Dev by -[15/04 16:02] Vasanth Ezhil add by Madhukar Kirkan
     async SearchEmpRuleViolation(ariaLabel: string, Rule: string, date: string, exp: string, exp_severity: string): Promise<string> {
 
         await this.EMP_Select.click();
@@ -81,8 +82,107 @@ export class WFMSchedulePlannerPage {
         await this.page.waitForTimeout(3000);
         // await this.EMP_Selected.click();
         // Updated by Ramchandra because locator was resolving to 2 employees
-        await this.page.locator('//div[@role="menuitem"]//span[text()="'+ariaLabel+'"]').click();
-        
+        await this.page.locator('//div[@role="menuitem"]//span[text()="' + ariaLabel + '"]').click();
+
+        await this.EMP_RELOAD.click();
+        await this.page.waitForTimeout(3000);
+        await this.page.getByLabel('Expand Rule Violation').click();
+        await this.page.waitForTimeout(1000);
+
+        const cssSelector = 'div.ui-grid-contents-wrapper > div:nth-child(3) div.ui-grid-viewport > div > div';
+        const rows = await this.page.locator(cssSelector).all();
+
+        const ruleViolations: RuleViolation[] = [];
+
+        for (let i = 0; i < rows.length; i++) {
+            const rowDate = await rows[i].locator('div:nth-child(1)').first().textContent();
+            const name = await rows[i].locator('div:nth-child(2)').textContent();
+            const severity = await rows[i].locator('div:nth-child(3)').textContent();
+            const employeeOrg = await rows[i].locator('div:nth-child(4)').textContent();
+            const ruleType = await rows[i].locator('div:nth-child(5)').textContent();
+            const description = await rows[i].locator('div:nth-child(6)').textContent();
+            await rows[i].locator('div:nth-child(6)').scrollIntoViewIfNeeded();
+            // Sanitize the string by trimming leading/trailing spaces
+            const sanitizedRowDate = rowDate.trim();
+
+            // Log the sanitized row date to debug
+            console.log(`Sanitized Row Date: "${sanitizedRowDate}"`);
+
+            // Updated regular expression to match the date (in the format MM/DD/YYYY)
+            const dateMatch = sanitizedRowDate.match(/(\d{1,2}\/\d{1,2}\/\d{4})/);
+
+            // Extracted date or an empty string if no match is found
+            const trimmedDate = dateMatch ? dateMatch[0] : '';
+
+            console.log(trimmedDate); // Output: 8/22/2024
+            const trimmedRuleType = ruleType?.trim() || '';
+            const trimmedDescription = description?.trim() || '';
+            // Validation: Check if the current row matches the provided date and Rule
+            // if (trimmedDate === date && trimmedRuleType.toLowerCase().includes(Rule.toLowerCase().trim())) {
+            //     return 'Passed';
+            // }
+
+            const cleanedRule = Rule.replace(/[\s,.]+/g, '').toLowerCase();
+            const cleanedDescription = trimmedDescription.replace(/[\s,.]+/g, '').toLowerCase();
+
+            //     if (trimmedDate === date && cleanedRule.includes(cleanedDescription)) {
+            //         return 'Passed';
+            //     }
+
+            // }
+
+            // return "Failed"
+
+            // if (trimmedDate === date && cleanedRule.includes(cleanedDescription)) {
+            // if (cleanedDescription.includes(cleanedRule) && severity.includes(exp_severity)) {
+            //     // if (exp === 'Yes') {
+            //     //     return 'Passed';
+            //     // }
+            //     // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"
+            //     return exp === 'Yes' ? 'Passed' : 'Failed';
+            // }
+            if (cleanedDescription.includes(cleanedRule) && severity.includes(exp_severity)) {
+                const elementHandle = await rows[i].elementHandle();
+
+                // Highlight the row
+                await this.page.evaluate((el) => {
+                    el.style.border = '2px solid red';
+                    el.style.background = '#ffffcc';
+                }, elementHandle);
+
+                // Scroll and wait
+                await elementHandle.scrollIntoViewIfNeeded();
+                await this.page.waitForTimeout(1000);
+
+                // Take screenshot
+                await this.page.screenshot({ path: `evidence-${ariaLabel}.png`, fullPage: false });
+
+                return exp === 'Yes' ? 'Passed' : 'Failed';
+            }
+
+        }
+        // If the first condition fails, check the value of exp
+        if (exp === 'No') {
+            return 'Passed';
+        } else {
+            return 'Failed';
+        }
+        // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"
+        return exp === 'No' ? 'Passed' : 'Failed';
+
+
+        // }
+    }
+    //28/04/2025
+    async SearchEmpRuleViolationOld(ariaLabel: string, Rule: string, date: string, exp: string, exp_severity: string): Promise<string> {
+
+        await this.EMP_Select.click();
+        await this.EMP_SEARCHBAR.fill(ariaLabel);
+        await this.page.waitForTimeout(3000);
+        // await this.EMP_Selected.click();
+        // Updated by Ramchandra because locator was resolving to 2 employees
+        await this.page.locator('//div[@role="menuitem"]//span[text()="' + ariaLabel + '"]').click();
+
         await this.EMP_RELOAD.click();
         await this.page.waitForTimeout(3000);
 
@@ -138,15 +238,15 @@ export class WFMSchedulePlannerPage {
                 // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"
                 return exp === 'Yes' ? 'Passed' : 'Failed';
             }
-            }
-            // If the first condition fails, check the value of exp
-            if (exp === 'No') {
-                return 'Passed';
-            } else {
-                return 'Failed';
-            }
-            // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"
-            return exp === 'No' ? 'Passed' : 'Failed';
+        }
+        // If the first condition fails, check the value of exp
+        if (exp === 'No') {
+            return 'Passed';
+        } else {
+            return 'Failed';
+        }
+        // If no row matches and `exp` is "No", return "Passed"; otherwise, "Failed"
+        return exp === 'No' ? 'Passed' : 'Failed';
 
 
         // }
@@ -223,10 +323,10 @@ export class WFMSchedulePlannerPage {
         await this.EMP_Selected.click();
         await this.EMP_RELOAD.click();
         await this.page.waitForTimeout(3000);
-    
+
         const cssSelector = 'div.ui-grid-contents-wrapper > div:nth-child(3) div.ui-grid-viewport > div > div';
         const rows = await this.page.locator(cssSelector).all();
-    
+
         for (let i = 0; i < rows.length; i++) {
             const rowDate = await rows[i].locator('div:nth-child(1)').first().textContent();
             const name = await rows[i].locator('div:nth-child(2)').textContent();
@@ -234,27 +334,27 @@ export class WFMSchedulePlannerPage {
             const employeeOrg = await rows[i].locator('div:nth-child(4)').textContent();
             const ruleType = await rows[i].locator('div:nth-child(5)').textContent();
             const description = await rows[i].locator('div:nth-child(6)').textContent();
-            
+
             // Sanitize the string by trimming leading/trailing spaces
             const sanitizedRowDate = rowDate.trim();
             console.log(`Sanitized Row Date: "${sanitizedRowDate}"`);
-    
+
             // Updated regular expression to match the date (in the format MM/DD/YYYY)
             const dateMatch = sanitizedRowDate.match(/(\d{1,2}\/\d{1,2}\/\d{4})/);
             const trimmedDate = dateMatch ? dateMatch[0] : '';
-    
+
             const trimmedRuleType = ruleType?.trim() || '';
-    
+
             // Check if the current row matches the provided date and Rule
             if (trimmedDate === date && trimmedRuleType.toLowerCase().includes(Rule.toLowerCase().trim())) {
                 return 'Passed'; // If match found, return 'Passed'
             }
         }
-    
+
         // If no match was found after checking all rows, return 'Failed'
         return 'Failed';
     }
-    
+
 
 }
 

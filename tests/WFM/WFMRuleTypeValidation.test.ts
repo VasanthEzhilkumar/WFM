@@ -4,7 +4,7 @@ import { getEmployeeNumbers, writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 import * as path from 'path';
 
-const excelFileName = 'Italy_PT20H5D_RuleTypeValidation.xlsx';
+const excelFileName = 'Full Time 40-5 Sch RuleAutomationFileR.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 const results: { empNumber: string, ruleViolations: string[] }[] = [];
@@ -51,11 +51,19 @@ for (const sheetName in sheetsJson) {
         });
     });
 }
+
+/* 
+ * @author: Madhukar Kirkan 
+ */
+test.beforeAll('delete old report', async () => {
+    const zipPath: any = await new AutoSendReport().deleteOldreport();
+    //await new AutoSendReport().sendEmail(String(zipPath));
+});
 /* 
  * @author: Madhukar Kirkan 
  * @description: test.afterAll-this hook used to execute zipReport method and this will what does  -The HTML report will be compressed into a ZIP file.
  */
-test.afterAll('Zip the Html Report and Send Report to CLient ', async () => {
+test.afterAll('Zip the Html Report and Send Report to client ', async () => {
     const zipPath: any = await new AutoSendReport().zipReport(excelFileName);
     //await new AutoSendReport().sendEmail(String(zipPath));
 });

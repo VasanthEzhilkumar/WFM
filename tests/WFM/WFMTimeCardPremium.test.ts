@@ -1,3 +1,4 @@
+import { AutoSendReport } from '@lib/AutoSendReport';
 import test from '@lib/BaseTest';
 import { writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
@@ -47,9 +48,18 @@ for (const sheetName in sheetsJson) {
                 //step added to select the payrange 
                 await currentPayPeriodPage.selectPayPeriodBydateRange(data.FromDate, data.ToDate);
                 //step added for validation for Paycode and Totals
-                const result = await wfmtimecardpage.ValidateTotal2(data.Paycode, data.Total,data.Expected);
+                const result = await wfmtimecardpage.ValidateTotal2(data.Paycode, data.Total, data.Expected);
                 writeResultsToExcel(excelFilePath, sheetName, index, "", result);
             });
         });
     });
 }
+
+/* 
+ * @author: Madhukar Kirkan 
+ * @description: test.afterAll — This hook is used to execute the zipReport method, which compresses the HTML report into a ZIP file.
+ */
+test.afterAll('Zip the Html Report and Send Report to CLient ', async () => {
+    const zipPath: any = await new AutoSendReport().zipReport(excelFileName);
+    //await new AutoSendReport().sendEmail(String(zipPath));
+});

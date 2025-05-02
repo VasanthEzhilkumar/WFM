@@ -1,4 +1,5 @@
 
+import { AutoSendReport } from '@lib/AutoSendReport';
 import test from '@lib/BaseTest';
 import { getRowNumberByCellValue, writeResultToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
@@ -75,3 +76,12 @@ for (const empId in groupedData) {
 
     });
 }
+
+/* 
+ * @author: Madhukar Kirkan 
+ * @description: test.afterAll — This hook is used to execute the zipReport method, which compresses the HTML report into a ZIP file.
+ */
+test.afterAll('Zip the Html Report and Send Report to CLient ', async () => {
+    const zipPath: any = await new AutoSendReport().zipReport(excelFileName);
+    //await new AutoSendReport().sendEmail(String(zipPath));
+});

@@ -1,3 +1,4 @@
+import { AutoSendReport } from '@lib/AutoSendReport';
 import test from '@lib/BaseTest';
 import { getEmployeeNumbers, writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
@@ -19,27 +20,36 @@ for (const sheetName in sheetsJson) {
             await test.step(`Navigate to Application`, async () => {
                 await loginPage.navigateToURL();
             });
-        
+
             await test.step('Login into WFM Application', async () => {
                 await loginPage.changelanguage();
                 await loginPage.logininASManager();
             });
-        
+
             await test.step('Verify Manage schedule time card Exists', async () => {
                 await wfmhomepage.searchEmpviaEmpSearch(data.EmpID, "Timecard");
             });
-        
+
             await test.step('Select Pay Period in the Timecard Page', async () => {
                 await wfmtimecardpage.selectPayPeriodBydateRange(String(data.FromDate), String(data.ToDate));
             });
-        
+
             await test.step('Select All the exceptions and provide justify reasons', async () => {
                 const justificationStatus = await wfmtimecardpage.justifyExceptions(data.Paycodes); // Run justification
-        
+
                 // Write status to Excel
                 writeResultsToExcel(excelFilePath, sheetName, index, "Justification Status", justificationStatus);
             });
         });
-        
+
     });
 }
+
+/* 
+ * @author: Madhukar Kirkan 
+ * @description: test.afterAll — This hook is used to execute the zipReport method, which compresses the HTML report into a ZIP file.
+ */
+test.afterAll('Zip the Html Report and Send Report to CLient ', async () => {
+    const zipPath: any = await new AutoSendReport().zipReport(excelFileName);
+    //await new AutoSendReport().sendEmail(String(zipPath));
+});
