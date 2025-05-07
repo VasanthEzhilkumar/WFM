@@ -81,7 +81,7 @@ export class WFMAvailabilityChangePage extends WebActions {
 
     async clickOnGLAvailabilityChangesGeneric(GLAvailabilityChanges: string): Promise<void> {
         await this.page.waitForTimeout(6000);
-        const lnkGLAvailabilityPattern1 = this.page.frameLocator('//iframe[@title="Embedded content"]').getByText("" + GLAvailabilityChanges + "");
+        const lnkGLAvailabilityPattern1 = this.page.frameLocator('//iframe[@title="Embedded content"]').getByText(GLAvailabilityChanges, { exact: true });
         if (await lnkGLAvailabilityPattern1.isVisible()) {
             await lnkGLAvailabilityPattern1.click();
             await this.clickOnApply();
