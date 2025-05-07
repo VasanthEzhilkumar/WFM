@@ -6,7 +6,7 @@ import path from 'path';
 
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
-const excelFileName = 'ESS Availability Pattern Requests and Manager Approval_CZ_REG_UPDATED.xlsx';
+const excelFileName = 'ESS Availability Pattern Requests and Manager Approval_CZ_REG.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 ///// Convert the Excel sheets to JSON format

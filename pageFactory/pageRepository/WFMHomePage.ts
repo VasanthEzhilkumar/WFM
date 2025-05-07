@@ -618,18 +618,23 @@ export class WFMHomePage extends WebActions {
         // await this.page.getByLabel('End date *').getByPlaceholder('DD/MM/YYYY').click();
         // await this.page.getByLabel('End date *').getByPlaceholder('DD/MM/YYYY').fill(End_Date);
 
-        await this.page.getByRole('group', { name: 'Start Date' }).getByPlaceholder('DD/MM/YYYY').click();
-        await this.page.getByRole('group', { name: 'Start Date' }).getByPlaceholder('DD/MM/YYYY').fill(Start_Date);
-        await this.page.getByRole('group', { name: 'End Date' }).getByPlaceholder('DD/MM/YYYY').click();
-        await this.page.getByRole('group', { name: 'End Date' }).getByPlaceholder('DD/MM/YYYY').fill(End_Date);
+        await this.page.getByRole('group', { name: 'Start Date' }).or(this.page.getByLabel('Starting date *')).getByPlaceholder('DD/MM/YYYY').click();
+        await this.page.getByRole('group', { name: 'Start Date' }).or(this.page.getByLabel('Starting date *')).getByPlaceholder('DD/MM/YYYY').fill(Start_Date);
+        await this.page.getByRole('group', { name: 'End Date' }).or(this.page.getByLabel('End date *')).getByPlaceholder('DD/MM/YYYY').click();
+        await this.page.getByRole('group', { name: 'End Date' }).or(this.page.getByLabel('End date *')).getByPlaceholder('DD/MM/YYYY').fill(End_Date);
         await this.page.waitForTimeout(1000);
         await this.page.getByRole('button', { name: 'Next' }).dblclick({ 'force': true });
         await this.page.getByRole('button', { name: 'Next' }).dblclick({ 'force': true });
         await this.page.waitForTimeout(2000);
         await this.page.getByRole('button', { name: 'Submit' }).click({ 'force': true });
         await this.page.waitForTimeout(2000);
-        const error = await this.page.locator('//*[@data-tag-name="banner"]//span');
-        let errorMsg = await error.innerText();
+        const error1 = await this.page.locator('//*[@data-tag-name="banner"]//span');
+        let errorMsg;
+
+        if (await error1.isVisible()) {
+            errorMsg = await error1.innerText();
+        }
+        
         // if (await error.isVisible()) {
         //     await this.page.getByRole('textbox', { name: 'Start time' }).click();
         //     await this.page.getByRole('textbox', { name: 'Start time' }).fill("9");
@@ -640,28 +645,6 @@ export class WFMHomePage extends WebActions {
         //     errorMsg = undefined;
         // }
 
-        // // Check if the element exists before clicking
-        // const reasonLocator = this.page.locator('#ngx-popover-1').getByText(Reason);
-        // try {
-        //     // Wait for the element to be visible within a 5-second timeout
-        //     await reasonLocator.waitFor({ timeout: 5000 });
-        //     await reasonLocator.click();
-        // } catch (error) {
-        //     // If the element is not found, throw an error and fail the test
-        //     return (`Reason "${Reason}" not found. Test failed.`);
-        //     // throw new Error(`Reason "${Reason}" not found. Test failed.`);
-        // }
-        // await this.PICK_DATES.click();
-        // await this.START_DATE.fill(Start_Date);
-        // await this.END_DATE.clear();
-        // await this.END_DATE.fill(End_Date);
-        // await this.APPLY_BUTTON.click();
-        // await this.SELECT_DURATION.click();
-        // await this.page.waitForTimeout(2000);
-        // await this.FULL_DURATION.click();
-        // await this.page.waitForTimeout(2000);
-        // await this.SUBMIT.click();
-        // await this.page.waitForTimeout(2000);
         if (errorMsg === "" || errorMsg === undefined) {
             return "Passed";
         } else {
