@@ -1,10 +1,9 @@
 import { AutoSendReport } from '@lib/AutoSendReport';
 import test from '@lib/BaseTest';
-import { getEmployeeNumbers, writeResultsToExcel } from '@lib/Excel';
+import { writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
-import * as path from 'path';
 
-const excelFileName = 'Part Time 20-2 Sch Rule Automation File.xlsx';
+const excelFileName = 'Part Time 20-4 Sch Rule Automation FileMK.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 const results: { empNumber: string, ruleViolations: string[] }[] = [];
@@ -52,13 +51,7 @@ for (const sheetName in sheetsJson) {
     });
 }
 
-/* 
-//  * @author: Madhukar Kirkan 
-//  */
-// test.beforeAll('delete old report', async () => {
-//     const zipPath: any = await new AutoSendReport().deleteOldreport();
-//     //await new AutoSendReport().sendEmail(String(zipPath));
-// });
+
 /* 
  * @author: Madhukar Kirkan 
  * @description: test.afterAll-this hook used to execute zipReport method and this will what does  -The HTML report will be compressed into a ZIP file.

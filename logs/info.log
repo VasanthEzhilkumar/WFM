@@ -23098,3 +23098,157 @@
 {"level":"info","message":"Executing Step : Open schedule Planner page"}
 {"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698914"}
 {"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698914 in sheet Sheet1 (Row 22) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 4) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 5)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 5) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 6)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 6) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 7)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 7) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 8)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 8) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 9)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 9) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 10)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 10) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 11)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 11) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 12)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 12) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 13)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 13) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 14)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 14) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 15)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 15) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 16)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 16) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 17)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 17) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 18)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 18) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 19)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 19) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 20)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 20) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 21)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 21) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 22)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 22) Status : passed"}
