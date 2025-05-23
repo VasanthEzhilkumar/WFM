@@ -3,7 +3,7 @@ import test from '@lib/BaseTest';
 import { writeResultsToExcel } from '@lib/Excel';
 import { excelToJson, getExcelFilePath } from '@lib/ExceltoJsonUtil';
 
-const excelFileName = 'Part Time 20-4 Sch Rule Automation FileMK.xlsx';
+const excelFileName = 'Romania_PT_RuleTypeValidation_RO_20250520.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 const sheetsJson = excelToJson(excelFilePath);
 const results: { empNumber: string, ruleViolations: string[] }[] = [];

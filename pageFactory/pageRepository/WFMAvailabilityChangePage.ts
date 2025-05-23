@@ -1,8 +1,8 @@
-import { Page, BrowserContext, Locator, expect } from '@playwright/test';
 import { WebActions } from "@lib/WebActions";
-import { testConfig } from '../../testConfig';
-import { PrimaryExpression } from 'typescript';
+import { BrowserContext, Locator, Page, expect } from '@playwright/test';
 import moment from 'moment';
+import { throws } from "node:assert";
+
 
 
 let webActions: WebActions;
@@ -29,6 +29,10 @@ export class WFMAvailabilityChangePage extends WebActions {
     readonly btnReview: Locator;
     readonly btnSubmit: Locator;
     readonly btnNext: Locator;
+    apply: Locator;
+    selectDate: Locator;
+    timeoffSubmit: any;
+    nextbtn: Locator;
 
 
 
@@ -36,6 +40,10 @@ export class WFMAvailabilityChangePage extends WebActions {
         super(page, context);
         this.page = page;
         this.context = context;
+
+        this.apply = page.getByRole('button', { name: 'Apply', exact: true })
+        this.nextbtn = page.getByRole('button', { name: 'Next', exact: true });
+        this.selectDate = page.getByLabel('Dates ')
         this.btnCangeMyAvailabilityRequest = page.locator('#changeMyAvailabilityRequestButton');
         this.lnkGLAvailabilityOverride = page.frameLocator('//iframe[@title="Embedded content"]').getByText('GL-Availability Override')
         this.lnkGLAvailabilityPattern = page.frameLocator('//iframe[@title="Embedded content"]').getByText('GL-Availability Pattern');
@@ -101,6 +109,14 @@ export class WFMAvailabilityChangePage extends WebActions {
         await this.page.frameLocator('//iframe[@title="Embedded content"]').getByRole('button', { name: 'Apply' }).click();
     }
 
+    async selectStartAndSpecifyDateWithBothUI(StartDate: string, EndDate: string) {
+        if (await this.txtSelectAdate.isVisible()) {
+            await this.setSelectAdateAndSpecifyDate(StartDate, EndDate);
+        } else {
+            await this.selectDates(StartDate, EndDate);
+        }
+    }
+
     async setSelectAdateAndSpecifyDate(StartDate: string, EndDate: string): Promise<void> {
         await this.page.waitForTimeout(3000);
         await this.txtSelectAdate.focus();
@@ -112,28 +128,101 @@ export class WFMAvailabilityChangePage extends WebActions {
         await this.page.keyboard.press('Tab');
     }
 
+    async selectDates(startDateStr: string, endDateStr: string): Promise<void> {
+        const frame = this.page.locator('iframe[id="angularIframeSlider"][title="Embedded content"]').contentFrame();
+        const nextMonth = this.page.locator('iframe[id="angularIframeSlider"][title="Embedded content"]').contentFrame().getByRole('button', { name: 'Next month' })
+        const preiousMonth = this.page.locator('iframe[id="angularIframeSlider"][title="Embedded content"]').contentFrame().getByRole('button', { name: 'Previous month' })
+        const monthYearText = this.page.locator('iframe[id="angularIframeSlider"][title="Embedded content"]').contentFrame().locator('//div[@class="calendar-info-panel"]/div');
+
+        let startDate = moment(startDateStr, 'DD/MM/YYYY', true);
+        let endDate = moment(endDateStr, 'DD/MM/YYYY', true);
+        const today = moment();
+        let diffInDays: number;
+
+        if (startDate.isValid() && endDate.isValid()) {
+            diffInDays = endDate.diff(startDate, 'days');
+            console.log(`Difference: ${diffInDays} days`);
+        } else {
+            console.error('One or both dates are invalid.');
+        }
+
+        const parsed = moment(startDateStr, 'DD/MM/YYYY', true);
+        const month = parsed.format('MMMM'); // "May"
+        const year = parsed.format('YYYY');  // "2025"
+        const monthYearFromStartDate = month + " " + year;
+        const dateFromApplication = await monthYearText.textContent();
+
+        while (await monthYearText.textContent() !== monthYearFromStartDate) {
+            await nextMonth.click();
+        }
+
+        diffInDays++;
+        while (diffInDays > 0) {
+            // Now format the current date in YYYY-MM-DD for data-date
+            const formattedDate = startDate.format('YYYY-MM-DD'); // Match attribute format
+            const dayName = startDate.format('dddd'); // For aria-label
+            const ariaLabel = `${formattedDate} ${dayName} unselected`;
+
+            // Build selectors
+            const dateSelector = `//td[@data-date='${formattedDate}' and @role='button']`;
+            const ariaLabelSelector = `//td[@aria-label='${ariaLabel}']`;
+            // Interact with the date cell
+            const dateElements = frame.locator(dateSelector);
+            if (await dateElements.count() > 0) {
+                const element = dateElements.first();
+                await element.scrollIntoViewIfNeeded();
+                await element.click({ force: true });
+                const checkElement = frame.locator(ariaLabelSelector);
+                if (await checkElement.count() > 0) {
+                    await element.click({ force: true }); // Re-click if not selected
+                }
+            } else {
+                console.warn(`Date ${formattedDate} not found in calendar`);
+            }
+            // // Increment the start date by one day
+            startDate = startDate.add(1, 'days');
+            diffInDays--;
+        }
+
+        const nextbtn = frame.getByRole('button', { name: 'Next', exact: true });
+        if (await nextbtn.isDisabled()) {
+            const errorMasg = await frame.locator('(//div[@class="msg-wrapper alert alert-error"]/div[contains(@id,"inpage-text-")]//span)[2]').innerText();
+            console.log(`ERROR - ${errorMasg} `);
+            //await expect(errorMasg).toBeNull();
+            throw new Error(`error: ${errorMasg}`);
+        } else {
+            await nextbtn.click({ force: true });
+        }
+    }
+
     async setRepeatEveryAndDaysANDWeeks(RepeatDaysWeeks: string, RepeatNumber: string): Promise<void> {
         await this.page.waitForTimeout(3000);
-        // await this.drpdwRepeatEvery.focus();
-        // await this.drpdwRepeatEvery.click();
-        await this.drpdwRepeatEvery.selectOption({ label: String(RepeatDaysWeeks) });
-        await this.page.waitForTimeout(400);
-        await this.txtpatternepeatSelect.click();
-        await this.txtpatternepeatSelect.fill(String(RepeatNumber));
-        await this.page.keyboard.press('Tab');
-        await this.page.waitForTimeout(400);
-        await this.btnNext.click();
+        if (await this.drpdwRepeatEvery.count() > 0) {
+            // await this.drpdwRepeatEvery.focus();
+            // await this.drpdwRepeatEvery.click();
+            await this.drpdwRepeatEvery.selectOption({ label: String(RepeatDaysWeeks) });
+            await this.page.waitForTimeout(400);
+            await this.txtpatternepeatSelect.click();
+            await this.txtpatternepeatSelect.fill(String(RepeatNumber));
+            await this.page.keyboard.press('Tab');
+            await this.page.waitForTimeout(400);
+            await this.btnNext.click();
+        }
+
     }
 
     async clickEditAvailabilityByDays(StartTime: string, EndateTime: string, Status: string, RepeatNumber: string): Promise<void> {
         await this.page.waitForTimeout(3000);
         // await this.drpdwRepeatEvery.focus();
         // for (let i = 1; i < Number(RepeatNumber) + 1; i++) {
-        await this.page.frameLocator('//iframe[@title="Embedded content"]').locator('//div[@class="availability-pattern-edit-day"]//input[contains(@aria-label,"Day ' + RepeatNumber + '")]').click();
-        await this.btnEditAvailability.click();
-        await this.setStartEndatTimeWithStatus(StartTime, EndateTime, Status);
-        //}
-
+        const repeatNumberdays = await this.page.frameLocator('//iframe[@title="Embedded content"]').locator('//div[@class="availability-pattern-edit-day"]//input[contains(@aria-label,"Day ' + RepeatNumber + '")]')
+        if (await repeatNumberdays.count() > 0 && await repeatNumberdays.isVisible()) {
+            await this.page.frameLocator('//iframe[@title="Embedded content"]').locator('//div[@class="availability-pattern-edit-day"]//input[contains(@aria-label,"Day ' + RepeatNumber + '")]').click();
+            await this.btnEditAvailability.click();
+            await this.setStartEndatTimeWithStatus(StartTime, EndateTime, Status);
+        } else {
+            await this.setStartEndatTimeWithStatus(StartTime, EndateTime, Status);
+        }
     }
 
     async clickReviewAndSubmit() {
@@ -163,7 +252,10 @@ export class WFMAvailabilityChangePage extends WebActions {
     }
 
     async clickOnSave() {
-        await this.page.frameLocator('//iframe[@title="Embedded content"]').getByRole('button', { name: 'Save' }).click();
+        const savebtn = await this.page.frameLocator('//iframe[@title="Embedded content"]').getByRole('button', { name: 'Save' });
+        if (await savebtn.isVisible() && await savebtn.count() > 0) {
+            await savebtn.click();
+        }
     }
 
     async PK() {

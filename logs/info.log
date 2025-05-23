@@ -23252,3 +23252,556 @@
 {"level":"info","message":"Executing Step : Open schedule Planner page"}
 {"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
 {"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 22) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10551546 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10551546 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10551547 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10551547 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10554017 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10554017 in sheet Sheet1 (Row 1) Status : interrupted"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10551546 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10551546 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10551547 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10551547 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10554017 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Executing Step : select the drop down menu"}
+{"level":"info","message":"Executing Step : Persona changed to Line manager to Duty Manager"}
+{"level":"info","message":"Executing Step : Validate the Swap To Duty Manager Persona"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10554017 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Data view With Swap Duty manager persona for 10562861 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open Maintenance Menu page"}
+{"level":"info","message":"Executing Step : Open Data View and validate dataviews"}
+{"level":"info","message":"Test Case Completed : @WFM Data view With Swap Duty manager persona for 10562861 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : passed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : passed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Select Timeoff for the Emp"}
+{"level":"info","message":"Executing Step : Select the dates "}
+{"level":"info","message":"Executing Step : Validate the Timeoff"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for Employee 1 in sheet Tabelle1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 2) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 3) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10698928 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10698928"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10562861"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10562861"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10562861"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10562861"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 4) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10562861"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 2)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10562861"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 2) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 3)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10562861"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 3) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 4)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10562861"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 4) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-undefined in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-undefined in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigateto Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Verify Manage schedule time card Exists"}
+{"level":"info","message":"Executing Step : Open schedule Planner page"}
+{"level":"info","message":"Executing Step : Search for the Employee Rule Violation: 10562861"}
+{"level":"info","message":"Test Case Completed : @WFM Validate Rule type for 10562861 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"SyntaxError: H:\\WFM\\pageFactory\\pageRepository\\WFMAvailabilityChangePage.ts: Unexpected token, expected \")\" (142:44)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         }\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m         \u001b[36mwhile\u001b[39m (today\u001b[33m.\u001b[39misSameOrAfter(endDate) {\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m             \u001b[90m// Get the formatted date and the day of the week\u001b[39m\n \u001b[90m 144 |\u001b[39m             \u001b[36mconst\u001b[39m toDate \u001b[33m=\u001b[39m startDate\u001b[33m.\u001b[39mformat(\u001b[32m'YYYY-DD-MM'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 145 |\u001b[39m             \u001b[36mconst\u001b[39m startDatefroDay \u001b[33m=\u001b[39m moment(toDate)\u001b[33m;\u001b[39m\u001b[0m"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-24/06/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, open 'H:\\WFM\\Data\\DataView_RO_20250508_001.xlsx'"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-06/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-07/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-07/07/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-07/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-07/07/2025 in sheet Sheet1 (Row 1) Status : failed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-07/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-07/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-08/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-08/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-07/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-07/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-09/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-09/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-10/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-10/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-14/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-14/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-17/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-17/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-14/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-14/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-17/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-17/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-14/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-14/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-17/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-14/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-14/07/2025 in sheet Sheet1 (Row 1) Status : passed"}
+{"level":"info","message":"Test Case Started : @WFM ESS Availabilty Pattern Request for 10648995-17/07/2025 in sheet Sheet1 (Row 1)"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login into WFM Application"}
+{"level":"info","message":"Executing Step : Open ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Start and Specify Date for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Edit Availablity Days for ESS AVailability Pattern Request "}
+{"level":"info","message":"Executing Step : Login As Manager for ESS AVailability Pattern Approval "}
+{"level":"info","message":"Executing Step : Open Availability Pattern Requests for Approval "}
+{"level":"info","message":"Executing Step : click Availablity PatternRequest For Approval after login as manager And Approve or Refuse"}
+{"level":"info","message":"Test Case Completed : @WFM ESS Availabilty Pattern Request for 10648995-17/07/2025 in sheet Sheet1 (Row 1) Status : passed"}

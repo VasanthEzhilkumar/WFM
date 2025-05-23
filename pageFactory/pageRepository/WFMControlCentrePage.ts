@@ -84,9 +84,13 @@ export class WFMControlCentrePage {
         await expect(this.page.getByRole('button', { name: 'Amount' })).toBeVisible();
         //await expect(this.page.locator('[id="\\31 720176347840-0-uiGrid-00M5-cell"]')).toContainText('8:30');
     }
-    async selectAvailabilityPatternRequests() {
+    async selectAvailabilityPatternRequests(GLAvailabilityChanges: string) {
         await this.page.waitForTimeout(4000);
-        await this.page.locator("//div[@role='button']/span[text()='Availability pattern requests']").click();
+        if (GLAvailabilityChanges.includes('Temporary')) {
+            await this.page.locator("//div[@role='button']/span[text()='Availability Requests']").click();
+        } else {
+            await this.page.locator("//div[@role='button']/span[text()='Availability pattern requests']").click();
+        }
     }
 
     async clickAvailablityPatternRequestForApprovalAndApprove_Refuse(EMPName: string, Approve: string) {
@@ -97,6 +101,14 @@ export class WFMControlCentrePage {
             if (await checkCorrectRequest.isVisible()) {
                 // await selectItem.click();
                 await checkCorrectRequest.click();
+            } else {
+                const nameArray = EMPName.split(' ');
+                const nameForAvailiablityRequest = nameArray[1] + ", " + nameArray[0];
+                const checkCorrectRequest = await this.page.locator('(//li[@class="card__data"]//span[@title="' + nameForAvailiablityRequest + '"])[1]');
+                if (await checkCorrectRequest.isVisible()) {
+                    // await selectItem.click();
+                    await checkCorrectRequest.click();
+                }
             }
             if (Approve === 'Yes') {
                 await this.btnApprove.click();
@@ -105,7 +117,7 @@ export class WFMControlCentrePage {
             }
             return "Passed";
         } catch (error) {
-           // await new throws(error);
+            // await new throws(error);
             return "Failed";
         }
     }

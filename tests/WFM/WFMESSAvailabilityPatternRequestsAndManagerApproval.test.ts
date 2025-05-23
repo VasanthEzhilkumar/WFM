@@ -6,7 +6,7 @@ import path from 'path';
 
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
-const excelFileName = 'ESS Availability Pattern Requests and Manager Approval_CZ_REG.xlsx';
+const excelFileName = 'ESS Availability Pattern Requests and Manager Approval_SK_REG.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 ///// Convert the Excel sheets to JSON format
@@ -53,70 +53,68 @@ for (const key in groupedData) {
         });
         // try {
 
-            await test.step('Login into WFM Application', async () => {
-                await loginPage.changelanguage();
-                //await loginPage.logininASManager();
-                await loginPage.logininfromExcel(dataSet[index].EmployeeID, dataSet[index].EmployeePassword);
-            });
+        await test.step('Login into WFM Application', async () => {
+            await loginPage.changelanguage();
+            //await loginPage.logininASManager();
+            await loginPage.logininfromExcel(dataSet[index].EmployeeID, dataSet[index].EmployeePassword);
+        });
 
-            let EmpName: string;
+        let EmpName: string;
 
-            await test.step('Open ESS AVailability Pattern Request ', async () => {
-                //await wfmavailibilityChangePage.verifyCangeMyAvailabilityRequestPage();
-                await wfmhomepage.ClickonchangeMyAvailabilityRequest();
-                await wfmavailibilityChangePage.clickOnGLAvailabilityChangesGeneric(dataSet[index].GLAvailabilityChanges);
-            });
+        await test.step('Open ESS AVailability Pattern Request ', async () => {
+            //await wfmavailibilityChangePage.verifyCangeMyAvailabilityRequestPage();
+            await wfmhomepage.ClickonchangeMyAvailabilityRequest();
+            await wfmavailibilityChangePage.clickOnGLAvailabilityChangesGeneric(dataSet[index].GLAvailabilityChanges);
+        });
 
-            await test.step('Set Start and Specify Date for ESS AVailability Pattern Request ', async () => {
+        await test.step('Set Start and Specify Date for ESS AVailability Pattern Request ', async () => {
+            //await wfmavailibilityChangePage.setSelectAdateAndSpecifyDate(dataSet[index].StartDate, dataSet[index].EndDate);
+            await wfmavailibilityChangePage.selectStartAndSpecifyDateWithBothUI(dataSet[index].StartDate, dataSet[index].EndDate);
+        });
 
-                await wfmavailibilityChangePage.setSelectAdateAndSpecifyDate(dataSet[index].StartDate, dataSet[index].EndDate);
-            });
+        await test.step('Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request ', async () => {
+            await wfmavailibilityChangePage.setRepeatEveryAndDaysANDWeeks(dataSet[index].DaysORWeeks, dataSet[index].RepeatEvery);
+        });
+        let repeat = 1;
+        await test.step('Edit Availablity Days for ESS AVailability Pattern Request ', async () => {
 
-            await test.step('Set Repeat Every Days&Weeks Count for ESS AVailability Pattern Request ', async () => {
+            for (const data of dataSet) {
 
-                await wfmavailibilityChangePage.setRepeatEveryAndDaysANDWeeks(dataSet[index].DaysORWeeks, dataSet[index].RepeatEvery);
-            });
-            let repeat = 1;
-            await test.step('Edit Availablity Days for ESS AVailability Pattern Request ', async () => {
-
-
-                for (const data of dataSet) {
-
-                    await wfmavailibilityChangePage.clickEditAvailabilityByDays(data.StartTime, data.EndTime, data.Status, String(repeat));
-                    // Handle punch-in/punch-out actions for each day
-                    //await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
-                    repeat = repeat + 1;
-                }
-                await wfmavailibilityChangePage.clickReviewAndSubmit();
-                // index = index + 1;
-            });
-
-            await test.step('Login As Manager for ESS AVailability Pattern Approval ', async () => {
-                await wfmhomepage.ClickonMainMenu();
-                EmpName = await webActions.getEmployeeNamefromHomePage();
-                await wfmhomepage.ClickonCloseMenu();
-
-                await loginPage.logOut();
-                await loginPage.changelanguage();
-                await loginPage.logininfromExcel(dataSet[index].ManagerID, dataSet[index].ManagerPassword);
-            });
-            await test.step('Open Availability Pattern Requests for Approval ', async () => {
-
-                await wfmnotificationpage.selectAvailabilityPatternRequests();
-                await wfmControlCentrePage.selectAvailabilityPatternRequests();
-            });
-
-            await test.step('click Availablity PatternRequest For Approval after login as manager And Approve or Refuse', async () => {
-                const result = await wfmControlCentrePage.clickAvailablityPatternRequestForApprovalAndApprove_Refuse(String(EmpName), dataSet[index].Approve);
-                const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, dataSet[index].EmployeeID, dataSet[index].StartDate);
-                //It will write result to excel sheet by rowNumber(index)
+                await wfmavailibilityChangePage.clickEditAvailabilityByDays(data.StartTime, data.EndTime, data.Status, String(repeat));
+                // Handle punch-in/punch-out actions for each day
                 //await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
-                for (let i = 1; i < Number(repeat); i++) {
-                    //await writeResultsToExcel(excelFilePath, sheetName, rowNumber, "", result);
-                    await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
-                }
+                repeat = repeat + 1;
+            }
+            await wfmavailibilityChangePage.clickReviewAndSubmit();
+            // index = index + 1;
+        });
 
-            });
+        await test.step('Login As Manager for ESS AVailability Pattern Approval ', async () => {
+            await wfmhomepage.ClickonMainMenu();
+            EmpName = await webActions.getEmployeeNamefromHomePage();
+            await wfmhomepage.ClickonCloseMenu();
+
+            await loginPage.logOut();
+            await loginPage.changelanguage();
+            await loginPage.logininfromExcel(dataSet[index].ManagerID, dataSet[index].ManagerPassword);
+        });
+        await test.step('Open Availability Pattern Requests for Approval ', async () => {
+
+            await wfmnotificationpage.selectAvailabilityPatternRequests();
+            await wfmControlCentrePage.selectAvailabilityPatternRequests(dataSet[index].GLAvailabilityChanges);
+        });
+
+        await test.step('click Availablity PatternRequest For Approval after login as manager And Approve or Refuse', async () => {
+            const result = await wfmControlCentrePage.clickAvailablityPatternRequestForApprovalAndApprove_Refuse(String(EmpName), dataSet[index].Approve);
+            const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, dataSet[index].EmployeeID, dataSet[index].StartDate);
+            //It will write result to excel sheet by rowNumber(index)
+            //await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
+            for (let i = 1; i < Number(repeat); i++) {
+                //await writeResultsToExcel(excelFilePath, sheetName, rowNumber, "", result);
+                await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
+            }
+
+        });
         // } catch (error) {
         //     await writeResultsToExcel(excelFilePath, sheetName, index, "", "Failed");
         // }

@@ -61,7 +61,7 @@ export class WFMTimecardPage extends WebActions {
         this.btnLoadMore = this.page.getByRole('button', { name: 'Load More' });
         // this.CurrentPayPeriod = page.getByTitle('Select Timeframe');
         // this.CurrentPayPeriod = page.getByRole('button', { name: 'Current Schedule Period' });
-        this.CurrentPayPeriod = page.locator('(//span[@class="timeframe btn-link"]//button[contains(@title,"Select Time")])[1]');
+        this.CurrentPayPeriod = page.locator('(//span[contains(@class,"timeframe btn-link")]//button[contains(@title,"Select Time")])[1]');
         //this.CurrentPayPeriod = page.getByTitle('Select Timeframe');
         this.SelectRange = page.getByRole('button', { name: 'Select Range' });
         this.Apply = page.getByRole('button', { name: 'Apply' });
