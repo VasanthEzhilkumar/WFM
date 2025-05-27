@@ -126,6 +126,7 @@ for (const key in groupedData) {
                 //await writeResultsToExcel(excelFilePath, sheetName, rowNumber, "", result);
                 await writeResultToExcel(excelFilePath, sheetName, rowNumber++, result, 'TestResult');
             }
+            
         });
         // } catch (error) {
         //     await writeResultsToExcel(excelFilePath, sheetName, index, "", "Failed");
