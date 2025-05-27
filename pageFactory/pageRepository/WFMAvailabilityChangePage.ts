@@ -110,6 +110,7 @@ export class WFMAvailabilityChangePage extends WebActions {
     }
 
     async selectStartAndSpecifyDateWithBothUI(StartDate: string, EndDate: string) {
+        await this.page.waitForTimeout(500);
         if (await this.txtSelectAdate.isVisible()) {
             await this.setSelectAdateAndSpecifyDate(StartDate, EndDate);
         } else {
@@ -123,9 +124,14 @@ export class WFMAvailabilityChangePage extends WebActions {
         await this.txtSelectAdate.fill(String(StartDate));
         await this.page.keyboard.press('Tab');
         await this.page.waitForTimeout(400);
-        await this.rdbtnSpecifyDate.click();
-        await this.txtEndDate.fill(String(EndDate));
-        await this.page.keyboard.press('Tab');
+
+        if (await EndDate.toLocaleLowerCase() === "forever") {
+            await this.page.frameLocator('//iframe[@title="Embedded content"]').getByRole('radio', { name: 'Forever' }).click();
+        } else {
+            await this.rdbtnSpecifyDate.click();
+            await this.txtEndDate.fill(String(EndDate));
+            await this.page.keyboard.press('Tab');
+        }
     }
 
     async selectDates(startDateStr: string, endDateStr: string): Promise<void> {
@@ -218,6 +224,26 @@ export class WFMAvailabilityChangePage extends WebActions {
         const repeatNumberdays = await this.page.frameLocator('//iframe[@title="Embedded content"]').locator('//div[@class="availability-pattern-edit-day"]//input[contains(@aria-label,"Day ' + RepeatNumber + '")]')
         if (await repeatNumberdays.count() > 0 && await repeatNumberdays.isVisible()) {
             await this.page.frameLocator('//iframe[@title="Embedded content"]').locator('//div[@class="availability-pattern-edit-day"]//input[contains(@aria-label,"Day ' + RepeatNumber + '")]').click();
+            await this.btnEditAvailability.click();
+            await this.setStartEndatTimeWithStatus(StartTime, EndateTime, Status);
+        } else {
+            await this.setStartEndatTimeWithStatus(StartTime, EndateTime, Status);
+        }
+    }
+
+    async clickEditAvailabilityByWeeks(StartTime: string, EndateTime: string, Status: string): Promise<void> {
+        await this.page.waitForTimeout(3000);
+        // await this.drpdwRepeatEvery.focus();
+        const repeatNumberWeeks = await this.page.frameLocator('//iframe[@title="Embedded content"]').getByText('Week');
+        const selectALL = await this.page.frameLocator('//iframe[@title="Embedded content"]').getByRole('button', { name: 'Select all' })
+        if (await repeatNumberWeeks.count() > 0 && await selectALL.isVisible()) {
+            //await selectALL.click();
+            const checkbox = await this.page.frameLocator('//iframe[@title="Embedded content"]').locator('[class="availability-pattern-edit-day"] input');
+            let j: number = 0;
+            while (j < 5) {
+                await checkbox.nth(j).click(); j++;
+            }
+
             await this.btnEditAvailability.click();
             await this.setStartEndatTimeWithStatus(StartTime, EndateTime, Status);
         } else {

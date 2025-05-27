@@ -6,7 +6,7 @@ import path from 'path';
 
 // Define the relative directory path to your Excel file
 const dataDirectory = path.resolve(__dirname, '../Data');
-const excelFileName = 'ESS Availability Pattern Requests and Manager Approval_SK_REG.xlsx';
+const excelFileName = 'ESS Availability Pattern Requests and Manager Approval_RO_20250521Updated.xlsx';
 const excelFilePath = getExcelFilePath(excelFileName);
 
 ///// Convert the Excel sheets to JSON format
@@ -27,13 +27,24 @@ if (!sheetsJson[sheetName]) {
 
 // Group the data by EmployeeID and StartDate
 const groupedData = sheetsJson[sheetName].reduce((acc, row) => {
-    const key = `${row.EmployeeID}-${row.StartDate}`; // Create a unique composite key
+    const key = `${row.EmployeeID}-${row.TestCaseID}`; // Create a unique composite key
     if (!acc[key]) {
         acc[key] = [];
     }
     acc[key].push(row);
     return acc;
 }, {});
+
+
+// // Group the data by EmployeeID and StartDate
+// const groupedData = sheetsJson[sheetName].reduce((acc, row) => {
+//    // const key = `${row.EmployeeID}`; // Create a unique composite key
+//     if (!acc[row.EmployeeID]) {
+//         acc[row.EmployeeID] = [];
+//     }
+//     acc[row.EmployeeID].push(row);
+//     return acc;
+// }, {});
 
 let index = 0;
 // Iterate over each grouped dataset and run the test
@@ -78,10 +89,12 @@ for (const key in groupedData) {
         let repeat = 1;
         await test.step('Edit Availablity Days for ESS AVailability Pattern Request ', async () => {
 
-            for (const data of dataSet) {
-
-                await wfmavailibilityChangePage.clickEditAvailabilityByDays(data.StartTime, data.EndTime, data.Status, String(repeat));
-                // Handle punch-in/punch-out actions for each day
+            for (const data of dataSet) {//clickEditAvailabilityByWeeks
+                if (data.DaysORWeeks === "Day(s)") {
+                    await wfmavailibilityChangePage.clickEditAvailabilityByDays(data.StartTime, data.EndTime, data.Status, String(repeat));
+                } else {
+                    await wfmavailibilityChangePage.clickEditAvailabilityByWeeks(data.StartTime, data.EndTime, data.Status);
+                }
                 //await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
                 repeat = repeat + 1;
             }
@@ -106,14 +119,13 @@ for (const key in groupedData) {
 
         await test.step('click Availablity PatternRequest For Approval after login as manager And Approve or Refuse', async () => {
             const result = await wfmControlCentrePage.clickAvailablityPatternRequestForApprovalAndApprove_Refuse(String(EmpName), dataSet[index].Approve);
-            const rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, dataSet[index].EmployeeID, dataSet[index].StartDate);
+            let rowNumber = await getRowNumberByCellValue(excelFilePath, sheetName, dataSet[index].EmployeeID, dataSet[index].TestCaseID);
             //It will write result to excel sheet by rowNumber(index)
             //await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
-            for (let i = 1; i < Number(repeat); i++) {
+            for (let i = 0; i < Number(repeat); i++) {
                 //await writeResultsToExcel(excelFilePath, sheetName, rowNumber, "", result);
-                await writeResultToExcel(excelFilePath, sheetName, rowNumber, result, 'TestResult');
+                await writeResultToExcel(excelFilePath, sheetName, rowNumber++, result, 'TestResult');
             }
-
         });
         // } catch (error) {
         //     await writeResultsToExcel(excelFilePath, sheetName, index, "", "Failed");

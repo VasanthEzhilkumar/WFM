@@ -82,7 +82,7 @@ export class WFMSchedulePlannerPage {
         await this.page.waitForTimeout(3000);
         // await this.EMP_Selected.click();
         // Updated by Ramchandra because locator was resolving to 2 employees
-        await this.page.locator('//div[@role="menuitem"]//span[text()="' + ariaLabel + '"]').click();
+        await this.page.locator('//div[@role="menuitem"]//span[text()="' + ariaLabel + '"]').first().click();
 
         await this.EMP_RELOAD.click();
         await this.page.waitForTimeout(3000);
